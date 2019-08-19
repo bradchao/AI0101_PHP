@@ -1,0 +1,1340 @@
+Microsoft Windows [版本 10.0.17763.678]
+(c) 2018 Microsoft Corporation. 著作權所有，並保留一切權利。
+
+C:\Users\USER>cd c:\xampp2\mysql\bin
+
+c:\xampp2\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.3.16-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| brad               |
+| class              |
+| db1                |
+| iii                |
+| information_schema |
+| mysql              |
+| northwind          |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+10 rows in set (0.094 sec)
+
+MariaDB [(none)]> use class;
+Database changed
+MariaDB [class]> show tables;
++-----------------+
+| Tables_in_class |
++-----------------+
+| bk1             |
+| scoreview       |
+| students        |
+| test1           |
++-----------------+
+4 rows in set (0.001 sec)
+
+MariaDB [class]> create table tb1 (id int,f1 varchar(10));
+Query OK, 0 rows affected (0.107 sec)
+
+MariaDB [class]> create table tb2 (id int,f1 varchar(10))
+    -> engine = InnoDB
+    -> character set = utf8;
+Query OK, 0 rows affected (0.109 sec)
+
+MariaDB [class]> create table tb3 (id int, f1 varchar(10)
+    -> character set big5 );
+Query OK, 0 rows affected (0.107 sec)
+
+MariaDB [class]> create table tb4 (id int unsigned zerofill auto_increment, f1 varchar(10));
+ERROR 1075 (42000): Incorrect table definition; there can be only one auto column and it must be defined as a key
+MariaDB [class]> create table tb4 (id int primary key unsigned zerofill auto_increment, f1 varchar(10));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'unsigned zerofill auto_increment, f1 varchar(10))' at line 1
+MariaDB [class]> create table tb4 (id int primary key auto_increment unsigned);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'unsigned)' at line 1
+MariaDB [class]> create table tb4 (id int unsigned primary key auto_increment);
+Query OK, 0 rows affected (0.108 sec)
+
+MariaDB [class]> create table tb5 (
+    -> f1 varchar(10) not null,
+    -> f2 varchar(10) null,
+    -> f3 varchar(10));
+Query OK, 0 rows affected (0.104 sec)
+
+MariaDB [class]> desc tb5;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| f1    | varchar(10) | NO   |     | NULL    |       |
+| f2    | varchar(10) | YES  |     | NULL    |       |
+| f3    | varchar(10) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.097 sec)
+
+MariaDB [class]> create table tb6 {
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '{' at line 1
+MariaDB [class]> create table tb6 (
+    -> f1 varchar(10) not null,
+    -> f2 varchar(10) default null);
+Query OK, 0 rows affected (0.108 sec)
+
+MariaDB [class]> desc tb6;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| f1    | varchar(10) | NO   |     | NULL    |       |
+| f2    | varchar(10) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.088 sec)
+
+MariaDB [class]> create table tb7 (
+    -> f1 varchar(10) not null default 'f1',
+    -> f2 varchar(10) not null,
+    -> f3 varchar(10) default 'f3'
+    -> f4 varchar(1) default null);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'varchar(1) default null)' at line 5
+MariaDB [class]> create table tb7 (
+    -> f1 varchar(10) not null default 'f1'
+    -> f2 varchar(10) not null,
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'varchar(10) not null,' at line 3
+MariaDB [class]> create table tb7 (
+    -> f1 varchar(10) not null default 'f1',
+    -> f2 varchar(1) not null,
+    -> f3 varchar(10));
+Query OK, 0 rows affected (0.085 sec)
+
+MariaDB [class]> desc tb7;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| f1    | varchar(10) | NO   |     | f1      |       |
+| f2    | varchar(1)  | NO   |     | NULL    |       |
+| f3    | varchar(10) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.089 sec)
+
+MariaDB [class]> insert into tb7 (f3) values ('brad');
+Query OK, 1 row affected, 1 warning (0.051 sec)
+
+MariaDB [class]> select * from tb7;
++----+----+------+
+| f1 | f2 | f3   |
++----+----+------+
+| f1 |    | brad |
++----+----+------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> update tb7 set f3='ok' where f1='f1';
+Query OK, 1 row affected (0.054 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [class]> select * from tb7;
++----+----+------+
+| f1 | f2 | f3   |
++----+----+------+
+| f1 |    | ok   |
++----+----+------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> update tb7 set f2 = default  where f1='f1';
+Query OK, 0 rows affected, 1 warning (0.000 sec)
+Rows matched: 1  Changed: 0  Warnings: 1
+
+MariaDB [class]> select * from tb7;
++----+----+------+
+| f1 | f2 | f3   |
++----+----+------+
+| f1 |    | ok   |
++----+----+------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> insert into tb7 (f1,f2,f3) values (
+    -> default, default, default);
+Query OK, 1 row affected, 1 warning (0.051 sec)
+
+MariaDB [class]> select * from tb7;
++----+----+------+
+| f1 | f2 | f3   |
++----+----+------+
+| f1 |    | ok   |
+| f1 |    | NULL |
++----+----+------+
+2 rows in set (0.000 sec)
+
+MariaDB [class]> create table tb8 (
+    ->
+    -> d1 date,
+    -> d2 datetime,
+    -> d3 time
+    -> ,d4 timestamp,
+    -> d5 timestamp not null default '2000-01-01 00:00:00',
+    -> d6 timestamp not null default current_timestamp);
+Query OK, 0 rows affected (0.105 sec)
+
+MariaDB [class]> desc tb8;
++-------+-----------+------+-----+---------------------+-------------------------------+
+| Field | Type      | Null | Key | Default             | Extra                         |
++-------+-----------+------+-----+---------------------+-------------------------------+
+| d1    | date      | YES  |     | NULL                |                               |
+| d2    | datetime  | YES  |     | NULL                |                               |
+| d3    | time      | YES  |     | NULL                |                               |
+| d4    | timestamp | NO   |     | current_timestamp() | on update current_timestamp() |
+| d5    | timestamp | NO   |     | 2000-01-01 00:00:00 |                               |
+| d6    | timestamp | NO   |     | current_timestamp() |                               |
++-------+-----------+------+-----+---------------------+-------------------------------+
+6 rows in set (0.086 sec)
+
+MariaDB [class]> desc tb8\G
+*************************** 1. row ***************************
+  Field: d1
+   Type: date
+   Null: YES
+    Key:
+Default: NULL
+  Extra:
+*************************** 2. row ***************************
+  Field: d2
+   Type: datetime
+   Null: YES
+    Key:
+Default: NULL
+  Extra:
+*************************** 3. row ***************************
+  Field: d3
+   Type: time
+   Null: YES
+    Key:
+Default: NULL
+  Extra:
+*************************** 4. row ***************************
+  Field: d4
+   Type: timestamp
+   Null: NO
+    Key:
+Default: current_timestamp()
+  Extra: on update current_timestamp()
+*************************** 5. row ***************************
+  Field: d5
+   Type: timestamp
+   Null: NO
+    Key:
+Default: 2000-01-01 00:00:00
+  Extra:
+*************************** 6. row ***************************
+  Field: d6
+   Type: timestamp
+   Null: NO
+    Key:
+Default: current_timestamp()
+  Extra:
+6 rows in set (0.086 sec)
+
+MariaDB [class]> insert into tb8 (d1) values ('2019-08-19');
+Query OK, 1 row affected (0.050 sec)
+
+MariaDB [class]> select * from tb8;
++------------+------+------+---------------------+---------------------+---------------------+
+| d1         | d2   | d3   | d4                  | d5                  | d6                  |
++------------+------+------+---------------------+---------------------+---------------------+
+| 2019-08-19 | NULL | NULL | 2019-08-19 09:58:26 | 2000-01-01 00:00:00 | 2019-08-19 09:58:26 |
++------------+------+------+---------------------+---------------------+---------------------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> select * from tb8\G
+*************************** 1. row ***************************
+d1: 2019-08-19
+d2: NULL
+d3: NULL
+d4: 2019-08-19 09:58:26
+d5: 2000-01-01 00:00:00
+d6: 2019-08-19 09:58:26
+1 row in set (0.000 sec)
+
+MariaDB [class]> update tb8 set d2='2019-01-02 10:20:30';
+Query OK, 1 row affected (0.050 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [class]> select * from tb8\G
+*************************** 1. row ***************************
+d1: 2019-08-19
+d2: 2019-01-02 10:20:30
+d3: NULL
+d4: 2019-08-19 10:00:16
+d5: 2000-01-01 00:00:00
+d6: 2019-08-19 09:58:26
+1 row in set (0.000 sec)
+
+MariaDB [class]> desc tb8;
++-------+-----------+------+-----+---------------------+-------------------------------+
+| Field | Type      | Null | Key | Default             | Extra                         |
++-------+-----------+------+-----+---------------------+-------------------------------+
+| d1    | date      | YES  |     | NULL                |                               |
+| d2    | datetime  | YES  |     | NULL                |                               |
+| d3    | time      | YES  |     | NULL                |                               |
+| d4    | timestamp | NO   |     | current_timestamp() | on update current_timestamp() |
+| d5    | timestamp | NO   |     | 2000-01-01 00:00:00 |                               |
+| d6    | timestamp | NO   |     | current_timestamp() |                               |
++-------+-----------+------+-----+---------------------+-------------------------------+
+6 rows in set (0.088 sec)
+
+MariaDB [class]> create table tb9 (
+    -> d1 timestamp default 0);
+ERROR 1067 (42000): Invalid default value for 'd1'
+MariaDB [class]> create table tb9 (
+    -> d1 timestamp default '0');
+ERROR 1067 (42000): Invalid default value for 'd1'
+MariaDB [class]> create table tb9 ( d1 timestamp not null default 0);
+ERROR 1067 (42000): Invalid default value for 'd1'
+MariaDB [class]> create table tb9 ( d1 timestamp not null default '0000-00-00');
+ERROR 1067 (42000): Invalid default value for 'd1'
+MariaDB [class]> create table tb9 ( d1 timestamp not null default '0000-00-00 00:00:00');
+ERROR 1067 (42000): Invalid default value for 'd1'
+MariaDB [class]> create table db9 (
+    -> d1 timestamp default null);
+ERROR 1067 (42000): Invalid default value for 'd1'
+MariaDB [class]> create table db9 (
+    -> d1 timestamp default '2000-01-01 10:10:10');
+Query OK, 0 rows affected (0.101 sec)
+
+MariaDB [class]> desc tb9\G
+ERROR 1146 (42S02): Table 'class.tb9' doesn't exist
+MariaDB [class]> desc tb8\G
+*************************** 1. row ***************************
+  Field: d1
+   Type: date
+   Null: YES
+    Key:
+Default: NULL
+  Extra:
+*************************** 2. row ***************************
+  Field: d2
+   Type: datetime
+   Null: YES
+    Key:
+Default: NULL
+  Extra:
+*************************** 3. row ***************************
+  Field: d3
+   Type: time
+   Null: YES
+    Key:
+Default: NULL
+  Extra:
+*************************** 4. row ***************************
+  Field: d4
+   Type: timestamp
+   Null: NO
+    Key:
+Default: current_timestamp()
+  Extra: on update current_timestamp()
+*************************** 5. row ***************************
+  Field: d5
+   Type: timestamp
+   Null: NO
+    Key:
+Default: 2000-01-01 00:00:00
+  Extra:
+*************************** 6. row ***************************
+  Field: d6
+   Type: timestamp
+   Null: NO
+    Key:
+Default: current_timestamp()
+  Extra:
+6 rows in set (0.086 sec)
+
+MariaDB [class]> insert into tb8 (d1,d2) values (
+    -> '0000-00-00 00:00:00',
+    -> 0);
+Query OK, 1 row affected, 2 warnings (0.049 sec)
+
+MariaDB [class]> select * from tb8;
++------------+---------------------+------+---------------------+---------------------+---------------------+
+| d1         | d2                  | d3   | d4                  | d5                  | d6                  |
++------------+---------------------+------+---------------------+---------------------+---------------------+
+| 2019-08-19 | 2019-01-02 10:20:30 | NULL | 2019-08-19 10:00:16 | 2000-01-01 00:00:00 | 2019-08-19 09:58:26 |
+| 0000-00-00 | 0000-00-00 00:00:00 | NULL | 2019-08-19 10:11:32 | 2000-01-01 00:00:00 | 2019-08-19 10:11:32 |
++------------+---------------------+------+---------------------+---------------------+---------------------+
+2 rows in set (0.000 sec)
+
+MariaDB [class]> select * from tb8\G
+*************************** 1. row ***************************
+d1: 2019-08-19
+d2: 2019-01-02 10:20:30
+d3: NULL
+d4: 2019-08-19 10:00:16
+d5: 2000-01-01 00:00:00
+d6: 2019-08-19 09:58:26
+*************************** 2. row ***************************
+d1: 0000-00-00
+d2: 0000-00-00 00:00:00
+d3: NULL
+d4: 2019-08-19 10:11:32
+d5: 2000-01-01 00:00:00
+d6: 2019-08-19 10:11:32
+2 rows in set (0.000 sec)
+
+MariaDB [class]> create temporary table tb10 (id int,f1 varchar(10));
+Query OK, 0 rows affected (0.018 sec)
+
+MariaDB [class]> decs tb10;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'decs tb10' at line 1
+MariaDB [class]> desc tb10;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int(11)     | YES  |     | NULL    |       |
+| f1    | varchar(10) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.088 sec)
+
+MariaDB [class]> insert into tb10 values (123,'Brad');
+Query OK, 1 row affected (0.048 sec)
+
+MariaDB [class]> select * from tb10;
++------+------+
+| id   | f1   |
++------+------+
+|  123 | Brad |
++------+------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> exit
+Bye
+
+c:\xampp2\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 113
+Server version: 10.3.16-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use class;
+Database changed
+MariaDB [class]> show tables;
++-----------------+
+| Tables_in_class |
++-----------------+
+| bk1             |
+| db9             |
+| scoreview       |
+| students        |
+| tb1             |
+| tb2             |
+| tb3             |
+| tb4             |
+| tb5             |
+| tb6             |
+| tb7             |
+| tb8             |
+| test1           |
++-----------------+
+13 rows in set (0.001 sec)
+
+MariaDB [class]> drop table tb1, t2, t3;
+ERROR 1051 (42S02): Unknown table 'class.t2,class.t3'
+MariaDB [class]> drop table tb1, tb2, tb3;
+ERROR 1051 (42S02): Unknown table 'class.tb1'
+MariaDB [class]> show tables;
++-----------------+
+| Tables_in_class |
++-----------------+
+| bk1             |
+| db9             |
+| scoreview       |
+| students        |
+| tb4             |
+| tb5             |
+| tb6             |
+| tb7             |
+| tb8             |
+| test1           |
++-----------------+
+10 rows in set (0.001 sec)
+
+MariaDB [class]> drop table db4, tb5, tb6, tb7;
+ERROR 1051 (42S02): Unknown table 'class.db4'
+MariaDB [class]> drop table tb4, tb5, tb6, tb7;
+ERROR 1051 (42S02): Unknown table 'class.tb5,class.tb6,class.tb7'
+MariaDB [class]> show tables;
++-----------------+
+| Tables_in_class |
++-----------------+
+| bk1             |
+| db9             |
+| scoreview       |
+| students        |
+| tb8             |
+| test1           |
++-----------------+
+6 rows in set (0.000 sec)
+
+MariaDB [class]> create table tb1 (
+    -> id int unsigned primary key,
+    -> twid varchar(10) unique key,
+    -> email varchar(200) unique key,
+    -> tel varchar(20));
+Query OK, 0 rows affected (0.025 sec)
+
+MariaDB [class]> desc tb1;
++-------+------------------+------+-----+---------+-------+
+| Field | Type             | Null | Key | Default | Extra |
++-------+------------------+------+-----+---------+-------+
+| id    | int(10) unsigned | NO   | PRI | NULL    |       |
+| twid  | varchar(10)      | YES  | UNI | NULL    |       |
+| email | varchar(200)     | YES  | UNI | NULL    |       |
+| tel   | varchar(20)      | YES  |     | NULL    |       |
++-------+------------------+------+-----+---------+-------+
+4 rows in set (0.015 sec)
+
+MariaDB [class]> create table tb2 (
+    -> id int unsigned,
+    -> twid varchar(10),
+    -> email varchar(200),
+    -> tel varchar(20),
+    -> primary key (id),
+    -> unique key (twid,email));
+Query OK, 0 rows affected (0.036 sec)
+
+MariaDB [class]> desc tb2;
++-------+------------------+------+-----+---------+-------+
+| Field | Type             | Null | Key | Default | Extra |
++-------+------------------+------+-----+---------+-------+
+| id    | int(10) unsigned | NO   | PRI | NULL    |       |
+| twid  | varchar(10)      | YES  | MUL | NULL    |       |
+| email | varchar(200)     | YES  |     | NULL    |       |
+| tel   | varchar(20)      | YES  |     | NULL    |       |
++-------+------------------+------+-----+---------+-------+
+4 rows in set (0.025 sec)
+
+MariaDB [class]> create table tb3 (
+    -> id int unsigned,
+    -> twid varchar(10),
+    -> email varchar(200),
+    -> tel varchar(20),
+    -> primary key (id),
+    -> unique key (twid),
+    -> unique key (email));
+Query OK, 0 rows affected (0.070 sec)
+
+MariaDB [class]> desc tb3;
++-------+------------------+------+-----+---------+-------+
+| Field | Type             | Null | Key | Default | Extra |
++-------+------------------+------+-----+---------+-------+
+| id    | int(10) unsigned | NO   | PRI | NULL    |       |
+| twid  | varchar(10)      | YES  | UNI | NULL    |       |
+| email | varchar(200)     | YES  | UNI | NULL    |       |
+| tel   | varchar(20)      | YES  |     | NULL    |       |
++-------+------------------+------+-----+---------+-------+
+4 rows in set (0.021 sec)
+
+MariaDB [class]> create table tb4 (
+    -> id int unsigned,
+    -> twid varchar(10),
+    -> email varchar(200),
+    -> tel varchar(20),
+    -> primary key (id),
+    -> index (twid, tel));
+Query OK, 0 rows affected (0.039 sec)
+
+MariaDB [class]> desc tb4;
++-------+------------------+------+-----+---------+-------+
+| Field | Type             | Null | Key | Default | Extra |
++-------+------------------+------+-----+---------+-------+
+| id    | int(10) unsigned | NO   | PRI | NULL    |       |
+| twid  | varchar(10)      | YES  | MUL | NULL    |       |
+| email | varchar(200)     | YES  |     | NULL    |       |
+| tel   | varchar(20)      | YES  |     | NULL    |       |
++-------+------------------+------+-----+---------+-------+
+4 rows in set (0.024 sec)
+
+MariaDB [class]> show create table tb1;
++-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table | Create Table                                                                                                                                                                                                                                                                             |
++-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| tb1   | CREATE TABLE `tb1` (
+  `id` int(10) unsigned NOT NULL,
+  `twid` varchar(10) DEFAULT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `tel` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `twid` (`twid`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
++-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> show create table tb2;
++-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table | Create Table                                                                                                                                                                                                                                                     |
++-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| tb2   | CREATE TABLE `tb2` (
+  `id` int(10) unsigned NOT NULL,
+  `twid` varchar(10) DEFAULT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `tel` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `twid` (`twid`,`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
++-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> show create table tb3;
++-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table | Create Table                                                                                                                                                                                                                                                                             |
++-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| tb3   | CREATE TABLE `tb3` (
+  `id` int(10) unsigned NOT NULL,
+  `twid` varchar(10) DEFAULT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `tel` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `twid` (`twid`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
++-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> show create table tb4;
++-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table | Create Table                                                                                                                                                                                                                                            |
++-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| tb4   | CREATE TABLE `tb4` (
+  `id` int(10) unsigned NOT NULL,
+  `twid` varchar(10) DEFAULT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `tel` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `twid` (`twid`,`tel`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
++-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> create table tb6 (id int key);
+Query OK, 0 rows affected (0.032 sec)
+
+MariaDB [class]> create table tb7 (id int index);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'index)' at line 1
+MariaDB [class]> create table tb7 (id int index key);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'index key)' at line 1
+MariaDB [class]> desc tb6;
++-------+---------+------+-----+---------+-------+
+| Field | Type    | Null | Key | Default | Extra |
++-------+---------+------+-----+---------+-------+
+| id    | int(11) | NO   | PRI | NULL    |       |
++-------+---------+------+-----+---------+-------+
+1 row in set (0.011 sec)
+
+MariaDB [class]> create table tb7 (id int, key (id));
+Query OK, 0 rows affected (0.071 sec)
+
+MariaDB [class]> desc tb7;
++-------+---------+------+-----+---------+-------+
+| Field | Type    | Null | Key | Default | Extra |
++-------+---------+------+-----+---------+-------+
+| id    | int(11) | YES  | MUL | NULL    |       |
++-------+---------+------+-----+---------+-------+
+1 row in set (0.059 sec)
+
+MariaDB [class]> show create table tb7;
++-------+----------------------------------------------------------------------------------------------------------+
+| Table | Create Table                                                                                             |
++-------+----------------------------------------------------------------------------------------------------------+
+| tb7   | CREATE TABLE `tb7` (
+  `id` int(11) DEFAULT NULL,
+  KEY `id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
++-------+----------------------------------------------------------------------------------------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> insert into tb7 values 1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1' at line 1
+MariaDB [class]> insert into tb7 values (1);
+Query OK, 1 row affected (0.049 sec)
+
+MariaDB [class]> insert into tb7 values (1);
+Query OK, 1 row affected (0.011 sec)
+
+MariaDB [class]> insert into tb7 values (1);
+Query OK, 1 row affected (0.012 sec)
+
+MariaDB [class]> select * from tb7;
++------+
+| id   |
++------+
+|    1 |
+|    1 |
+|    1 |
++------+
+3 rows in set (0.000 sec)
+
+MariaDB [class]> create table tb8 (id int unique);
+ERROR 1050 (42S01): Table 'tb8' already exists
+MariaDB [class]> create table tb9 (id int unique);
+Query OK, 0 rows affected (0.077 sec)
+
+MariaDB [class]> desc tb9;
++-------+---------+------+-----+---------+-------+
+| Field | Type    | Null | Key | Default | Extra |
++-------+---------+------+-----+---------+-------+
+| id    | int(11) | YES  | UNI | NULL    |       |
++-------+---------+------+-----+---------+-------+
+1 row in set (0.022 sec)
+
+MariaDB [class]> create table tb10 (id int index, id2 int key);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'index, id2 int key)' at line 1
+MariaDB [class]> create table tb10 (id int key, id2 int key);
+ERROR 1068 (42000): Multiple primary key defined
+MariaDB [class]> create table tb10 (
+    -> id int, id2 int,
+    -> key (id1),
+    -> key (id2));
+ERROR 1072 (42000): Key column 'id1' doesn't exist in table
+MariaDB [class]> create table tb10 (
+    -> id int, id2 int,
+    -> key (id),
+    -> key (id2));
+Query OK, 0 rows affected (0.031 sec)
+
+MariaDB [class]> desc tb10;
++-------+---------+------+-----+---------+-------+
+| Field | Type    | Null | Key | Default | Extra |
++-------+---------+------+-----+---------+-------+
+| id    | int(11) | YES  | MUL | NULL    |       |
+| id2   | int(11) | YES  | MUL | NULL    |       |
++-------+---------+------+-----+---------+-------+
+2 rows in set (0.024 sec)
+
+MariaDB [class]> show create table tb10;
++-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table | Create Table                                                                                                                                                 |
++-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| tb10  | CREATE TABLE `tb10` (
+  `id` int(11) DEFAULT NULL,
+  `id2` int(11) DEFAULT NULL,
+  KEY `id` (`id`),
+  KEY `id2` (`id2`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
++-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> create table tb11 (
+    -> addr varchar(100),
+    -> index (addr (6) desc));
+Query OK, 0 rows affected (0.031 sec)
+
+MariaDB [class]> show create table tb11;
++-------+-------------------------------------------------------------------------------------------------------------------------+
+| Table | Create Table                                                                                                            |
++-------+-------------------------------------------------------------------------------------------------------------------------+
+| tb11  | CREATE TABLE `tb11` (
+  `addr` varchar(100) DEFAULT NULL,
+  KEY `addr` (`addr`(6))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
++-------+-------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.001 sec)
+
+MariaDB [class]> desc tb11;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| addr  | varchar(100) | YES  | MUL | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+1 row in set (0.014 sec)
+
+MariaDB [class]> create table tb12 (
+    -> id int,
+    -> unique (id) using hash);
+Query OK, 0 rows affected (0.070 sec)
+
+MariaDB [class]> desc tb12;
++-------+---------+------+-----+---------+-------+
+| Field | Type    | Null | Key | Default | Extra |
++-------+---------+------+-----+---------+-------+
+| id    | int(11) | YES  | UNI | NULL    |       |
++-------+---------+------+-----+---------+-------+
+1 row in set (0.058 sec)
+
+MariaDB [class]> show tables;
++-----------------+
+| Tables_in_class |
++-----------------+
+| bk1             |
+| db9             |
+| scoreview       |
+| students        |
+| tb1             |
+| tb10            |
+| tb11            |
+| tb12            |
+| tb2             |
+| tb3             |
+| tb4             |
+| tb6             |
+| tb7             |
+| tb8             |
+| tb9             |
+| test1           |
++-----------------+
+16 rows in set (0.000 sec)
+
+MariaDB [class]> show indexes from tb1;
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+| Table | Non_unique | Key_name | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment |
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+| tb1   |          0 | PRIMARY  |            1 | id          | A         |           0 |     NULL | NULL   |      | BTREE      |         |               |
+| tb1   |          0 | twid     |            1 | twid        | A         |           0 |     NULL | NULL   | YES  | BTREE      |         |               |
+| tb1   |          0 | email    |            1 | email       | A         |           0 |     NULL | NULL   | YES  | BTREE      |         |               |
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+3 rows in set (0.000 sec)
+
+MariaDB [class]> show indexes from tb1\G
+*************************** 1. row ***************************
+        Table: tb1
+   Non_unique: 0
+     Key_name: PRIMARY
+ Seq_in_index: 1
+  Column_name: id
+    Collation: A
+  Cardinality: 0
+     Sub_part: NULL
+       Packed: NULL
+         Null:
+   Index_type: BTREE
+      Comment:
+Index_comment:
+*************************** 2. row ***************************
+        Table: tb1
+   Non_unique: 0
+     Key_name: twid
+ Seq_in_index: 1
+  Column_name: twid
+    Collation: A
+  Cardinality: 0
+     Sub_part: NULL
+       Packed: NULL
+         Null: YES
+   Index_type: BTREE
+      Comment:
+Index_comment:
+*************************** 3. row ***************************
+        Table: tb1
+   Non_unique: 0
+     Key_name: email
+ Seq_in_index: 1
+  Column_name: email
+    Collation: A
+  Cardinality: 0
+     Sub_part: NULL
+       Packed: NULL
+         Null: YES
+   Index_type: BTREE
+      Comment:
+Index_comment:
+3 rows in set (0.000 sec)
+
+MariaDB [class]> show indexes from tb2\G
+*************************** 1. row ***************************
+        Table: tb2
+   Non_unique: 0
+     Key_name: PRIMARY
+ Seq_in_index: 1
+  Column_name: id
+    Collation: A
+  Cardinality: 0
+     Sub_part: NULL
+       Packed: NULL
+         Null:
+   Index_type: BTREE
+      Comment:
+Index_comment:
+*************************** 2. row ***************************
+        Table: tb2
+   Non_unique: 0
+     Key_name: twid
+ Seq_in_index: 1
+  Column_name: twid
+    Collation: A
+  Cardinality: 0
+     Sub_part: NULL
+       Packed: NULL
+         Null: YES
+   Index_type: BTREE
+      Comment:
+Index_comment:
+*************************** 3. row ***************************
+        Table: tb2
+   Non_unique: 0
+     Key_name: twid
+ Seq_in_index: 2
+  Column_name: email
+    Collation: A
+  Cardinality: 0
+     Sub_part: NULL
+       Packed: NULL
+         Null: YES
+   Index_type: BTREE
+      Comment:
+Index_comment:
+3 rows in set (0.000 sec)
+
+MariaDB [class]> show create table students;
++----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table    | Create Table                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
++----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| students | CREATE TABLE `students` (
+  `cID` tinyint(2) unsigned zerofill NOT NULL AUTO_INCREMENT,
+  `cName` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `cSex` enum('F','M') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'F',
+  `cBirthday` date NOT NULL,
+  `cEmail` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `cPhone` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `cAddr` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`cID`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci |
++----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> show indexes from students;
++----------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+| Table    | Non_unique | Key_name | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment |
++----------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+| students |          0 | PRIMARY  |            1 | cID         | A         |          10 |     NULL | NULL   |      | BTREE      |         |               |
++----------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> show indexes from students\G
+*************************** 1. row ***************************
+        Table: students
+   Non_unique: 0
+     Key_name: PRIMARY
+ Seq_in_index: 1
+  Column_name: cID
+    Collation: A
+  Cardinality: 10
+     Sub_part: NULL
+       Packed: NULL
+         Null:
+   Index_type: BTREE
+      Comment:
+Index_comment:
+1 row in set (0.000 sec)
+
+MariaDB [class]> create table tb20 (
+    -> id int unsigned,
+    -> cname varchar(100),
+    -> twid varchar(10) not null,
+    -> birthday date,
+    -> memo text);
+Query OK, 0 rows affected (0.034 sec)
+
+MariaDB [class]> show indexes from tb20;
+Empty set (0.002 sec)
+
+MariaDB [class]> alter table tb20 add primary key (id);
+Query OK, 0 rows affected (0.101 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [class]> show indexes from tb20;
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+| Table | Non_unique | Key_name | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment |
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+| tb20  |          0 | PRIMARY  |            1 | id          | A         |           0 |     NULL | NULL   |      | BTREE      |         |               |
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> show indexes from tb20\G
+*************************** 1. row ***************************
+        Table: tb20
+   Non_unique: 0
+     Key_name: PRIMARY
+ Seq_in_index: 1
+  Column_name: id
+    Collation: A
+  Cardinality: 0
+     Sub_part: NULL
+       Packed: NULL
+         Null:
+   Index_type: BTREE
+      Comment:
+Index_comment:
+1 row in set (0.000 sec)
+
+MariaDB [class]> show index from tb20\G
+*************************** 1. row ***************************
+        Table: tb20
+   Non_unique: 0
+     Key_name: PRIMARY
+ Seq_in_index: 1
+  Column_name: id
+    Collation: A
+  Cardinality: 0
+     Sub_part: NULL
+       Packed: NULL
+         Null:
+   Index_type: BTREE
+      Comment:
+Index_comment:
+1 row in set (0.000 sec)
+
+MariaDB [class]> alter table tb20 modify twid varchar(20) unique key;
+Query OK, 0 rows affected (0.056 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [class]> show index from tb20\G
+*************************** 1. row ***************************
+        Table: tb20
+   Non_unique: 0
+     Key_name: PRIMARY
+ Seq_in_index: 1
+  Column_name: id
+    Collation: A
+  Cardinality: 0
+     Sub_part: NULL
+       Packed: NULL
+         Null:
+   Index_type: BTREE
+      Comment:
+Index_comment:
+*************************** 2. row ***************************
+        Table: tb20
+   Non_unique: 0
+     Key_name: twid
+ Seq_in_index: 1
+  Column_name: twid
+    Collation: A
+  Cardinality: 0
+     Sub_part: NULL
+       Packed: NULL
+         Null: YES
+   Index_type: BTREE
+      Comment:
+Index_comment:
+2 rows in set (0.000 sec)
+
+MariaDB [class]> alter table tb20 drop index twid;
+Query OK, 0 rows affected (0.058 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [class]> show index from tb20\G
+*************************** 1. row ***************************
+        Table: tb20
+   Non_unique: 0
+     Key_name: PRIMARY
+ Seq_in_index: 1
+  Column_name: id
+    Collation: A
+  Cardinality: 0
+     Sub_part: NULL
+       Packed: NULL
+         Null:
+   Index_type: BTREE
+      Comment:
+Index_comment:
+1 row in set (0.000 sec)
+
+MariaDB [class]> alter table tb20 drop primary key;
+Query OK, 0 rows affected (0.071 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [class]> show index from tb20\G
+Empty set (0.002 sec)
+
+MariaDB [class]> create primary key idIndex on tb20 (id);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'primary key idIndex on tb20 (id)' at line 1
+MariaDB [class]> create index key idIndex on tb20 (id);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key idIndex on tb20 (id)' at line 1
+MariaDB [class]> create index idIndex on tb20 (id);
+Query OK, 0 rows affected (0.059 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [class]> desc tb20;
++----------+------------------+------+-----+---------+-------+
+| Field    | Type             | Null | Key | Default | Extra |
++----------+------------------+------+-----+---------+-------+
+| id       | int(10) unsigned | NO   | MUL | NULL    |       |
+| cname    | varchar(100)     | YES  |     | NULL    |       |
+| twid     | varchar(20)      | YES  |     | NULL    |       |
+| birthday | date             | YES  |     | NULL    |       |
+| memo     | text             | YES  |     | NULL    |       |
++----------+------------------+------+-----+---------+-------+
+5 rows in set (0.022 sec)
+
+MariaDB [class]> create unique index twidIndex on tb20 (twid);
+Query OK, 0 rows affected (0.023 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [class]> desc tb20;
++----------+------------------+------+-----+---------+-------+
+| Field    | Type             | Null | Key | Default | Extra |
++----------+------------------+------+-----+---------+-------+
+| id       | int(10) unsigned | NO   | MUL | NULL    |       |
+| cname    | varchar(100)     | YES  |     | NULL    |       |
+| twid     | varchar(20)      | YES  | UNI | NULL    |       |
+| birthday | date             | YES  |     | NULL    |       |
+| memo     | text             | YES  |     | NULL    |       |
++----------+------------------+------+-----+---------+-------+
+5 rows in set (0.023 sec)
+
+MariaDB [class]> create primary index pidex ontb20 (cname);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'primary index pidex ontb20 (cname)' at line 1
+MariaDB [class]> create primary index pidex on tb20 (cname);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'primary index pidex on tb20 (cname)' at line 1
+MariaDB [class]> create primary pidex on tb20 (cname);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'primary pidex on tb20 (cname)' at line 1
+MariaDB [class]> create primary key pidex on tb20 (cname);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'primary key pidex on tb20 (cname)' at line 1
+MariaDB [class]> alter table tb20 add primary key (cname);
+Query OK, 0 rows affected (0.052 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [class]> desc tb20;
++----------+------------------+------+-----+---------+-------+
+| Field    | Type             | Null | Key | Default | Extra |
++----------+------------------+------+-----+---------+-------+
+| id       | int(10) unsigned | NO   | MUL | NULL    |       |
+| cname    | varchar(100)     | NO   | PRI | NULL    |       |
+| twid     | varchar(20)      | YES  | UNI | NULL    |       |
+| birthday | date             | YES  |     | NULL    |       |
+| memo     | text             | YES  |     | NULL    |       |
++----------+------------------+------+-----+---------+-------+
+5 rows in set (0.013 sec)
+
+MariaDB [class]> alter table tb20 drop primary key;
+Query OK, 0 rows affected (0.066 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [class]> desc tb20;
++----------+------------------+------+-----+---------+-------+
+| Field    | Type             | Null | Key | Default | Extra |
++----------+------------------+------+-----+---------+-------+
+| id       | int(10) unsigned | NO   | MUL | NULL    |       |
+| cname    | varchar(100)     | NO   |     | NULL    |       |
+| twid     | varchar(20)      | YES  | UNI | NULL    |       |
+| birthday | date             | YES  |     | NULL    |       |
+| memo     | text             | YES  |     | NULL    |       |
++----------+------------------+------+-----+---------+-------+
+5 rows in set (0.050 sec)
+
+MariaDB [class]> create primary brad on tb20 (cname);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'primary brad on tb20 (cname)' at line 1
+MariaDB [class]> create index primary brad on tb20 (cname);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'primary brad on tb20 (cname)' at line 1
+MariaDB [class]> create primary on tb20 (cname);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'primary on tb20 (cname)' at line 1
+MariaDB [class]> create index primary on tb20 (cname);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'primary on tb20 (cname)' at line 1
+MariaDB [class]> create primary key on tb20 (cname);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'primary key on tb20 (cname)' at line 1
+MariaDB [class]> create primary primary on tb20 (cname);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'primary primary on tb20 (cname)' at line 1
+MariaDB [class]> create primary PRIMARY on tb20 (cname);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'primary PRIMARY on tb20 (cname)' at line 1
+MariaDB [class]> create primary key PRIMARY on tb20 (cname);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'primary key PRIMARY on tb20 (cname)' at line 1
+MariaDB [class]> show tables;
++-----------------+
+| Tables_in_class |
++-----------------+
+| bk1             |
+| db9             |
+| scoreview       |
+| students        |
+| tb1             |
+| tb10            |
+| tb11            |
+| tb12            |
+| tb2             |
+| tb20            |
+| tb3             |
+| tb4             |
+| tb6             |
+| tb7             |
+| tb8             |
+| tb9             |
+| test1           |
++-----------------+
+17 rows in set (0.001 sec)
+
+MariaDB [class]> desc tb3;
++-------+------------------+------+-----+---------+-------+
+| Field | Type             | Null | Key | Default | Extra |
++-------+------------------+------+-----+---------+-------+
+| id    | int(10) unsigned | NO   | PRI | NULL    |       |
+| twid  | varchar(10)      | YES  | UNI | NULL    |       |
+| email | varchar(200)     | YES  | UNI | NULL    |       |
+| tel   | varchar(20)      | YES  |     | NULL    |       |
++-------+------------------+------+-----+---------+-------+
+4 rows in set (0.018 sec)
+
+MariaDB [class]> insert into tb3 (id) values (1);
+Query OK, 1 row affected (0.049 sec)
+
+MariaDB [class]> insert into tb3 (id) values (2);
+Query OK, 1 row affected (0.050 sec)
+
+MariaDB [class]> insert into tb3 (id) values (3);
+Query OK, 1 row affected (0.012 sec)
+
+MariaDB [class]> select * from tb3;
++----+------+-------+------+
+| id | twid | email | tel  |
++----+------+-------+------+
+|  1 | NULL | NULL  | NULL |
+|  2 | NULL | NULL  | NULL |
+|  3 | NULL | NULL  | NULL |
++----+------+-------+------+
+3 rows in set (0.000 sec)
+
+MariaDB [class]> insert into tb3 (id,twid) values (3,'1');
+ERROR 1062 (23000): Duplicate entry '3' for key 'PRIMARY'
+MariaDB [class]> insert into tb3 (id,twid) values (4,'1');
+Query OK, 1 row affected (0.012 sec)
+
+MariaDB [class]> insert into tb3 (id,twid) values (5,'1');
+ERROR 1062 (23000): Duplicate entry '1' for key 'twid'
+MariaDB [class]> select * from tb3;
++----+------+-------+------+
+| id | twid | email | tel  |
++----+------+-------+------+
+|  1 | NULL | NULL  | NULL |
+|  2 | NULL | NULL  | NULL |
+|  3 | NULL | NULL  | NULL |
+|  4 | 1    | NULL  | NULL |
++----+------+-------+------+
+4 rows in set (0.000 sec)
+
+MariaDB [class]> create table tb21 (
+    -> id int unsigned primary key auto_increment,
+    -> f1 varchar(10));
+Query OK, 0 rows affected (0.033 sec)
+
+MariaDB [class]> create table tb22 (
+    -> tb21id int, f1 varchar(10));
+Query OK, 0 rows affected (0.069 sec)
+
+MariaDB [class]> insert into tb21 (f1) values ('aa');
+Query OK, 1 row affected (0.012 sec)
+
+MariaDB [class]> insert into tb22 values (last_insert_id(),'111'),
+    -> (last_insert_id(),'222');
+Query OK, 2 rows affected (0.013 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+MariaDB [class]> select * from tb21; select * from tb22;
++----+------+
+| id | f1   |
++----+------+
+|  1 | aa   |
++----+------+
+1 row in set (0.000 sec)
+
++--------+------+
+| tb21id | f1   |
++--------+------+
+|      1 | 111  |
+|      1 | 222  |
++--------+------+
+2 rows in set (0.000 sec)
+
+MariaDB [class]> insert into tb21 (f1) values ('bb');
+Query OK, 1 row affected (0.013 sec)
+
+MariaDB [class]> select * from tb21; select * from tb22;
++----+------+
+| id | f1   |
++----+------+
+|  1 | aa   |
+|  2 | bb   |
++----+------+
+2 rows in set (0.000 sec)
+
++--------+------+
+| tb21id | f1   |
++--------+------+
+|      1 | 111  |
+|      1 | 222  |
++--------+------+
+2 rows in set (0.000 sec)
+
+MariaDB [class]> insert into tb21 (f1) values ('cc');
+Query OK, 1 row affected (0.012 sec)
+
+MariaDB [class]> select * from tb21; select * from tb22;
++----+------+
+| id | f1   |
++----+------+
+|  1 | aa   |
+|  2 | bb   |
+|  3 | cc   |
++----+------+
+3 rows in set (0.000 sec)
+
++--------+------+
+| tb21id | f1   |
++--------+------+
+|      1 | 111  |
+|      1 | 222  |
++--------+------+
+2 rows in set (0.000 sec)
+
+MariaDB [class]> delete from tb21 where id = 2;
+Query OK, 1 row affected (0.012 sec)
+
+MariaDB [class]> select * from tb21; select * from tb22;
++----+------+
+| id | f1   |
++----+------+
+|  1 | aa   |
+|  3 | cc   |
++----+------+
+2 rows in set (0.000 sec)
+
++--------+------+
+| tb21id | f1   |
++--------+------+
+|      1 | 111  |
+|      1 | 222  |
++--------+------+
+2 rows in set (0.000 sec)
+
+MariaDB [class]> insert into tb21 (f1) values ('dd');
+Query OK, 1 row affected (0.012 sec)
+
+MariaDB [class]> insert into tb22 values (last_insert_id(),'ok');
+Query OK, 1 row affected (0.050 sec)
+
+MariaDB [class]> select * from tb21; select * from tb22;
++----+------+
+| id | f1   |
++----+------+
+|  1 | aa   |
+|  3 | cc   |
+|  4 | dd   |
++----+------+
+3 rows in set (0.000 sec)
+
++--------+------+
+| tb21id | f1   |
++--------+------+
+|      1 | 111  |
+|      1 | 222  |
+|      4 | ok   |
++--------+------+
+3 rows in set (0.000 sec)
+
+MariaDB [class]>
