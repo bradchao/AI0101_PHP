@@ -1338,3 +1338,8 @@ MariaDB [class]> select * from tb21; select * from tb22;
 3 rows in set (0.000 sec)
 
 MariaDB [class]>
+
+異動自動遞增值
+alert table 表名稱 AUTO_INCREMENT = n;
+
+foreign key (本表欄位) references 其他表 (欄位)
