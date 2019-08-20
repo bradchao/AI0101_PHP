@@ -158,4 +158,40 @@ begin
     return sum;
 end #
 \d ;
+----------------------------------
+\d #
+create function ftest10(n int) returns int
+begin
+    declare i int default 0;
+    declare sum int default 0;
+    myloop: loop
+        set i = i + 1;
+        if i % 2 = 0 then
+            iterate myloop;
+        end if;
+        set sum = sum + i;
+        if i >= n then
+            leave myloop;
+        end if;
+    end loop myloop;
 
+    return sum;
+end #
+\d ;
+----------------------------------
+\d #
+create function ftest9(n int) returns int
+begin
+    declare i int default 0;
+    declare sum int default 0;
+    myloop: while i <= n do
+        set i = i + 1;
+        if i % 2 = 0 then
+            iterate myloop;
+        end if;
+        set sum = sum + 1;
+    end while myloop;
+
+    return sum;
+end #
+\d ;
