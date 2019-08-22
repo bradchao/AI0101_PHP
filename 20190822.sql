@@ -88,3 +88,83 @@ create trigger tname timing event on tbname for each row
 begin
 end #
 \d ;
+\d #
+create trigger t1 after insert on mytable for each row
+begin
+    insert into eventlog (message) values 
+        (concat("insert new f1 :", new.f1));
+end #
+\d ;
+---------------
+\d #
+create trigger t2 before insert on mytable for each row
+begin
+    insert into myevent (timing,action,etime,log) values 
+        ('before','insert',now(),'insert f1');
+end #
+\d ;
+---------------
+\d #
+create trigger t3 after insert on mytable for each row
+begin
+    insert into myevent (timing,action,etime,log) values 
+        ('after','insert',now(),concat('insert f1: new:', new.f1));
+end #
+\d ;
+---------------------------------
+\d #
+create trigger t4 before update on mytable for each row
+begin
+    insert into myevent (timing,action,etime,log) values 
+        ('before','update',now(),concat('update f1: old = ',old.f1));
+end #
+\d ;
+-----
+\d #
+create trigger t5 after update on mytable for each row
+begin
+    insert into myevent (timing,action,etime,log) values 
+        ('after','update',now(),
+        concat('update f1:',old.f1, ' => ', new.f1));
+end #
+\d ;
+-----
+\d #
+create trigger t6 before delete on mytable for each row
+begin
+    insert into myevent (timing,action,etime,log) values 
+        ('before','delete',now(),concat('delete:',old.id,':',old.f1));
+end #
+\d ;
+-----
+\d #
+create trigger t7 after delete on mytable for each row
+begin
+    insert into myevent (timing,action,etime,log) values 
+        ('after','delete',now(),
+        concat('delete:ok'));
+end #
+\d ;
+-----
+\d #
+create trigger t9 after update on mytable for each row
+begin
+    if old.id = 3 then
+        delete from mytable where f1 = 'Brad';
+    end if;
+end #
+\d ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
