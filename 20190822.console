@@ -1,0 +1,1124 @@
+Microsoft Windows [版本 10.0.17763.678]
+(c) 2018 Microsoft Corporation. 著作權所有，並保留一切權利。
+
+C:\Users\USER>cd c:\xampp2\mysql\backup
+
+c:\xampp2\mysql\backup>cd c:\xampp2\mysql\bin
+
+c:\xampp2\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.3.16-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use class;
+Database changed
+MariaDB [class]> show function status;
++-------+----------+----------+----------------+---------------------+---------------------+---------------+---------+----------------------+----------------------+--------------------+
+| Db    | Name     | Type     | Definer        | Modified            | Created             | Security_type | Comment | character_set_client | collation_connection | Database Collation |
++-------+----------+----------+----------------+---------------------+---------------------+---------------+---------+----------------------+----------------------+--------------------+
+| class | avgLevel | FUNCTION | root@localhost | 2019-08-20 11:10:00 | 2019-08-20 11:10:00 | DEFINER       |         | big5                 | big5_chinese_ci      | utf8_general_ci    |
+| class | avgLvl   | FUNCTION | root@localhost | 2019-08-20 11:18:43 | 2019-08-20 11:18:43 | DEFINER       |         | big5                 | big5_chinese_ci      | utf8_general_ci    |
+| class | ftest1   | FUNCTION | root@localhost | 2019-08-20 10:29:40 | 2019-08-20 10:29:40 | DEFINER       |         | big5                 | big5_chinese_ci      | utf8_general_ci    |
+| class | ftest2   | FUNCTION | root@localhost | 2019-08-20 10:51:32 | 2019-08-20 10:51:32 | DEFINER       |         | big5                 | big5_chinese_ci      | utf8_general_ci    |
+| class | ftest3   | FUNCTION | root@localhost | 2019-08-20 10:57:14 | 2019-08-20 10:57:14 | DEFINER       |         | big5                 | big5_chinese_ci      | utf8_general_ci    |
+| class | ftest4   | FUNCTION | root@localhost | 2019-08-20 11:33:51 | 2019-08-20 11:33:51 | DEFINER       |         | big5                 | big5_chinese_ci      | utf8_general_ci    |
+| class | ftest5   | FUNCTION | root@localhost | 2019-08-20 11:48:07 | 2019-08-20 11:48:07 | DEFINER       |         | big5                 | big5_chinese_ci      | utf8_general_ci    |
+| class | ftest6   | FUNCTION | root@localhost | 2019-08-20 12:01:43 | 2019-08-20 12:01:43 | DEFINER       |         | big5                 | big5_chinese_ci      | utf8_general_ci    |
+| class | ftest7   | FUNCTION | root@localhost | 2019-08-20 12:02:47 | 2019-08-20 12:02:47 | DEFINER       |         | big5                 | big5_chinese_ci      | utf8_general_ci    |
+| class | ftest8   | FUNCTION | root@localhost | 2019-08-20 13:07:04 | 2019-08-20 13:07:04 | DEFINER       |         | big5                 | big5_chinese_ci      | utf8_general_ci    |
+| class | fxy      | FUNCTION | root@localhost | 2019-08-20 10:06:20 | 2019-08-20 10:06:20 | DEFINER       |         | big5                 | big5_chinese_ci      | utf8_general_ci    |
++-------+----------+----------+----------------+---------------------+---------------------+---------------+---------+----------------------+----------------------+--------------------+
+11 rows in set (0.020 sec)
+
+MariaDB [class]> show function status\G
+*************************** 1. row ***************************
+                  Db: class
+                Name: avgLevel
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 11:10:00
+             Created: 2019-08-20 11:10:00
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 2. row ***************************
+                  Db: class
+                Name: avgLvl
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 11:18:43
+             Created: 2019-08-20 11:18:43
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 3. row ***************************
+                  Db: class
+                Name: ftest1
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 10:29:40
+             Created: 2019-08-20 10:29:40
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 4. row ***************************
+                  Db: class
+                Name: ftest2
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 10:51:32
+             Created: 2019-08-20 10:51:32
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 5. row ***************************
+                  Db: class
+                Name: ftest3
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 10:57:14
+             Created: 2019-08-20 10:57:14
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 6. row ***************************
+                  Db: class
+                Name: ftest4
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 11:33:51
+             Created: 2019-08-20 11:33:51
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 7. row ***************************
+                  Db: class
+                Name: ftest5
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 11:48:07
+             Created: 2019-08-20 11:48:07
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 8. row ***************************
+                  Db: class
+                Name: ftest6
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 12:01:43
+             Created: 2019-08-20 12:01:43
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 9. row ***************************
+                  Db: class
+                Name: ftest7
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 12:02:47
+             Created: 2019-08-20 12:02:47
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 10. row ***************************
+                  Db: class
+                Name: ftest8
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 13:07:04
+             Created: 2019-08-20 13:07:04
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 11. row ***************************
+                  Db: class
+                Name: fxy
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 10:06:20
+             Created: 2019-08-20 10:06:20
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+11 rows in set (0.026 sec)
+
+MariaDB [class]> drop function ftest8;
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [class]> show function status\G
+*************************** 1. row ***************************
+                  Db: class
+                Name: avgLevel
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 11:10:00
+             Created: 2019-08-20 11:10:00
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 2. row ***************************
+                  Db: class
+                Name: avgLvl
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 11:18:43
+             Created: 2019-08-20 11:18:43
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 3. row ***************************
+                  Db: class
+                Name: ftest1
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 10:29:40
+             Created: 2019-08-20 10:29:40
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 4. row ***************************
+                  Db: class
+                Name: ftest2
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 10:51:32
+             Created: 2019-08-20 10:51:32
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 5. row ***************************
+                  Db: class
+                Name: ftest3
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 10:57:14
+             Created: 2019-08-20 10:57:14
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 6. row ***************************
+                  Db: class
+                Name: ftest4
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 11:33:51
+             Created: 2019-08-20 11:33:51
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 7. row ***************************
+                  Db: class
+                Name: ftest5
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 11:48:07
+             Created: 2019-08-20 11:48:07
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 8. row ***************************
+                  Db: class
+                Name: ftest6
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 12:01:43
+             Created: 2019-08-20 12:01:43
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 9. row ***************************
+                  Db: class
+                Name: ftest7
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 12:02:47
+             Created: 2019-08-20 12:02:47
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 10. row ***************************
+                  Db: class
+                Name: fxy
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 10:06:20
+             Created: 2019-08-20 10:06:20
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+10 rows in set (0.026 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create function ftest8(n int) returns int
+    -> begin
+    ->     declare i int default 0;
+    ->     declare sum int default 0;
+    ->     myloop: loop
+    ->         set i = i + 1;
+    ->         if i % 2 = 0 then
+    ->             iterate myloop;
+    ->         end if;
+    ->         set sum = sum + i;
+    ->         if i = n then
+    ->             leave myloop;
+    ->         end if;
+    ->     end loop;
+    ->
+    ->     return sum;
+    -> end #
+Query OK, 0 rows affected (0.012 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> select ftest8(4);
+Ctrl-C -- query killed. Continuing normally.
+ERROR 1317 (70100): Query execution was interrupted
+MariaDB [class]>
+MariaDB [class]>
+MariaDB [class]>
+MariaDB [class]>
+MariaDB [class]> \d #
+MariaDB [class]> create function ftest10(n int) returns int
+    -> begin
+    ->     declare i int default 0;
+    ->     declare sum int default 0;
+    ->     myloop: loop
+    ->         set i = i + 1;
+    ->         if i % 2 = 0 then
+    ->             iterate myloop;
+    ->         end if;
+    ->         set sum = sum + i;
+    ->         if i = n then
+    ->             leave myloop;
+    ->         end if;
+    ->     end loop myloop;
+    ->
+    ->     return sum;
+    -> end #
+ERROR 2006 (HY000): MySQL server has gone away
+No connection. Trying to reconnect...
+Connection id:    44
+Current database: class
+
+Query OK, 0 rows affected (0.031 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> select ftest10(4);
+^C
+c:\xampp2\mysql\bin>
+c:\xampp2\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 55
+Server version: 10.3.16-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use class;
+Database changed
+MariaDB [class]> select ftest10(7);
++------------+
+| ftest10(7) |
++------------+
+|         16 |
++------------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> show databases;
+ERROR 2006 (HY000): MySQL server has gone away
+No connection. Trying to reconnect...
+Connection id:    80
+Current database: class
+
++--------------------+
+| Database           |
++--------------------+
+| brad               |
+| class              |
+| db1                |
+| iii                |
+| information_schema |
+| mysql              |
+| northwind          |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+10 rows in set (0.009 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create procedure ptest1()
+    -> begin
+    ->     select * from bk1;
+    -> end #
+Query OK, 0 rows affected (0.012 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> call ptest1();
++-----+--------+------+------------+-----------------------+------------+------------------------+------+-----+------+
+| cID | cName  | cSex | cBirthday  | cEmail                | cPhone     | cAddr                  | ch   | eng | math |
++-----+--------+------+------------+-----------------------+------------+------------------------+------+-----+------+
+|  01 | 簡奉君 | F    | 1987-04-04 | elven@superstar.com   | 0922988876 |  台北市濟洲北路12號     |   44 |  44 |   44 |
+|  02 | 黃靖輪 | M    | 1987-07-01 | jinglun@superstar.com | 0918181111 |  台北市敦化南路93號5樓  |   84 |  47 |   68 |
+|  03 | 潘四敬 | M    | 1987-08-11 | sugie@superstar.com   | 0914530768 |  台北市中央路201號7樓   |   63 |  63 |   44 |
+|  04 | 賴勝恩 | M    | 1984-06-20 | shane@superstar.com   | 0946820035 |  台北市建國路177號6樓   |   83 |  74 |  100 |
+|  05 | 黎楚寧 | F    | 1988-02-15 | ivy@superstar.com     | 0920981230 |  台北市忠孝東路520號6樓 |   66 |  80 |   81 |
+|  06 | 蔡中穎 | M    | 1987-05-05 | zhong@superstar.com   | 0951983366 |  台北市三民路1巷10號    |  100 |  75 |   66 |
+|  07 | 徐佳螢 | F    | 1985-08-30 | lala@superstar.com    | 0918123456 |  台北市仁愛路100號      |   81 |  98 |   49 |
+|  08 | 林雨媗 | F    | 1986-12-10 | crystal@superstar.com | 0907408965 |  台北市民族路204號      |   66 |  40 |   65 |
+|  09 | 林心儀 | F    | 1988-12-01 | peggy@superstar.com   | 0916456723 |  台北市建國北路10號     |   46 |  51 |   78 |
+|  10 | 王燕博 | M    | 1993-08-10 | albert@superstar.com  | 0918976588 |  台北市北環路2巷80號    |   53 |  95 |   94 |
+|  11 | Brad   | M    | 1999-01-02 |                       |            |                        |   85 | 100 |   73 |
++-----+--------+------+------------+-----------------------+------------+------------------------+------+-----+------+
+11 rows in set (0.000 sec)
+
+Query OK, 0 rows affected (0.163 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create procedure ptest2(in x int)
+    -> begin
+    ->     select x;
+    -> end #
+Query OK, 0 rows affected (0.011 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> call ptest2(4);
++------+
+| x    |
++------+
+|    4 |
++------+
+1 row in set (0.000 sec)
+
+Query OK, 0 rows affected (0.017 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create procedure ptest3(out x int)
+    -> begin
+    ->     select x;
+    -> end #
+Query OK, 0 rows affected (0.002 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> call ptest3(4);
+ERROR 1414 (42000): OUT or INOUT argument 1 for routine class.ptest3 is not a variable or NEW pseudo-variable in BEFORE trigger
+MariaDB [class]> call ptest3(@x);
++------+
+| x    |
++------+
+| NULL |
++------+
+1 row in set (0.000 sec)
+
+Query OK, 0 rows affected (0.017 sec)
+
+MariaDB [class]> set @x = 100;
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [class]> call ptest3(@x);
++------+
+| x    |
++------+
+| NULL |
++------+
+1 row in set (0.000 sec)
+
+Query OK, 0 rows affected (0.023 sec)
+
+MariaDB [class]> -- in, out, inout
+MariaDB [class]> \d #
+MariaDB [class]> create procedure ptest4(out x int)
+    -> begin
+    ->     select count(*) into x from bk1;
+    -> end #
+Query OK, 0 rows affected (0.013 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> call ptest4(@num);
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [class]> select @num;
++------+
+| @num |
++------+
+|   11 |
++------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> -- in, out, inout
+MariaDB [class]> \d #
+MariaDB [class]> create procedure ptest5(inout x int)
+    -> begin
+    ->     select x;
+    -> end #
+Query OK, 0 rows affected (0.012 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> set @a = 123;
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [class]> call ptest5(@a);
++------+
+| x    |
++------+
+|  123 |
++------+
+1 row in set (0.000 sec)
+
+Query OK, 0 rows affected (0.004 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create procedure ptest6(inout x int)
+    -> begin
+    ->     select x;
+    ->     select max(ch) into x from bk1;
+    -> end #
+Query OK, 0 rows affected (0.012 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> set @score = 0;
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [class]> select @score;
++--------+
+| @score |
++--------+
+|      0 |
++--------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> call ptest6(@score);
++------+
+| x    |
++------+
+|    0 |
++------+
+1 row in set (0.000 sec)
+
+Query OK, 1 row affected (0.008 sec)
+
+MariaDB [class]> select @score;
++--------+
+| @score |
++--------+
+|    100 |
++--------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> select * from bk1;
++-----+--------+------+------------+-----------------------+------------+------------------------+------+-----+------+
+| cID | cName  | cSex | cBirthday  | cEmail                | cPhone     | cAddr                  | ch   | eng | math |
++-----+--------+------+------------+-----------------------+------------+------------------------+------+-----+------+
+|  01 | 簡奉君 | F    | 1987-04-04 | elven@superstar.com   | 0922988876 |  台北市濟洲北路12號     |   44 |  44 |   44 |
+|  02 | 黃靖輪 | M    | 1987-07-01 | jinglun@superstar.com | 0918181111 |  台北市敦化南路93號5樓  |   84 |  47 |   68 |
+|  03 | 潘四敬 | M    | 1987-08-11 | sugie@superstar.com   | 0914530768 |  台北市中央路201號7樓   |   63 |  63 |   44 |
+|  04 | 賴勝恩 | M    | 1984-06-20 | shane@superstar.com   | 0946820035 |  台北市建國路177號6樓   |   83 |  74 |  100 |
+|  05 | 黎楚寧 | F    | 1988-02-15 | ivy@superstar.com     | 0920981230 |  台北市忠孝東路520號6樓 |   66 |  80 |   81 |
+|  06 | 蔡中穎 | M    | 1987-05-05 | zhong@superstar.com   | 0951983366 |  台北市三民路1巷10號    |  100 |  75 |   66 |
+|  07 | 徐佳螢 | F    | 1985-08-30 | lala@superstar.com    | 0918123456 |  台北市仁愛路100號      |   81 |  98 |   49 |
+|  08 | 林雨媗 | F    | 1986-12-10 | crystal@superstar.com | 0907408965 |  台北市民族路204號      |   66 |  40 |   65 |
+|  09 | 林心儀 | F    | 1988-12-01 | peggy@superstar.com   | 0916456723 |  台北市建國北路10號     |   46 |  51 |   78 |
+|  10 | 王燕博 | M    | 1993-08-10 | albert@superstar.com  | 0918976588 |  台北市北環路2巷80號    |   53 |  95 |   94 |
+|  11 | Brad   | M    | 1999-01-02 |                       |            |                        |   85 | 100 |   73 |
++-----+--------+------+------------+-----------------------+------------+------------------------+------+-----+------+
+11 rows in set (0.000 sec)
+
+MariaDB [class]> select cid,cname,ctel from bk1 where ctel like '092%';
+ERROR 1054 (42S22): Unknown column 'ctel' in 'field list'
+MariaDB [class]> select cid,cname,cphone from bk1 where cphone like '092%';
++-----+--------+------------+
+| cid | cname  | cphone     |
++-----+--------+------------+
+|  01 | 簡奉君 | 0922988876 |
+|  05 | 黎楚寧 | 0920981230 |
++-----+--------+------------+
+2 rows in set (0.000 sec)
+
+MariaDB [class]> select count(*) from bk1 where cphone like '092%';
++----------+
+| count(*) |
++----------+
+|        2 |
++----------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> select count(*) from bk1 where cphone like '091%';
++----------+
+| count(*) |
++----------+
+|        5 |
++----------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> select count(*) from bk1 where cphone like '090%';
++----------+
+| count(*) |
++----------+
+|        1 |
++----------+
+1 row in set (0.001 sec)
+
+MariaDB [class]> select count(*) from bk1 where cphone like '093%';
++----------+
+| count(*) |
++----------+
+|        0 |
++----------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create procedure ptest71(in kw varchar(100), out count int)
+    -> begin
+    ->     select count(*) into count from bk1 where cphone like '092%';
+    -> end #
+Query OK, 0 rows affected (0.012 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> call ptest71('a', @x);
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [class]> select @x;
++------+
+| @x   |
++------+
+|    2 |
++------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create procedure ptest72(in kw varchar(100), out count int)
+    -> begin
+    ->     select count(*) into count from bk1 where cphone like kw;
+    -> end #
+Query OK, 0 rows affected (0.012 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> call ptest72('092%',@y);
+ERROR 1267 (HY000): Illegal mix of collations (utf8_unicode_ci,IMPLICIT) and (utf8_general_ci,IMPLICIT) for operation 'like'
+MariaDB [class]> \d #
+MariaDB [class]> create procedure ptest73(in kw varchar(100), out count int)
+    -> begin
+    ->     select count(*) into count from bk1 where cphone like kw COLLATE utf8_unicode_ci;
+    -> end #
+Query OK, 0 rows affected (0.002 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> call ptest73('092%',@y);
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [class]> select @y;
++------+
+| @y   |
++------+
+|    2 |
++------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> call ptest73('091%',@y);
+Query OK, 1 row affected (0.000 sec)
+
+MariaDB [class]> select @y;
++------+
+| @y   |
++------+
+|    5 |
++------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> call ptest73('090%',@y);
+Query OK, 1 row affected (0.000 sec)
+
+MariaDB [class]> select @y;
++------+
+| @y   |
++------+
+|    1 |
++------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create procedure ptest74(in kw varchar(100), out count int)
+    -> begin
+    ->     set @key = concat(kw, '%') COLLATE utf8_unicode_ci;
+    ->     select count(*) into count from bk1
+    ->         where cphone like @key;
+    -> end #
+Query OK, 0 rows affected (0.003 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> call ptest74('092', @result);
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [class]> select @result;
++---------+
+| @result |
++---------+
+|       2 |
++---------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> call ptest74('093', @result);
+Query OK, 1 row affected (0.000 sec)
+
+MariaDB [class]> select @result;
++---------+
+| @result |
++---------+
+|       0 |
++---------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> call ptest74('091', @result);
+Query OK, 1 row affected (0.000 sec)
+
+MariaDB [class]> select @result;
++---------+
+| @result |
++---------+
+|       5 |
++---------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create procedure ptest75(in kw varchar(100))
+    -> begin
+    ->     set @key = concat('%', kw, '%') COLLATE utf8_unicode_ci;
+    ->     set @query = 'select cid,cname,cphone from bk1 where cname like ?';
+    ->
+    ->     prepare stmt from @query;
+    ->     execute stmt using @key;
+    -> end #
+Query OK, 0 rows affected (0.012 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> call ptest75('簡');
++-----+--------+------------+
+| cid | cname  | cphone     |
++-----+--------+------------+
+|  01 | 簡奉君 | 0922988876 |
++-----+--------+------------+
+1 row in set (0.001 sec)
+
+Query OK, 0 rows affected (0.018 sec)
+
+MariaDB [class]> select cname from bk1;
++--------+
+| cname  |
++--------+
+| 簡奉君 |
+| 黃靖輪 |
+| 潘四敬 |
+| 賴勝恩 |
+| 黎楚寧 |
+| 蔡中穎 |
+| 徐佳螢 |
+| 林雨媗 |
+| 林心儀 |
+| 王燕博 |
+| Brad   |
++--------+
+11 rows in set (0.000 sec)
+
+MariaDB [class]> call ptest75('林');
++-----+--------+------------+
+| cid | cname  | cphone     |
++-----+--------+------------+
+|  08 | 林雨媗 | 0907408965 |
+|  09 | 林心儀 | 0916456723 |
++-----+--------+------------+
+2 rows in set (0.000 sec)
+
+Query OK, 0 rows affected (0.027 sec)
+
+MariaDB [class]> call ptest75('心');
++-----+--------+------------+
+| cid | cname  | cphone     |
++-----+--------+------------+
+|  09 | 林心儀 | 0916456723 |
++-----+--------+------------+
+1 row in set (0.000 sec)
+
+Query OK, 0 rows affected (0.019 sec)
+
+MariaDB [class]> create table mytable (id int pimary key auto_increment,
+    -> f1 varchar(100));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key auto_increment,
+f1 varchar(100))' at line 1
+MariaDB [class]> create table mytable (id int primary key auto_increment,
+    -> f1 varchar(100));
+Query OK, 0 rows affected (0.015 sec)
+
+MariaDB [class]> desc mytable;
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| id    | int(11)      | NO   | PRI | NULL    | auto_increment |
+| f1    | varchar(100) | YES  |     | NULL    |                |
++-------+--------------+------+-----+---------+----------------+
+2 rows in set (0.021 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create trigger t1 after insert on mytable for each row
+    -> begin
+    ->     select 'ok1';
+    -> end #
+ERROR 1415 (0A000): Not allowed to return a result set from a trigger
+MariaDB [class]> \d ;
+MariaDB [class]> create table eventlog (id primary key auto_increment,
+    -> message varchar(200));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'primary key auto_increment,
+message varchar(200))' at line 1
+MariaDB [class]> create table eventlog (id int primary key auto_increment,
+    -> message varchar(200));
+Query OK, 0 rows affected (0.023 sec)
+
+MariaDB [class]> desc eventlog;
++---------+--------------+------+-----+---------+----------------+
+| Field   | Type         | Null | Key | Default | Extra          |
++---------+--------------+------+-----+---------+----------------+
+| id      | int(11)      | NO   | PRI | NULL    | auto_increment |
+| message | varchar(200) | YES  |     | NULL    |                |
++---------+--------------+------+-----+---------+----------------+
+2 rows in set (0.024 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create trigger t1 after insert on mytable for each row
+    -> begin
+    ->     insert into eventlog (message) values
+    ->         (concat("insert new f1 :", new.f1));
+    -> end #
+Query OK, 0 rows affected (0.021 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> insert into mytable (f1) values ('abcdefg');
+Query OK, 1 row affected (0.013 sec)
+
+MariaDB [class]> select * from mytable;
++----+---------+
+| id | f1      |
++----+---------+
+|  1 | abcdefg |
++----+---------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> select * from eventlog;
++----+------------------------+
+| id | message                |
++----+------------------------+
+|  1 | insert new f1 :abcdefg |
++----+------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> create table myevent (id int primary key auto_increment,
+    -> timing varchar(10), action varchar(10), etime datetime,
+    -> log text);
+Query OK, 0 rows affected (0.031 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create trigger t2 before insert on mytable for each row
+    -> begin
+    ->     insert into myevent (timing,action,etime,log) values
+    ->         ('before','insert',now(),'insert f1: old');
+    -> end #
+Query OK, 0 rows affected (0.021 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> \d #
+MariaDB [class]> create trigger t3 after insert on mytable for each row
+    -> begin
+    ->     insert into myevent (timing,action,etime,log) values
+    ->         ('after','insert',now(),concat('insert f1: new:', new.f1));
+    -> end #
+Query OK, 0 rows affected (0.026 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> insert into mytable (f1) values ('Hello,World');
+Query OK, 1 row affected (0.014 sec)
+
+MariaDB [class]> select * from myevent;
++----+--------+--------+---------------------+----------------------------+
+| id | timing | action | etime               | log                        |
++----+--------+--------+---------------------+----------------------------+
+|  1 | before | insert | 2019-08-22 11:16:12 | insert f1: old             |
+|  2 | after  | insert | 2019-08-22 11:16:12 | insert f1: new:Hello,World |
++----+--------+--------+---------------------+----------------------------+
+2 rows in set (0.000 sec)
+
+MariaDB [class]> insert into mytable (f1) values ('Hello,WorldV2');
+Query OK, 1 row affected (0.003 sec)
+
+MariaDB [class]> select * from myevent;
++----+--------+--------+---------------------+------------------------------+
+| id | timing | action | etime               | log                          |
++----+--------+--------+---------------------+------------------------------+
+|  1 | before | insert | 2019-08-22 11:16:12 | insert f1: old               |
+|  2 | after  | insert | 2019-08-22 11:16:12 | insert f1: new:Hello,World   |
+|  3 | before | insert | 2019-08-22 11:19:53 | insert f1: new:Hello,WorldV2 |
+|  4 | after  | insert | 2019-08-22 11:19:53 | insert f1: new:Hello,WorldV2 |
++----+--------+--------+---------------------+------------------------------+
+4 rows in set (0.000 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create trigger t4 before update on mytable for each row
+    -> begin
+    ->     insert into myevent (timing,action,etime,log) values
+    ->         ('before','update',now(),concat('update f1: old = ',old.f1));
+    -> end #
+Query OK, 0 rows affected (0.021 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> \d #
+MariaDB [class]> create trigger t5 after update on mytable for each row
+    -> begin
+    ->     insert into myevent (timing,action,etime,log) values
+    ->         ('after','update',now(),
+    ->         concat('update f1:',old.f1, ' => ', new.f1));
+    -> end #
+Query OK, 0 rows affected (0.016 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> select * from mytable;
++----+---------------+
+| id | f1            |
++----+---------------+
+|  1 | abcdefg       |
+|  2 | Hello,World   |
+|  3 | Hello,WorldV2 |
++----+---------------+
+3 rows in set (0.001 sec)
+
+MariaDB [class]> update mytable set f1 = 'Brad' where id = 1;
+Query OK, 1 row affected (0.012 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [class]> select * from mytable;
++----+---------------+
+| id | f1            |
++----+---------------+
+|  1 | Brad          |
+|  2 | Hello,World   |
+|  3 | Hello,WorldV2 |
++----+---------------+
+3 rows in set (0.000 sec)
+
+MariaDB [class]> select * from myevent;
++----+--------+--------+---------------------+------------------------------+
+| id | timing | action | etime               | log                          |
++----+--------+--------+---------------------+------------------------------+
+|  1 | before | insert | 2019-08-22 11:16:12 | insert f1: old               |
+|  2 | after  | insert | 2019-08-22 11:16:12 | insert f1: new:Hello,World   |
+|  3 | before | insert | 2019-08-22 11:19:53 | insert f1: new:Hello,WorldV2 |
+|  4 | after  | insert | 2019-08-22 11:19:53 | insert f1: new:Hello,WorldV2 |
+|  5 | before | update | 2019-08-22 11:25:47 | update f1: old = abcdefg     |
+|  6 | after  | update | 2019-08-22 11:25:47 | update f1:abcdefg => Brad    |
++----+--------+--------+---------------------+------------------------------+
+6 rows in set (0.000 sec)
+
+MariaDB [class]> create trigger t6 before delete on mytable for each row
+    -> begin
+    ->     insert into myevent (timing,action,etime,log) values
+    ->         ('before','delete',now(),concat('delete:',old.id,':',old.f1));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 4
+MariaDB [class]> end #
+    -> \d ;
+    -> #
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'end' at line 1
+MariaDB [class]> select concat('a','b');
++-----------------+
+| concat('a','b') |
++-----------------+
+| ab              |
++-----------------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> select concat('a',123);
++-----------------+
+| concat('a',123) |
++-----------------+
+| a123            |
++-----------------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> select concat('a',123,'b');
++---------------------+
+| concat('a',123,'b') |
++---------------------+
+| a123b               |
++---------------------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create trigger t6 before delete on mytable for each row
+    -> begin
+    ->     insert into myevent (timing,action,etime,log) values
+    ->         ('before','delete',now(),concat('delete:',old.id,':',old.f1));
+    -> end #
+Query OK, 0 rows affected (0.022 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> \d #
+MariaDB [class]> create trigger t7 after delete on mytable for each row
+    -> begin
+    ->     insert into myevent (timing,action,etime,log) values
+    ->         ('after','delete',now(),
+    ->         concat('delete:ok'));
+    -> end #
+Query OK, 0 rows affected (0.020 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> select * from mytable;
++----+---------------+
+| id | f1            |
++----+---------------+
+|  1 | Brad          |
+|  2 | Hello,World   |
+|  3 | Hello,WorldV2 |
++----+---------------+
+3 rows in set (0.002 sec)
+
+MariaDB [class]> delete from mytable where id=2;
+Query OK, 1 row affected (0.014 sec)
+
+MariaDB [class]> select * from myevent;
++----+--------+--------+---------------------+------------------------------+
+| id | timing | action | etime               | log                          |
++----+--------+--------+---------------------+------------------------------+
+|  1 | before | insert | 2019-08-22 11:16:12 | insert f1: old               |
+|  2 | after  | insert | 2019-08-22 11:16:12 | insert f1: new:Hello,World   |
+|  3 | before | insert | 2019-08-22 11:19:53 | insert f1: new:Hello,WorldV2 |
+|  4 | after  | insert | 2019-08-22 11:19:53 | insert f1: new:Hello,WorldV2 |
+|  5 | before | update | 2019-08-22 11:25:47 | update f1: old = abcdefg     |
+|  6 | after  | update | 2019-08-22 11:25:47 | update f1:abcdefg => Brad    |
+|  7 | before | delete | 2019-08-22 11:40:06 | delete:2:Hello,World         |
+|  8 | after  | delete | 2019-08-22 11:40:06 | delete:ok                    |
++----+--------+--------+---------------------+------------------------------+
+8 rows in set (0.000 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create trigger t8 after update on mytable for each row
+    -> begin
+    ->     update mytable set f1 = 'Brad' where id = new.id;
+    -> end #
+Query OK, 0 rows affected (0.021 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> select * from mytable;
++----+---------------+
+| id | f1            |
++----+---------------+
+|  1 | Brad          |
+|  3 | Hello,WorldV2 |
++----+---------------+
+2 rows in set (0.002 sec)
+
+MariaDB [class]> update mytable set f1 = 'tony' where id =3;
+ERROR 1442 (HY000): Can't update table 'mytable' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+MariaDB [class]> \d #
+MariaDB [class]> create trigger t8 after update on mytable for each row
+    -> begin
+    ->     if old.id = 3 then
+    ->         delete from mytable where f1 = 'Brad';
+    ->     end if;
+    -> end #
+ERROR 1359 (HY000): Trigger 'class.t8' already exists
+MariaDB [class]> \d ;
+MariaDB [class]> \d #
+MariaDB [class]> create trigger t9 after update on mytable for each row
+    -> begin
+    ->     if old.id = 3 then
+    ->         delete from mytable where f1 = 'Brad';
+    ->     end if;
+    -> end #
+Query OK, 0 rows affected (0.020 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]>
+MariaDB [class]> select * from mytable;
++----+---------------+
+| id | f1            |
++----+---------------+
+|  1 | Brad          |
+|  3 | Hello,WorldV2 |
++----+---------------+
+2 rows in set (0.001 sec)
+
+MariaDB [class]> update mytable set f1='peter' where id=3;
+ERROR 1442 (HY000): Can't update table 'mytable' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+MariaDB [class]> create table product (id int primary key auto_increment,
+    -> pname varchar(200), cat varchar(100), unique (pname));
+Query OK, 0 rows affected (0.023 sec)
+
+MariaDB [class]> create table cats (id int primary key auto_increment,
+    -> cat varchar(100), unique (cat));
+Query OK, 0 rows affected (0.033 sec)
+
+MariaDB [class]> desc product;
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| id    | int(11)      | NO   | PRI | NULL    | auto_increment |
+| pname | varchar(200) | YES  | UNI | NULL    |                |
+| cat   | varchar(100) | YES  |     | NULL    |                |
++-------+--------------+------+-----+---------+----------------+
+3 rows in set (0.023 sec)
+
+MariaDB [class]> desc cats;
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| id    | int(11)      | NO   | PRI | NULL    | auto_increment |
+| cat   | varchar(100) | YES  | UNI | NULL    |                |
++-------+--------------+------+-----+---------+----------------+
+2 rows in set (0.025 sec)
+
+MariaDB [class]>
