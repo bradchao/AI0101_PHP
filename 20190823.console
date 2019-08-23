@@ -1,0 +1,3490 @@
+Microsoft Windows [版本 10.0.17763.678]
+(c) 2018 Microsoft Corporation. 著作權所有，並保留一切權利。
+
+C:\Users\USER>cd c:\xampp2\mysql\backup
+
+c:\xampp2\mysql\backup>cd c:\xampp2\mysql\bin
+
+c:\xampp2\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.3.16-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use class;
+Database changed
+MariaDB [class]> show function status;
++-------+----------+----------+----------------+---------------------+---------------------+---------------+---------+----------------------+----------------------+--------------------+
+| Db    | Name     | Type     | Definer        | Modified            | Created             | Security_type | Comment | character_set_client | collation_connection | Database Collation |
++-------+----------+----------+----------------+---------------------+---------------------+---------------+---------+----------------------+----------------------+--------------------+
+| class | avgLevel | FUNCTION | root@localhost | 2019-08-20 11:10:00 | 2019-08-20 11:10:00 | DEFINER       |         | big5                 | big5_chinese_ci      | utf8_general_ci    |
+| class | avgLvl   | FUNCTION | root@localhost | 2019-08-20 11:18:43 | 2019-08-20 11:18:43 | DEFINER       |         | big5                 | big5_chinese_ci      | utf8_general_ci    |
+| class | ftest1   | FUNCTION | root@localhost | 2019-08-20 10:29:40 | 2019-08-20 10:29:40 | DEFINER       |         | big5                 | big5_chinese_ci      | utf8_general_ci    |
+| class | ftest2   | FUNCTION | root@localhost | 2019-08-20 10:51:32 | 2019-08-20 10:51:32 | DEFINER       |         | big5                 | big5_chinese_ci      | utf8_general_ci    |
+| class | ftest3   | FUNCTION | root@localhost | 2019-08-20 10:57:14 | 2019-08-20 10:57:14 | DEFINER       |         | big5                 | big5_chinese_ci      | utf8_general_ci    |
+| class | ftest4   | FUNCTION | root@localhost | 2019-08-20 11:33:51 | 2019-08-20 11:33:51 | DEFINER       |         | big5                 | big5_chinese_ci      | utf8_general_ci    |
+| class | ftest5   | FUNCTION | root@localhost | 2019-08-20 11:48:07 | 2019-08-20 11:48:07 | DEFINER       |         | big5                 | big5_chinese_ci      | utf8_general_ci    |
+| class | ftest6   | FUNCTION | root@localhost | 2019-08-20 12:01:43 | 2019-08-20 12:01:43 | DEFINER       |         | big5                 | big5_chinese_ci      | utf8_general_ci    |
+| class | ftest7   | FUNCTION | root@localhost | 2019-08-20 12:02:47 | 2019-08-20 12:02:47 | DEFINER       |         | big5                 | big5_chinese_ci      | utf8_general_ci    |
+| class | ftest8   | FUNCTION | root@localhost | 2019-08-20 13:07:04 | 2019-08-20 13:07:04 | DEFINER       |         | big5                 | big5_chinese_ci      | utf8_general_ci    |
+| class | fxy      | FUNCTION | root@localhost | 2019-08-20 10:06:20 | 2019-08-20 10:06:20 | DEFINER       |         | big5                 | big5_chinese_ci      | utf8_general_ci    |
++-------+----------+----------+----------------+---------------------+---------------------+---------------+---------+----------------------+----------------------+--------------------+
+11 rows in set (0.020 sec)
+
+MariaDB [class]> show function status\G
+*************************** 1. row ***************************
+                  Db: class
+                Name: avgLevel
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 11:10:00
+             Created: 2019-08-20 11:10:00
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 2. row ***************************
+                  Db: class
+                Name: avgLvl
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 11:18:43
+             Created: 2019-08-20 11:18:43
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 3. row ***************************
+                  Db: class
+                Name: ftest1
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 10:29:40
+             Created: 2019-08-20 10:29:40
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 4. row ***************************
+                  Db: class
+                Name: ftest2
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 10:51:32
+             Created: 2019-08-20 10:51:32
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 5. row ***************************
+                  Db: class
+                Name: ftest3
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 10:57:14
+             Created: 2019-08-20 10:57:14
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 6. row ***************************
+                  Db: class
+                Name: ftest4
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 11:33:51
+             Created: 2019-08-20 11:33:51
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 7. row ***************************
+                  Db: class
+                Name: ftest5
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 11:48:07
+             Created: 2019-08-20 11:48:07
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 8. row ***************************
+                  Db: class
+                Name: ftest6
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 12:01:43
+             Created: 2019-08-20 12:01:43
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 9. row ***************************
+                  Db: class
+                Name: ftest7
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 12:02:47
+             Created: 2019-08-20 12:02:47
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 10. row ***************************
+                  Db: class
+                Name: ftest8
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 13:07:04
+             Created: 2019-08-20 13:07:04
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 11. row ***************************
+                  Db: class
+                Name: fxy
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 10:06:20
+             Created: 2019-08-20 10:06:20
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+11 rows in set (0.026 sec)
+
+MariaDB [class]> drop function ftest8;
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [class]> show function status\G
+*************************** 1. row ***************************
+                  Db: class
+                Name: avgLevel
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 11:10:00
+             Created: 2019-08-20 11:10:00
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 2. row ***************************
+                  Db: class
+                Name: avgLvl
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 11:18:43
+             Created: 2019-08-20 11:18:43
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 3. row ***************************
+                  Db: class
+                Name: ftest1
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 10:29:40
+             Created: 2019-08-20 10:29:40
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 4. row ***************************
+                  Db: class
+                Name: ftest2
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 10:51:32
+             Created: 2019-08-20 10:51:32
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 5. row ***************************
+                  Db: class
+                Name: ftest3
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 10:57:14
+             Created: 2019-08-20 10:57:14
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 6. row ***************************
+                  Db: class
+                Name: ftest4
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 11:33:51
+             Created: 2019-08-20 11:33:51
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 7. row ***************************
+                  Db: class
+                Name: ftest5
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 11:48:07
+             Created: 2019-08-20 11:48:07
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 8. row ***************************
+                  Db: class
+                Name: ftest6
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 12:01:43
+             Created: 2019-08-20 12:01:43
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 9. row ***************************
+                  Db: class
+                Name: ftest7
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 12:02:47
+             Created: 2019-08-20 12:02:47
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+*************************** 10. row ***************************
+                  Db: class
+                Name: fxy
+                Type: FUNCTION
+             Definer: root@localhost
+            Modified: 2019-08-20 10:06:20
+             Created: 2019-08-20 10:06:20
+       Security_type: DEFINER
+             Comment:
+character_set_client: big5
+collation_connection: big5_chinese_ci
+  Database Collation: utf8_general_ci
+10 rows in set (0.026 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create function ftest8(n int) returns int
+    -> begin
+    ->     declare i int default 0;
+    ->     declare sum int default 0;
+    ->     myloop: loop
+    ->         set i = i + 1;
+    ->         if i % 2 = 0 then
+    ->             iterate myloop;
+    ->         end if;
+    ->         set sum = sum + i;
+    ->         if i = n then
+    ->             leave myloop;
+    ->         end if;
+    ->     end loop;
+    ->
+    ->     return sum;
+    -> end #
+Query OK, 0 rows affected (0.012 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> select ftest8(4);
+Ctrl-C -- query killed. Continuing normally.
+ERROR 1317 (70100): Query execution was interrupted
+MariaDB [class]>
+MariaDB [class]>
+MariaDB [class]>
+MariaDB [class]>
+MariaDB [class]> \d #
+MariaDB [class]> create function ftest10(n int) returns int
+    -> begin
+    ->     declare i int default 0;
+    ->     declare sum int default 0;
+    ->     myloop: loop
+    ->         set i = i + 1;
+    ->         if i % 2 = 0 then
+    ->             iterate myloop;
+    ->         end if;
+    ->         set sum = sum + i;
+    ->         if i = n then
+    ->             leave myloop;
+    ->         end if;
+    ->     end loop myloop;
+    ->
+    ->     return sum;
+    -> end #
+ERROR 2006 (HY000): MySQL server has gone away
+No connection. Trying to reconnect...
+Connection id:    44
+Current database: class
+
+Query OK, 0 rows affected (0.031 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> select ftest10(4);
+^C
+c:\xampp2\mysql\bin>
+c:\xampp2\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 55
+Server version: 10.3.16-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use class;
+Database changed
+MariaDB [class]> select ftest10(7);
++------------+
+| ftest10(7) |
++------------+
+|         16 |
++------------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> show databases;
+ERROR 2006 (HY000): MySQL server has gone away
+No connection. Trying to reconnect...
+Connection id:    80
+Current database: class
+
++--------------------+
+| Database           |
++--------------------+
+| brad               |
+| class              |
+| db1                |
+| iii                |
+| information_schema |
+| mysql              |
+| northwind          |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+10 rows in set (0.009 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create procedure ptest1()
+    -> begin
+    ->     select * from bk1;
+    -> end #
+Query OK, 0 rows affected (0.012 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> call ptest1();
++-----+--------+------+------------+-----------------------+------------+------------------------+------+-----+------+
+| cID | cName  | cSex | cBirthday  | cEmail                | cPhone     | cAddr                  | ch   | eng | math |
++-----+--------+------+------------+-----------------------+------------+------------------------+------+-----+------+
+|  01 | 簡奉君 | F    | 1987-04-04 | elven@superstar.com   | 0922988876 |  台北市濟洲北路12號     |   44 |  44 |   44 |
+|  02 | 黃靖輪 | M    | 1987-07-01 | jinglun@superstar.com | 0918181111 |  台北市敦化南路93號5樓  |   84 |  47 |   68 |
+|  03 | 潘四敬 | M    | 1987-08-11 | sugie@superstar.com   | 0914530768 |  台北市中央路201號7樓   |   63 |  63 |   44 |
+|  04 | 賴勝恩 | M    | 1984-06-20 | shane@superstar.com   | 0946820035 |  台北市建國路177號6樓   |   83 |  74 |  100 |
+|  05 | 黎楚寧 | F    | 1988-02-15 | ivy@superstar.com     | 0920981230 |  台北市忠孝東路520號6樓 |   66 |  80 |   81 |
+|  06 | 蔡中穎 | M    | 1987-05-05 | zhong@superstar.com   | 0951983366 |  台北市三民路1巷10號    |  100 |  75 |   66 |
+|  07 | 徐佳螢 | F    | 1985-08-30 | lala@superstar.com    | 0918123456 |  台北市仁愛路100號      |   81 |  98 |   49 |
+|  08 | 林雨媗 | F    | 1986-12-10 | crystal@superstar.com | 0907408965 |  台北市民族路204號      |   66 |  40 |   65 |
+|  09 | 林心儀 | F    | 1988-12-01 | peggy@superstar.com   | 0916456723 |  台北市建國北路10號     |   46 |  51 |   78 |
+|  10 | 王燕博 | M    | 1993-08-10 | albert@superstar.com  | 0918976588 |  台北市北環路2巷80號    |   53 |  95 |   94 |
+|  11 | Brad   | M    | 1999-01-02 |                       |            |                        |   85 | 100 |   73 |
++-----+--------+------+------------+-----------------------+------------+------------------------+------+-----+------+
+11 rows in set (0.000 sec)
+
+Query OK, 0 rows affected (0.163 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create procedure ptest2(in x int)
+    -> begin
+    ->     select x;
+    -> end #
+Query OK, 0 rows affected (0.011 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> call ptest2(4);
++------+
+| x    |
++------+
+|    4 |
++------+
+1 row in set (0.000 sec)
+
+Query OK, 0 rows affected (0.017 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create procedure ptest3(out x int)
+    -> begin
+    ->     select x;
+    -> end #
+Query OK, 0 rows affected (0.002 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> call ptest3(4);
+ERROR 1414 (42000): OUT or INOUT argument 1 for routine class.ptest3 is not a variable or NEW pseudo-variable in BEFORE trigger
+MariaDB [class]> call ptest3(@x);
++------+
+| x    |
++------+
+| NULL |
++------+
+1 row in set (0.000 sec)
+
+Query OK, 0 rows affected (0.017 sec)
+
+MariaDB [class]> set @x = 100;
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [class]> call ptest3(@x);
++------+
+| x    |
++------+
+| NULL |
++------+
+1 row in set (0.000 sec)
+
+Query OK, 0 rows affected (0.023 sec)
+
+MariaDB [class]> -- in, out, inout
+MariaDB [class]> \d #
+MariaDB [class]> create procedure ptest4(out x int)
+    -> begin
+    ->     select count(*) into x from bk1;
+    -> end #
+Query OK, 0 rows affected (0.013 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> call ptest4(@num);
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [class]> select @num;
++------+
+| @num |
++------+
+|   11 |
++------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> -- in, out, inout
+MariaDB [class]> \d #
+MariaDB [class]> create procedure ptest5(inout x int)
+    -> begin
+    ->     select x;
+    -> end #
+Query OK, 0 rows affected (0.012 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> set @a = 123;
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [class]> call ptest5(@a);
++------+
+| x    |
++------+
+|  123 |
++------+
+1 row in set (0.000 sec)
+
+Query OK, 0 rows affected (0.004 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create procedure ptest6(inout x int)
+    -> begin
+    ->     select x;
+    ->     select max(ch) into x from bk1;
+    -> end #
+Query OK, 0 rows affected (0.012 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> set @score = 0;
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [class]> select @score;
++--------+
+| @score |
++--------+
+|      0 |
++--------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> call ptest6(@score);
++------+
+| x    |
++------+
+|    0 |
++------+
+1 row in set (0.000 sec)
+
+Query OK, 1 row affected (0.008 sec)
+
+MariaDB [class]> select @score;
++--------+
+| @score |
++--------+
+|    100 |
++--------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> select * from bk1;
++-----+--------+------+------------+-----------------------+------------+------------------------+------+-----+------+
+| cID | cName  | cSex | cBirthday  | cEmail                | cPhone     | cAddr                  | ch   | eng | math |
++-----+--------+------+------------+-----------------------+------------+------------------------+------+-----+------+
+|  01 | 簡奉君 | F    | 1987-04-04 | elven@superstar.com   | 0922988876 |  台北市濟洲北路12號     |   44 |  44 |   44 |
+|  02 | 黃靖輪 | M    | 1987-07-01 | jinglun@superstar.com | 0918181111 |  台北市敦化南路93號5樓  |   84 |  47 |   68 |
+|  03 | 潘四敬 | M    | 1987-08-11 | sugie@superstar.com   | 0914530768 |  台北市中央路201號7樓   |   63 |  63 |   44 |
+|  04 | 賴勝恩 | M    | 1984-06-20 | shane@superstar.com   | 0946820035 |  台北市建國路177號6樓   |   83 |  74 |  100 |
+|  05 | 黎楚寧 | F    | 1988-02-15 | ivy@superstar.com     | 0920981230 |  台北市忠孝東路520號6樓 |   66 |  80 |   81 |
+|  06 | 蔡中穎 | M    | 1987-05-05 | zhong@superstar.com   | 0951983366 |  台北市三民路1巷10號    |  100 |  75 |   66 |
+|  07 | 徐佳螢 | F    | 1985-08-30 | lala@superstar.com    | 0918123456 |  台北市仁愛路100號      |   81 |  98 |   49 |
+|  08 | 林雨媗 | F    | 1986-12-10 | crystal@superstar.com | 0907408965 |  台北市民族路204號      |   66 |  40 |   65 |
+|  09 | 林心儀 | F    | 1988-12-01 | peggy@superstar.com   | 0916456723 |  台北市建國北路10號     |   46 |  51 |   78 |
+|  10 | 王燕博 | M    | 1993-08-10 | albert@superstar.com  | 0918976588 |  台北市北環路2巷80號    |   53 |  95 |   94 |
+|  11 | Brad   | M    | 1999-01-02 |                       |            |                        |   85 | 100 |   73 |
++-----+--------+------+------------+-----------------------+------------+------------------------+------+-----+------+
+11 rows in set (0.000 sec)
+
+MariaDB [class]> select cid,cname,ctel from bk1 where ctel like '092%';
+ERROR 1054 (42S22): Unknown column 'ctel' in 'field list'
+MariaDB [class]> select cid,cname,cphone from bk1 where cphone like '092%';
++-----+--------+------------+
+| cid | cname  | cphone     |
++-----+--------+------------+
+|  01 | 簡奉君 | 0922988876 |
+|  05 | 黎楚寧 | 0920981230 |
++-----+--------+------------+
+2 rows in set (0.000 sec)
+
+MariaDB [class]> select count(*) from bk1 where cphone like '092%';
++----------+
+| count(*) |
++----------+
+|        2 |
++----------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> select count(*) from bk1 where cphone like '091%';
++----------+
+| count(*) |
++----------+
+|        5 |
++----------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> select count(*) from bk1 where cphone like '090%';
++----------+
+| count(*) |
++----------+
+|        1 |
++----------+
+1 row in set (0.001 sec)
+
+MariaDB [class]> select count(*) from bk1 where cphone like '093%';
++----------+
+| count(*) |
++----------+
+|        0 |
++----------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create procedure ptest71(in kw varchar(100), out count int)
+    -> begin
+    ->     select count(*) into count from bk1 where cphone like '092%';
+    -> end #
+Query OK, 0 rows affected (0.012 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> call ptest71('a', @x);
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [class]> select @x;
++------+
+| @x   |
++------+
+|    2 |
++------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create procedure ptest72(in kw varchar(100), out count int)
+    -> begin
+    ->     select count(*) into count from bk1 where cphone like kw;
+    -> end #
+Query OK, 0 rows affected (0.012 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> call ptest72('092%',@y);
+ERROR 1267 (HY000): Illegal mix of collations (utf8_unicode_ci,IMPLICIT) and (utf8_general_ci,IMPLICIT) for operation 'like'
+MariaDB [class]> \d #
+MariaDB [class]> create procedure ptest73(in kw varchar(100), out count int)
+    -> begin
+    ->     select count(*) into count from bk1 where cphone like kw COLLATE utf8_unicode_ci;
+    -> end #
+Query OK, 0 rows affected (0.002 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> call ptest73('092%',@y);
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [class]> select @y;
++------+
+| @y   |
++------+
+|    2 |
++------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> call ptest73('091%',@y);
+Query OK, 1 row affected (0.000 sec)
+
+MariaDB [class]> select @y;
++------+
+| @y   |
++------+
+|    5 |
++------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> call ptest73('090%',@y);
+Query OK, 1 row affected (0.000 sec)
+
+MariaDB [class]> select @y;
++------+
+| @y   |
++------+
+|    1 |
++------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create procedure ptest74(in kw varchar(100), out count int)
+    -> begin
+    ->     set @key = concat(kw, '%') COLLATE utf8_unicode_ci;
+    ->     select count(*) into count from bk1
+    ->         where cphone like @key;
+    -> end #
+Query OK, 0 rows affected (0.003 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> call ptest74('092', @result);
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [class]> select @result;
++---------+
+| @result |
++---------+
+|       2 |
++---------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> call ptest74('093', @result);
+Query OK, 1 row affected (0.000 sec)
+
+MariaDB [class]> select @result;
++---------+
+| @result |
++---------+
+|       0 |
++---------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> call ptest74('091', @result);
+Query OK, 1 row affected (0.000 sec)
+
+MariaDB [class]> select @result;
++---------+
+| @result |
++---------+
+|       5 |
++---------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create procedure ptest75(in kw varchar(100))
+    -> begin
+    ->     set @key = concat('%', kw, '%') COLLATE utf8_unicode_ci;
+    ->     set @query = 'select cid,cname,cphone from bk1 where cname like ?';
+    ->
+    ->     prepare stmt from @query;
+    ->     execute stmt using @key;
+    -> end #
+Query OK, 0 rows affected (0.012 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> call ptest75('簡');
++-----+--------+------------+
+| cid | cname  | cphone     |
++-----+--------+------------+
+|  01 | 簡奉君 | 0922988876 |
++-----+--------+------------+
+1 row in set (0.001 sec)
+
+Query OK, 0 rows affected (0.018 sec)
+
+MariaDB [class]> select cname from bk1;
++--------+
+| cname  |
++--------+
+| 簡奉君 |
+| 黃靖輪 |
+| 潘四敬 |
+| 賴勝恩 |
+| 黎楚寧 |
+| 蔡中穎 |
+| 徐佳螢 |
+| 林雨媗 |
+| 林心儀 |
+| 王燕博 |
+| Brad   |
++--------+
+11 rows in set (0.000 sec)
+
+MariaDB [class]> call ptest75('林');
++-----+--------+------------+
+| cid | cname  | cphone     |
++-----+--------+------------+
+|  08 | 林雨媗 | 0907408965 |
+|  09 | 林心儀 | 0916456723 |
++-----+--------+------------+
+2 rows in set (0.000 sec)
+
+Query OK, 0 rows affected (0.027 sec)
+
+MariaDB [class]> call ptest75('心');
++-----+--------+------------+
+| cid | cname  | cphone     |
++-----+--------+------------+
+|  09 | 林心儀 | 0916456723 |
++-----+--------+------------+
+1 row in set (0.000 sec)
+
+Query OK, 0 rows affected (0.019 sec)
+
+MariaDB [class]> create table mytable (id int pimary key auto_increment,
+    -> f1 varchar(100));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key auto_increment,
+f1 varchar(100))' at line 1
+MariaDB [class]> create table mytable (id int primary key auto_increment,
+    -> f1 varchar(100));
+Query OK, 0 rows affected (0.015 sec)
+
+MariaDB [class]> desc mytable;
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| id    | int(11)      | NO   | PRI | NULL    | auto_increment |
+| f1    | varchar(100) | YES  |     | NULL    |                |
++-------+--------------+------+-----+---------+----------------+
+2 rows in set (0.021 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create trigger t1 after insert on mytable for each row
+    -> begin
+    ->     select 'ok1';
+    -> end #
+ERROR 1415 (0A000): Not allowed to return a result set from a trigger
+MariaDB [class]> \d ;
+MariaDB [class]> create table eventlog (id primary key auto_increment,
+    -> message varchar(200));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'primary key auto_increment,
+message varchar(200))' at line 1
+MariaDB [class]> create table eventlog (id int primary key auto_increment,
+    -> message varchar(200));
+Query OK, 0 rows affected (0.023 sec)
+
+MariaDB [class]> desc eventlog;
++---------+--------------+------+-----+---------+----------------+
+| Field   | Type         | Null | Key | Default | Extra          |
++---------+--------------+------+-----+---------+----------------+
+| id      | int(11)      | NO   | PRI | NULL    | auto_increment |
+| message | varchar(200) | YES  |     | NULL    |                |
++---------+--------------+------+-----+---------+----------------+
+2 rows in set (0.024 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create trigger t1 after insert on mytable for each row
+    -> begin
+    ->     insert into eventlog (message) values
+    ->         (concat("insert new f1 :", new.f1));
+    -> end #
+Query OK, 0 rows affected (0.021 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> insert into mytable (f1) values ('abcdefg');
+Query OK, 1 row affected (0.013 sec)
+
+MariaDB [class]> select * from mytable;
++----+---------+
+| id | f1      |
++----+---------+
+|  1 | abcdefg |
++----+---------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> select * from eventlog;
++----+------------------------+
+| id | message                |
++----+------------------------+
+|  1 | insert new f1 :abcdefg |
++----+------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> create table myevent (id int primary key auto_increment,
+    -> timing varchar(10), action varchar(10), etime datetime,
+    -> log text);
+Query OK, 0 rows affected (0.031 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create trigger t2 before insert on mytable for each row
+    -> begin
+    ->     insert into myevent (timing,action,etime,log) values
+    ->         ('before','insert',now(),'insert f1: old');
+    -> end #
+Query OK, 0 rows affected (0.021 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> \d #
+MariaDB [class]> create trigger t3 after insert on mytable for each row
+    -> begin
+    ->     insert into myevent (timing,action,etime,log) values
+    ->         ('after','insert',now(),concat('insert f1: new:', new.f1));
+    -> end #
+Query OK, 0 rows affected (0.026 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> insert into mytable (f1) values ('Hello,World');
+Query OK, 1 row affected (0.014 sec)
+
+MariaDB [class]> select * from myevent;
++----+--------+--------+---------------------+----------------------------+
+| id | timing | action | etime               | log                        |
++----+--------+--------+---------------------+----------------------------+
+|  1 | before | insert | 2019-08-22 11:16:12 | insert f1: old             |
+|  2 | after  | insert | 2019-08-22 11:16:12 | insert f1: new:Hello,World |
++----+--------+--------+---------------------+----------------------------+
+2 rows in set (0.000 sec)
+
+MariaDB [class]> insert into mytable (f1) values ('Hello,WorldV2');
+Query OK, 1 row affected (0.003 sec)
+
+MariaDB [class]> select * from myevent;
++----+--------+--------+---------------------+------------------------------+
+| id | timing | action | etime               | log                          |
++----+--------+--------+---------------------+------------------------------+
+|  1 | before | insert | 2019-08-22 11:16:12 | insert f1: old               |
+|  2 | after  | insert | 2019-08-22 11:16:12 | insert f1: new:Hello,World   |
+|  3 | before | insert | 2019-08-22 11:19:53 | insert f1: new:Hello,WorldV2 |
+|  4 | after  | insert | 2019-08-22 11:19:53 | insert f1: new:Hello,WorldV2 |
++----+--------+--------+---------------------+------------------------------+
+4 rows in set (0.000 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create trigger t4 before update on mytable for each row
+    -> begin
+    ->     insert into myevent (timing,action,etime,log) values
+    ->         ('before','update',now(),concat('update f1: old = ',old.f1));
+    -> end #
+Query OK, 0 rows affected (0.021 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> \d #
+MariaDB [class]> create trigger t5 after update on mytable for each row
+    -> begin
+    ->     insert into myevent (timing,action,etime,log) values
+    ->         ('after','update',now(),
+    ->         concat('update f1:',old.f1, ' => ', new.f1));
+    -> end #
+Query OK, 0 rows affected (0.016 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> select * from mytable;
++----+---------------+
+| id | f1            |
++----+---------------+
+|  1 | abcdefg       |
+|  2 | Hello,World   |
+|  3 | Hello,WorldV2 |
++----+---------------+
+3 rows in set (0.001 sec)
+
+MariaDB [class]> update mytable set f1 = 'Brad' where id = 1;
+Query OK, 1 row affected (0.012 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [class]> select * from mytable;
++----+---------------+
+| id | f1            |
++----+---------------+
+|  1 | Brad          |
+|  2 | Hello,World   |
+|  3 | Hello,WorldV2 |
++----+---------------+
+3 rows in set (0.000 sec)
+
+MariaDB [class]> select * from myevent;
++----+--------+--------+---------------------+------------------------------+
+| id | timing | action | etime               | log                          |
++----+--------+--------+---------------------+------------------------------+
+|  1 | before | insert | 2019-08-22 11:16:12 | insert f1: old               |
+|  2 | after  | insert | 2019-08-22 11:16:12 | insert f1: new:Hello,World   |
+|  3 | before | insert | 2019-08-22 11:19:53 | insert f1: new:Hello,WorldV2 |
+|  4 | after  | insert | 2019-08-22 11:19:53 | insert f1: new:Hello,WorldV2 |
+|  5 | before | update | 2019-08-22 11:25:47 | update f1: old = abcdefg     |
+|  6 | after  | update | 2019-08-22 11:25:47 | update f1:abcdefg => Brad    |
++----+--------+--------+---------------------+------------------------------+
+6 rows in set (0.000 sec)
+
+MariaDB [class]> create trigger t6 before delete on mytable for each row
+    -> begin
+    ->     insert into myevent (timing,action,etime,log) values
+    ->         ('before','delete',now(),concat('delete:',old.id,':',old.f1));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 4
+MariaDB [class]> end #
+    -> \d ;
+    -> #
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'end' at line 1
+MariaDB [class]> select concat('a','b');
++-----------------+
+| concat('a','b') |
++-----------------+
+| ab              |
++-----------------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> select concat('a',123);
++-----------------+
+| concat('a',123) |
++-----------------+
+| a123            |
++-----------------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> select concat('a',123,'b');
++---------------------+
+| concat('a',123,'b') |
++---------------------+
+| a123b               |
++---------------------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create trigger t6 before delete on mytable for each row
+    -> begin
+    ->     insert into myevent (timing,action,etime,log) values
+    ->         ('before','delete',now(),concat('delete:',old.id,':',old.f1));
+    -> end #
+Query OK, 0 rows affected (0.022 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> \d #
+MariaDB [class]> create trigger t7 after delete on mytable for each row
+    -> begin
+    ->     insert into myevent (timing,action,etime,log) values
+    ->         ('after','delete',now(),
+    ->         concat('delete:ok'));
+    -> end #
+Query OK, 0 rows affected (0.020 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> select * from mytable;
++----+---------------+
+| id | f1            |
++----+---------------+
+|  1 | Brad          |
+|  2 | Hello,World   |
+|  3 | Hello,WorldV2 |
++----+---------------+
+3 rows in set (0.002 sec)
+
+MariaDB [class]> delete from mytable where id=2;
+Query OK, 1 row affected (0.014 sec)
+
+MariaDB [class]> select * from myevent;
++----+--------+--------+---------------------+------------------------------+
+| id | timing | action | etime               | log                          |
++----+--------+--------+---------------------+------------------------------+
+|  1 | before | insert | 2019-08-22 11:16:12 | insert f1: old               |
+|  2 | after  | insert | 2019-08-22 11:16:12 | insert f1: new:Hello,World   |
+|  3 | before | insert | 2019-08-22 11:19:53 | insert f1: new:Hello,WorldV2 |
+|  4 | after  | insert | 2019-08-22 11:19:53 | insert f1: new:Hello,WorldV2 |
+|  5 | before | update | 2019-08-22 11:25:47 | update f1: old = abcdefg     |
+|  6 | after  | update | 2019-08-22 11:25:47 | update f1:abcdefg => Brad    |
+|  7 | before | delete | 2019-08-22 11:40:06 | delete:2:Hello,World         |
+|  8 | after  | delete | 2019-08-22 11:40:06 | delete:ok                    |
++----+--------+--------+---------------------+------------------------------+
+8 rows in set (0.000 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create trigger t8 after update on mytable for each row
+    -> begin
+    ->     update mytable set f1 = 'Brad' where id = new.id;
+    -> end #
+Query OK, 0 rows affected (0.021 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> select * from mytable;
++----+---------------+
+| id | f1            |
++----+---------------+
+|  1 | Brad          |
+|  3 | Hello,WorldV2 |
++----+---------------+
+2 rows in set (0.002 sec)
+
+MariaDB [class]> update mytable set f1 = 'tony' where id =3;
+ERROR 1442 (HY000): Can't update table 'mytable' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+MariaDB [class]> \d #
+MariaDB [class]> create trigger t8 after update on mytable for each row
+    -> begin
+    ->     if old.id = 3 then
+    ->         delete from mytable where f1 = 'Brad';
+    ->     end if;
+    -> end #
+ERROR 1359 (HY000): Trigger 'class.t8' already exists
+MariaDB [class]> \d ;
+MariaDB [class]> \d #
+MariaDB [class]> create trigger t9 after update on mytable for each row
+    -> begin
+    ->     if old.id = 3 then
+    ->         delete from mytable where f1 = 'Brad';
+    ->     end if;
+    -> end #
+Query OK, 0 rows affected (0.020 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]>
+MariaDB [class]> select * from mytable;
++----+---------------+
+| id | f1            |
++----+---------------+
+|  1 | Brad          |
+|  3 | Hello,WorldV2 |
++----+---------------+
+2 rows in set (0.001 sec)
+
+MariaDB [class]> update mytable set f1='peter' where id=3;
+ERROR 1442 (HY000): Can't update table 'mytable' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+MariaDB [class]> create table product (id int primary key auto_increment,
+    -> pname varchar(200), cat varchar(100), unique (pname));
+Query OK, 0 rows affected (0.023 sec)
+
+MariaDB [class]> create table cats (id int primary key auto_increment,
+    -> cat varchar(100), unique (cat));
+Query OK, 0 rows affected (0.033 sec)
+
+MariaDB [class]> desc product;
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| id    | int(11)      | NO   | PRI | NULL    | auto_increment |
+| pname | varchar(200) | YES  | UNI | NULL    |                |
+| cat   | varchar(100) | YES  |     | NULL    |                |
++-------+--------------+------+-----+---------+----------------+
+3 rows in set (0.023 sec)
+
+MariaDB [class]> desc cats;
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| id    | int(11)      | NO   | PRI | NULL    | auto_increment |
+| cat   | varchar(100) | YES  | UNI | NULL    |                |
++-------+--------------+------+-----+---------+----------------+
+2 rows in set (0.025 sec)
+
+MariaDB [class]> show databases;
+ERROR 2013 (HY000): Lost connection to MySQL server during query
+MariaDB [class]> \q
+Bye
+
+c:\xampp2\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 245
+Server version: 10.3.16-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| brad               |
+| class              |
+| db1                |
+| iii                |
+| information_schema |
+| mysql              |
+| northwind          |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+10 rows in set (0.001 sec)
+
+MariaDB [(none)]> show variables
+    -> ;
++--------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Variable_name                                          | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
++--------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| alter_algorithm                                        | DEFAULT                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| aria_block_size                                        | 8192                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| aria_checkpoint_interval                               | 30                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| aria_checkpoint_log_activity                           | 1048576                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| aria_encrypt_tables                                    | OFF                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| aria_force_start_after_recovery_failures               | 0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| aria_group_commit                                      | none                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| aria_group_commit_interval                             | 0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| aria_log_file_size                                     | 1073741824                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| aria_log_purge_type                                    | immediate                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| aria_max_sort_file_size                                | 9223372036853727232                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| aria_page_checksum                                     | ON                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| aria_pagecache_age_threshold                           | 300                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| aria_pagecache_buffer_size                             | 134217728                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| aria_pagecache_division_limit                          | 100                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| aria_pagecache_file_hash_size                          | 512                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| aria_recover_options                                   | BACKUP,QUICK                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| aria_repair_threads                                    | 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| aria_sort_buffer_size                                  | 268434432                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| aria_stats_method                                      | nulls_unequal                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| aria_sync_log_dir                                      | NEWFILE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| aria_used_for_temp_tables                              | ON                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| auto_increment_increment                               | 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| auto_increment_offset                                  | 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| autocommit                                             | ON                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| automatic_sp_privileges                                | ON                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| back_log      Ctrl-C -- query killed. Continuing normally.
+                                         | 80                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
++--------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+597 rows in set (0.003 sec)
+
+MariaDB [(none)]> show variables\G
+*************************** 1. row ***************************
+Variable_name: alter_algorithm
+        Value: DEFAULT
+*************************** 2. row ***************************
+Variable_name: aria_block_size
+        Value: 8192
+*************************** 3. row ***************************
+Variable_name: aria_checkpoint_interval
+        Value: 30
+*************************** 4. row ***************************
+Variable_name: aria_checkpoint_log_activity
+        Value: 1048576
+*************************** 5. row ***************************
+Variable_name: aria_encrypt_tables
+        Value: OFF
+*************************** 6. row ***************************
+Variable_name: aria_force_start_after_recovery_failures
+        Value: 0
+*************************** 7. row ***************************
+Variable_name: aria_group_commit
+        Value: none
+*************************** 8. row ***************************
+Variable_name: aria_group_commit_interval
+        Value: 0
+*************************** 9. row ***************************
+Variable_name: aria_log_file_size
+        Value: 1073741824
+*************************** 10. row ***************************
+Variable_name: aria_log_purge_type
+        Value: immediate
+*************************** 11. row ***************************
+Variable_name: aria_max_sort_file_size
+        Value: 9223372036853727232
+*************************** 12. row ***************************
+Variable_name: aria_page_checksum
+        Value: ON
+*************************** 13. row ***************************
+Variable_name: aria_pagecache_age_threshold
+        Value: 300
+*************************** 14. row ***************************
+Variable_name: aria_pagecache_buffer_size
+        Value: 134217728
+*************************** 15. row ***************************
+Variable_name: aria_pagecache_division_limit
+        Value: 100
+*************************** 16. row ***************************
+Variable_name: aria_pagecache_file_hash_size
+        Value: 512
+*************************** 17. row ***************************
+Variable_name: aria_recover_options
+        Value: BACKUP,QUICK
+*************************** 18. row ***************************
+Variable_name: aria_repair_threads
+        Value: 1
+*************************** 19. row ***************************
+Variable_name: aria_sort_buffer_size
+        Value: 268434432
+*************************** 20. row ***************************
+Variable_name: aria_stats_method
+        Value: nulls_unequal
+*************************** 21. row ***************************
+Variable_name: aria_sync_log_dir
+        Value: NEWFILE
+*************************** 22. row ***************************
+Variable_name: aria_used_for_temp_tables
+        Value: ON
+*************************** 23. row ***************************
+Variable_name: auto_increment_increment
+        Value: 1
+*************************** 24. row ***************************
+Variable_name: auto_increment_offset
+        Value: 1
+*************************** 25. row ***************************
+Variable_name: autocommit
+        Value: ON
+*************************** 26. row ***************************
+Variable_name: automatic_sp_privileges
+        Value: ON
+*************************** 27. row ***************************
+Variable_name: back_log
+        Value: 80
+*************************** 28. row ***************************
+Variable_name: basedir
+        Value: C:/xampp2/mysql
+*************************** 29. row ***************************
+Variable_name: big_tables
+        Value: OFF
+*************************** 30. row ***************************
+Variable_name: bind_address
+        Value:
+*************************** 31. row ***************************
+Variable_name: binlog_annotate_row_events
+        Value: ON
+*************************** 32. row ***************************
+Variable_name: binlog_cache_size
+        Value: 32768
+*************************** 33. row ***************************
+Variable_name: binlog_checksum
+        Value: CRC32
+*************************** 34. row ***************************
+Variable_name: binlog_commit_wait_count
+        Value: 0
+*************************** 35. row ***************************
+Variable_name: binlog_commit_wait_usec
+        Value: 100000
+*************************** 36. row ***************************
+Variable_name: binlog_direct_non_transactional_updates
+        Value: OFF
+*************************** 37. row ***************************
+Variable_name: binlog_file_cache_size
+        Value: 16384
+*************************** 38. row ***************************
+Variable_name: binlog_format
+        Value: MIXED
+*************************** 39. row ***************************
+Variable_name: binlog_optimize_thread_scheduling
+        Value: ON
+*************************** 40. row ***************************
+Variable_name: binlog_row_image
+        Value: FULL
+*************************** 41. row ***************************
+Variable_name: binlog_stmt_cache_size
+        Value: 32768
+*************************** 42. row ***************************
+Variable_name: bulk_insert_buffer_size
+        Value: 8388608
+*************************** 43. row ***************************
+Variable_name: character_set_client
+        Value: big5
+*************************** 44. row ***************************
+Variable_name: character_set_connection
+        Value: big5
+*************************** 45. row ***************************
+Variable_name: character_set_database
+        Value: utf8
+*************************** 46. row ***************************
+Variable_name: character_set_filesystem
+        Value: binary
+*************************** 47. row ***************************
+Variable_name: character_set_results
+        Value: big5
+*************************** 48. row ***************************
+Variable_name: character_set_server
+        Value: utf8
+*************************** 49. row ***************************
+Variable_name: character_set_system
+        Value: utf8
+*************************** 50. row ***************************
+Variable_name: character_sets_dir
+        Value: C:\xampp2\mysql\share\charsets\
+*************************** 51. row ***************************
+Variable_name: check_constraint_checks
+        Value: ON
+*************************** 52. row ***************************
+Variable_name: collation_connection
+        Value: big5_chinese_ci
+*************************** 53. row ***************************
+Variable_name: collation_database
+        Value: utf8_general_ci
+*************************** 54. row ***************************
+Variable_name: collation_server
+        Value: utf8_general_ci
+*************************** 55. row ***************************
+Variable_name: column_compression_threshold
+        Value: 100
+*************************** 56. row ***************************
+Variable_name: column_compression_zlib_level
+        Value: 6
+*************************** 57. row ***************************
+Variable_name: column_compression_zlib_strategy
+        Value: DEFAULT_STRATEGY
+*************************** 58. row ***************************
+Variable_name: column_compression_zlib_wrap
+        Value: OFF
+*************************** 59. row ***************************
+Variable_name: completion_type
+        Value: NO_CHAIN
+*************************** 60. row ***************************
+Variable_name: concurrent_insert
+        Value: AUTO
+*************************** 61. row ***************************
+Variable_name: connect_timeout
+        Value: 10
+*************************** 62. row ***************************
+Variable_name: core_file
+        Value: OFF
+*************************** 63. row ***************************
+Variable_name: datadir
+        Value: C:\xampp2\mysql\data\
+*************************** 64. row ***************************
+Variable_name: date_format
+        Value: %Y-%m-%d
+*************************** 65. row ***************************
+Variable_name: datetime_format
+        Value: %Y-%m-%d %H:%i:%s
+*************************** 66. row ***************************
+Variable_name: deadlock_search_depth_long
+        Value: 15
+*************************** 67. row ***************************
+Variable_name: deadlock_search_depth_short
+        Value: 4
+*************************** 68. row ***************************
+Variable_name: deadlock_timeout_long
+        Value: 50000000
+*************************** 69. row ***************************
+Variable_name: deadlock_timeout_short
+        Value: 10000
+*************************** 70. row ***************************
+Variable_name: debug_no_thread_alarm
+        Value: OFF
+*************************** 71. row ***************************
+Variable_name: default_master_connection
+        Value:
+*************************** 72. row ***************************
+Variable_name: default_regex_flags
+        Value:
+*************************** 73. row ***************************
+Variable_name: default_storage_engine
+        Value: InnoDB
+*************************** 74. row ***************************
+Variable_name: default_tmp_storage_engine
+        Value:
+*************************** 75. row ***************************
+Variable_name: default_week_format
+        Value: 0
+*************************** 76. row ***************************
+Variable_name: delay_key_write
+        Value: ON
+*************************** 77. row ***************************
+Variable_name: delayed_insert_limit
+        Value: 100
+*************************** 78. row ***************************
+Variable_name: delayed_insert_timeout
+        Value: 300
+*************************** 79. row ***************************
+Variable_name: delayed_queue_size
+        Value: 1000
+*************************** 80. row ***************************
+Variable_name: div_precision_increment
+        Value: 4
+*************************** 81. row ***************************
+Variable_name: encrypt_binlog
+        Value: OFF
+*************************** 82. row ***************************
+Variable_name: encrypt_tmp_disk_tables
+        Value: OFF
+*************************** 83. row ***************************
+Variable_name: encrypt_tmp_files
+        Value: OFF
+*************************** 84. row ***************************
+Variable_name: enforce_storage_engine
+        Value:
+*************************** 85. row ***************************
+Variable_name: eq_range_index_dive_limit
+        Value: 0
+*************************** 86. row ***************************
+Variable_name: error_count
+        Value: 0
+*************************** 87. row ***************************
+Variable_name: event_scheduler
+        Value: OFF
+*************************** 88. row ***************************
+Variable_name: expensive_subquery_limit
+        Value: 100
+*************************** 89. row ***************************
+Variable_name: expire_logs_days
+        Value: 0
+*************************** 90. row ***************************
+Variable_name: explicit_defaults_for_timestamp
+        Value: OFF
+*************************** 91. row ***************************
+Variable_name: external_user
+        Value:
+*************************** 92. row ***************************
+Variable_name: extra_max_connections
+        Value: 1
+*************************** 93. row ***************************
+Variable_name: extra_port
+        Value: 0
+*************************** 94. row ***************************
+Variable_name: flush
+        Value: OFF
+*************************** 95. row ***************************
+Variable_name: flush_time
+        Value: 0
+*************************** 96. row ***************************
+Variable_name: foreign_key_checks
+        Value: ON
+*************************** 97. row ***************************
+Variable_name: ft_boolean_syntax
+        Value: + -><()~*:""&|
+*************************** 98. row ***************************
+Variable_name: ft_max_word_len
+        Value: 84
+*************************** 99. row ***************************
+Variable_name: ft_min_word_len
+        Value: 4
+*************************** 100. row ***************************
+Variable_name: ft_query_expansion_limit
+        Value: 20
+*************************** 101. row ***************************
+Variable_name: ft_stopword_file
+        Value: (built-in)
+*************************** 102. row ***************************
+Variable_name: general_log
+        Value: OFF
+*************************** 103. row ***************************
+Variable_name: general_log_file
+        Value: L01.log
+*************************** 104. row ***************************
+Variable_name: group_concat_max_len
+        Value: 1048576
+*************************** 105. row ***************************
+Variable_name: gtid_binlog_pos
+        Value:
+*************************** 106. row ***************************
+Variable_name: gtid_binlog_state
+        Value:
+*************************** 107. row ***************************
+Variable_name: gtid_current_pos
+        Value:
+*************************** 108. row ***************************
+Variable_name: gtid_domain_id
+        Value: 0
+*************************** 109. row ***************************
+Variable_name: gtid_ignore_duplicates
+        Value: OFF
+*************************** 110. row ***************************
+Variable_name: gtid_pos_auto_engines
+        Value:
+*************************** 111. row ***************************
+Variable_name: gtid_seq_no
+        Value: 0
+*************************** 112. row ***************************
+Variable_name: gtid_slave_pos
+        Value:
+*************************** 113. row ***************************
+Variable_name: gtid_strict_mode
+        Value: OFF
+*************************** 114. row ***************************
+Variable_name: have_compress
+        Value: YES
+*************************** 115. row ***************************
+Variable_name: have_crypt
+        Value: NO
+*************************** 116. row ***************************
+Variable_name: have_dynamic_loading
+        Value: YES
+*************************** 117. row ***************************
+Variable_name: have_geometry
+        Value: YES
+*************************** 118. row ***************************
+Variable_name: have_openssl
+        Value: NO
+*************************** 119. row ***************************
+Variable_name: have_profiling
+        Value: YES
+*************************** 120. row ***************************
+Variable_name: have_query_cache
+        Value: YES
+*************************** 121. row ***************************
+Variable_name: have_rtree_keys
+        Value: YES
+*************************** 122. row ***************************
+Variable_name: have_ssl
+        Value: DISABLED
+*************************** 123. row ***************************
+Variable_name: have_symlink
+        Value: NO
+*************************** 124. row ***************************
+Variable_name: histogram_size
+        Value: 0
+*************************** 125. row ***************************
+Variable_name: histogram_type
+        Value: SINGLE_PREC_HB
+*************************** 126. row ***************************
+Variable_name: host_cache_size
+        Value: 279
+*************************** 127. row ***************************
+Variable_name: hostname
+        Value: L01
+*************************** 128. row ***************************
+Variable_name: identity
+        Value: 0
+*************************** 129. row ***************************
+Variable_name: idle_readonly_transaction_timeout
+        Value: 0
+*************************** 130. row ***************************
+Variable_name: idle_transaction_timeout
+        Value: 0
+*************************** 131. row ***************************
+Variable_name: idle_write_transaction_timeout
+        Value: 0
+*************************** 132. row ***************************
+Variable_name: ignore_builtin_innodb
+        Value: OFF
+*************************** 133. row ***************************
+Variable_name: ignore_db_dirs
+        Value:
+*************************** 134. row ***************************
+Variable_name: in_transaction
+        Value: 0
+*************************** 135. row ***************************
+Variable_name: init_connect
+        Value: SET NAMES utf8
+*************************** 136. row ***************************
+Variable_name: init_file
+        Value:
+*************************** 137. row ***************************
+Variable_name: init_slave
+        Value:
+*************************** 138. row ***************************
+Variable_name: innodb_adaptive_flushing
+        Value: ON
+*************************** 139. row ***************************
+Variable_name: innodb_adaptive_flushing_lwm
+        Value: 10.000000
+*************************** 140. row ***************************
+Variable_name: innodb_adaptive_hash_index
+        Value: ON
+*************************** 141. row ***************************
+Variable_name: innodb_adaptive_hash_index_parts
+        Value: 8
+*************************** 142. row ***************************
+Variable_name: innodb_adaptive_max_sleep_delay
+        Value: 150000
+*************************** 143. row ***************************
+Variable_name: innodb_autoextend_increment
+        Value: 64
+*************************** 144. row ***************************
+Variable_name: innodb_autoinc_lock_mode
+        Value: 1
+*************************** 145. row ***************************
+Variable_name: innodb_background_scrub_data_check_interval
+        Value: 3600
+*************************** 146. row ***************************
+Variable_name: innodb_background_scrub_data_compressed
+        Value: OFF
+*************************** 147. row ***************************
+Variable_name: innodb_background_scrub_data_interval
+        Value: 604800
+*************************** 148. row ***************************
+Variable_name: innodb_background_scrub_data_uncompressed
+        Value: OFF
+*************************** 149. row ***************************
+Variable_name: innodb_buf_dump_status_frequency
+        Value: 0
+*************************** 150. row ***************************
+Variable_name: innodb_buffer_pool_chunk_size
+        Value: 16777216
+*************************** 151. row ***************************
+Variable_name: innodb_buffer_pool_dump_at_shutdown
+        Value: ON
+*************************** 152. row ***************************
+Variable_name: innodb_buffer_pool_dump_now
+        Value: OFF
+*************************** 153. row ***************************
+Variable_name: innodb_buffer_pool_dump_pct
+        Value: 25
+*************************** 154. row ***************************
+Variable_name: innodb_buffer_pool_filename
+        Value: ib_buffer_pool
+*************************** 155. row ***************************
+Variable_name: innodb_buffer_pool_instances
+        Value: 1
+*************************** 156. row ***************************
+Variable_name: innodb_buffer_pool_load_abort
+        Value: OFF
+*************************** 157. row ***************************
+Variable_name: innodb_buffer_pool_load_at_startup
+        Value: ON
+*************************** 158. row ***************************
+Variable_name: innodb_buffer_pool_load_now
+        Value: OFF
+*************************** 159. row ***************************
+Variable_name: innodb_buffer_pool_size
+        Value: 16777216
+*************************** 160. row ***************************
+Variable_name: innodb_change_buffer_max_size
+        Value: 25
+*************************** 161. row ***************************
+Variable_name: innodb_change_buffering
+        Value: all
+*************************** 162. row ***************************
+Variable_name: innodb_checksum_algorithm
+        Value: crc32
+*************************** 163. row ***************************
+Variable_name: innodb_checksums
+        Value: ON
+*************************** 164. row ***************************
+Variable_name: innodb_cmp_per_index_enabled
+        Value: OFF
+*************************** 165. row ***************************
+Variable_name: innodb_commit_concurrency
+        Value: 0
+*************************** 166. row ***************************
+Variable_name: innodb_compression_algorithm
+        Value: zlib
+*************************** 167. row ***************************
+Variable_name: innodb_compression_default
+        Value: OFF
+*************************** 168. row ***************************
+Variable_name: innodb_compression_failure_threshold_pct
+        Value: 5
+*************************** 169. row ***************************
+Variable_name: innodb_compression_level
+        Value: 6
+*************************** 170. row ***************************
+Variable_name: innodb_compression_pad_pct_max
+        Value: 50
+*************************** 171. row ***************************
+Variable_name: innodb_concurrency_tickets
+        Value: 5000
+*************************** 172. row ***************************
+Variable_name: innodb_data_file_path
+        Value: ibdata1:10M:autoextend
+*************************** 173. row ***************************
+Variable_name: innodb_data_home_dir
+        Value: C:/xampp2/mysql/data
+*************************** 174. row ***************************
+Variable_name: innodb_deadlock_detect
+        Value: ON
+*************************** 175. row ***************************
+Variable_name: innodb_default_encryption_key_id
+        Value: 1
+*************************** 176. row ***************************
+Variable_name: innodb_default_row_format
+        Value: dynamic
+*************************** 177. row ***************************
+Variable_name: innodb_defragment
+        Value: OFF
+*************************** 178. row ***************************
+Variable_name: innodb_defragment_fill_factor
+        Value: 0.900000
+*************************** 179. row ***************************
+Variable_name: innodb_defragment_fill_factor_n_recs
+        Value: 20
+*************************** 180. row ***************************
+Variable_name: innodb_defragment_frequency
+        Value: 40
+*************************** 181. row ***************************
+Variable_name: innodb_defragment_n_pages
+        Value: 7
+*************************** 182. row ***************************
+Variable_name: innodb_defragment_stats_accuracy
+        Value: 0
+*************************** 183. row ***************************
+Variable_name: innodb_disable_sort_file_cache
+        Value: OFF
+*************************** 184. row ***************************
+Variable_name: innodb_doublewrite
+        Value: ON
+*************************** 185. row ***************************
+Variable_name: innodb_encrypt_log
+        Value: OFF
+*************************** 186. row ***************************
+Variable_name: innodb_encrypt_tables
+        Value: OFF
+*************************** 187. row ***************************
+Variable_name: innodb_encryption_rotate_key_age
+        Value: 1
+*************************** 188. row ***************************
+Variable_name: innodb_encryption_rotation_iops
+        Value: 100
+*************************** 189. row ***************************
+Variable_name: innodb_encryption_threads
+        Value: 0
+*************************** 190. row ***************************
+Variable_name: innodb_fast_shutdown
+        Value: 1
+*************************** 191. row ***************************
+Variable_name: innodb_fatal_semaphore_wait_threshold
+        Value: 600
+*************************** 192. row ***************************
+Variable_name: innodb_file_format
+        Value:
+*************************** 193. row ***************************
+Variable_name: innodb_file_per_table
+        Value: ON
+*************************** 194. row ***************************
+Variable_name: innodb_fill_factor
+        Value: 100
+*************************** 195. row ***************************
+Variable_name: innodb_flush_log_at_timeout
+        Value: 1
+*************************** 196. row ***************************
+Variable_name: innodb_flush_log_at_trx_commit
+        Value: 1
+*************************** 197. row ***************************
+Variable_name: innodb_flush_method
+        Value: unbuffered
+*************************** 198. row ***************************
+Variable_name: innodb_flush_neighbors
+        Value: 1
+*************************** 199. row ***************************
+Variable_name: innodb_flush_sync
+        Value: ON
+*************************** 200. row ***************************
+Variable_name: innodb_flushing_avg_loops
+        Value: 30
+*************************** 201. row ***************************
+Variable_name: innodb_force_load_corrupted
+        Value: OFF
+*************************** 202. row ***************************
+Variable_name: innodb_force_primary_key
+        Value: OFF
+*************************** 203. row ***************************
+Variable_name: innodb_force_recovery
+        Value: 0
+*************************** 204. row ***************************
+Variable_name: innodb_ft_aux_table
+        Value:
+*************************** 205. row ***************************
+Variable_name: innodb_ft_cache_size
+        Value: 8000000
+*************************** 206. row ***************************
+Variable_name: innodb_ft_enable_diag_print
+        Value: OFF
+*************************** 207. row ***************************
+Variable_name: innodb_ft_enable_stopword
+        Value: ON
+*************************** 208. row ***************************
+Variable_name: innodb_ft_max_token_size
+        Value: 84
+*************************** 209. row ***************************
+Variable_name: innodb_ft_min_token_size
+        Value: 3
+*************************** 210. row ***************************
+Variable_name: innodb_ft_num_word_optimize
+        Value: 2000
+*************************** 211. row ***************************
+Variable_name: innodb_ft_result_cache_limit
+        Value: 2000000000
+*************************** 212. row ***************************
+Variable_name: innodb_ft_server_stopword_table
+        Value:
+*************************** 213. row ***************************
+Variable_name: innodb_ft_sort_pll_degree
+        Value: 2
+*************************** 214. row ***************************
+Variable_name: innodb_ft_total_cache_size
+        Value: 640000000
+*************************** 215. row ***************************
+Variable_name: innodb_ft_user_stopword_table
+        Value:
+*************************** 216. row ***************************
+Variable_name: innodb_idle_flush_pct
+        Value: 100
+*************************** 217. row ***************************
+Variable_name: innodb_immediate_scrub_data_uncompressed
+        Value: OFF
+*************************** 218. row ***************************
+Variable_name: innodb_io_capacity
+        Value: 200
+*************************** 219. row ***************************
+Variable_name: innodb_io_capacity_max
+        Value: 2000
+*************************** 220. row ***************************
+Variable_name: innodb_large_prefix
+        Value:
+*************************** 221. row ***************************
+Variable_name: innodb_lock_schedule_algorithm
+        Value: fcfs
+*************************** 222. row ***************************
+Variable_name: innodb_lock_wait_timeout
+        Value: 50
+*************************** 223. row ***************************
+Variable_name: innodb_locks_unsafe_for_binlog
+        Value: OFF
+*************************** 224. row ***************************
+Variable_name: innodb_log_buffer_size
+        Value: 8388608
+*************************** 225. row ***************************
+Variable_name: innodb_log_checksums
+        Value: ON
+*************************** 226. row ***************************
+Variable_name: innodb_log_compressed_pages
+        Value: ON
+*************************** 227. row ***************************
+Variable_name: innodb_log_file_size
+        Value: 5242880
+*************************** 228. row ***************************
+Variable_name: innodb_log_files_in_group
+        Value: 2
+*************************** 229. row ***************************
+Variable_name: innodb_log_group_home_dir
+        Value: C:\xampp2\mysql\data
+*************************** 230. row ***************************
+Variable_name: innodb_log_optimize_ddl
+        Value: ON
+*************************** 231. row ***************************
+Variable_name: innodb_log_write_ahead_size
+        Value: 8192
+*************************** 232. row ***************************
+Variable_name: innodb_lru_scan_depth
+        Value: 1024
+*************************** 233. row ***************************
+Variable_name: innodb_max_dirty_pages_pct
+        Value: 75.000000
+*************************** 234. row ***************************
+Variable_name: innodb_max_dirty_pages_pct_lwm
+        Value: 0.000000
+*************************** 235. row ***************************
+Variable_name: innodb_max_purge_lag
+        Value: 0
+*************************** 236. row ***************************
+Variable_name: innodb_max_purge_lag_delay
+        Value: 0
+*************************** 237. row ***************************
+Variable_name: innodb_max_undo_log_size
+        Value: 10485760
+*************************** 238. row ***************************
+Variable_name: innodb_monitor_disable
+        Value:
+*************************** 239. row ***************************
+Variable_name: innodb_monitor_enable
+        Value:
+*************************** 240. row ***************************
+Variable_name: innodb_monitor_reset
+        Value:
+*************************** 241. row ***************************
+Variable_name: innodb_monitor_reset_all
+        Value:
+*************************** 242. row ***************************
+Variable_name: innodb_old_blocks_pct
+        Value: 37
+*************************** 243. row ***************************
+Variable_name: innodb_old_blocks_time
+        Value: 1000
+*************************** 244. row ***************************
+Variable_name: innodb_online_alter_log_max_size
+        Value: 134217728
+*************************** 245. row ***************************
+Variable_name: innodb_open_files
+        Value: 2000
+*************************** 246. row ***************************
+Variable_name: innodb_optimize_fulltext_only
+        Value: OFF
+*************************** 247. row ***************************
+Variable_name: innodb_page_cleaners
+        Value: 1
+*************************** 248. row ***************************
+Variable_name: innodb_page_size
+        Value: 16384
+*************************** 249. row ***************************
+Variable_name: innodb_prefix_index_cluster_optimization
+        Value: OFF
+*************************** 250. row ***************************
+Variable_name: innodb_print_all_deadlocks
+        Value: OFF
+*************************** 251. row ***************************
+Variable_name: innodb_purge_batch_size
+        Value: 300
+*************************** 252. row ***************************
+Variable_name: innodb_purge_rseg_truncate_frequency
+        Value: 128
+*************************** 253. row ***************************
+Variable_name: innodb_purge_threads
+        Value: 4
+*************************** 254. row ***************************
+Variable_name: innodb_random_read_ahead
+        Value: OFF
+*************************** 255. row ***************************
+Variable_name: innodb_read_ahead_threshold
+        Value: 56
+*************************** 256. row ***************************
+Variable_name: innodb_read_io_threads
+        Value: 4
+*************************** 257. row ***************************
+Variable_name: innodb_read_only
+        Value: OFF
+*************************** 258. row ***************************
+Variable_name: innodb_replication_delay
+        Value: 0
+*************************** 259. row ***************************
+Variable_name: innodb_rollback_on_timeout
+        Value: OFF
+*************************** 260. row ***************************
+Variable_name: innodb_rollback_segments
+        Value: 128
+*************************** 261. row ***************************
+Variable_name: innodb_scrub_log
+        Value: OFF
+*************************** 262. row ***************************
+Variable_name: innodb_scrub_log_speed
+        Value: 256
+*************************** 263. row ***************************
+Variable_name: innodb_sort_buffer_size
+        Value: 1048576
+*************************** 264. row ***************************
+Variable_name: innodb_spin_wait_delay
+        Value: 4
+*************************** 265. row ***************************
+Variable_name: innodb_stats_auto_recalc
+        Value: ON
+*************************** 266. row ***************************
+Variable_name: innodb_stats_include_delete_marked
+        Value: OFF
+*************************** 267. row ***************************
+Variable_name: innodb_stats_method
+        Value: nulls_equal
+*************************** 268. row ***************************
+Variable_name: innodb_stats_modified_counter
+        Value: 0
+*************************** 269. row ***************************
+Variable_name: innodb_stats_on_metadata
+        Value: OFF
+*************************** 270. row ***************************
+Variable_name: innodb_stats_persistent
+        Value: ON
+*************************** 271. row ***************************
+Variable_name: innodb_stats_persistent_sample_pages
+        Value: 20
+*************************** 272. row ***************************
+Variable_name: innodb_stats_sample_pages
+        Value: 8
+*************************** 273. row ***************************
+Variable_name: innodb_stats_traditional
+        Value: ON
+*************************** 274. row ***************************
+Variable_name: innodb_stats_transient_sample_pages
+        Value: 8
+*************************** 275. row ***************************
+Variable_name: innodb_status_output
+        Value: OFF
+*************************** 276. row ***************************
+Variable_name: innodb_status_output_locks
+        Value: OFF
+*************************** 277. row ***************************
+Variable_name: innodb_strict_mode
+        Value: ON
+*************************** 278. row ***************************
+Variable_name: innodb_sync_array_size
+        Value: 1
+*************************** 279. row ***************************
+Variable_name: innodb_sync_spin_loops
+        Value: 30
+*************************** 280. row ***************************
+Variable_name: innodb_table_locks
+        Value: ON
+*************************** 281. row ***************************
+Variable_name: innodb_temp_data_file_path
+        Value: ibtmp1:12M:autoextend
+*************************** 282. row ***************************
+Variable_name: innodb_thread_concurrency
+        Value: 0
+*************************** 283. row ***************************
+Variable_name: innodb_thread_sleep_delay
+        Value: 10000
+*************************** 284. row ***************************
+Variable_name: innodb_tmpdir
+        Value:
+*************************** 285. row ***************************
+Variable_name: innodb_undo_directory
+        Value: .\
+*************************** 286. row ***************************
+Variable_name: innodb_undo_log_truncate
+        Value: OFF
+*************************** 287. row ***************************
+Variable_name: innodb_undo_logs
+        Value: 128
+*************************** 288. row ***************************
+Variable_name: innodb_undo_tablespaces
+        Value: 0
+*************************** 289. row ***************************
+Variable_name: innodb_use_atomic_writes
+        Value: ON
+*************************** 290. row ***************************
+Variable_name: innodb_use_native_aio
+        Value: ON
+*************************** 291. row ***************************
+Variable_name: innodb_version
+        Value: 10.3.16
+*************************** 292. row ***************************
+Variable_name: innodb_write_io_threads
+        Value: 4
+*************************** 293. row ***************************
+Variable_name: insert_id
+        Value: 0
+*************************** 294. row ***************************
+Variable_name: interactive_timeout
+        Value: 28800
+*************************** 295. row ***************************
+Variable_name: join_buffer_size
+        Value: 262144
+*************************** 296. row ***************************
+Variable_name: join_buffer_space_limit
+        Value: 2097152
+*************************** 297. row ***************************
+Variable_name: join_cache_level
+        Value: 2
+*************************** 298. row ***************************
+Variable_name: keep_files_on_create
+        Value: OFF
+*************************** 299. row ***************************
+Variable_name: key_buffer_size
+        Value: 16777216
+*************************** 300. row ***************************
+Variable_name: key_cache_age_threshold
+        Value: 300
+*************************** 301. row ***************************
+Variable_name: key_cache_block_size
+        Value: 1024
+*************************** 302. row ***************************
+Variable_name: key_cache_division_limit
+        Value: 100
+*************************** 303. row ***************************
+Variable_name: key_cache_file_hash_size
+        Value: 512
+*************************** 304. row ***************************
+Variable_name: key_cache_segments
+        Value: 0
+*************************** 305. row ***************************
+Variable_name: large_files_support
+        Value: ON
+*************************** 306. row ***************************
+Variable_name: large_page_size
+        Value: 0
+*************************** 307. row ***************************
+Variable_name: large_pages
+        Value: OFF
+*************************** 308. row ***************************
+Variable_name: last_gtid
+        Value:
+*************************** 309. row ***************************
+Variable_name: last_insert_id
+        Value: 0
+*************************** 310. row ***************************
+Variable_name: lc_messages
+        Value: en_US
+*************************** 311. row ***************************
+Variable_name: lc_messages_dir
+        Value:
+*************************** 312. row ***************************
+Variable_name: lc_time_names
+        Value: en_US
+*************************** 313. row ***************************
+Variable_name: license
+        Value: GPL
+*************************** 314. row ***************************
+Variable_name: local_infile
+        Value: ON
+*************************** 315. row ***************************
+Variable_name: lock_wait_timeout
+        Value: 86400
+*************************** 316. row ***************************
+Variable_name: log_bin
+        Value: OFF
+*************************** 317. row ***************************
+Variable_name: log_bin_basename
+        Value:
+*************************** 318. row ***************************
+Variable_name: log_bin_compress
+        Value: OFF
+*************************** 319. row ***************************
+Variable_name: log_bin_compress_min_len
+        Value: 256
+*************************** 320. row ***************************
+Variable_name: log_bin_index
+        Value:
+*************************** 321. row ***************************
+Variable_name: log_bin_trust_function_creators
+        Value: ON
+*************************** 322. row ***************************
+Variable_name: log_disabled_statements
+        Value: sp
+*************************** 323. row ***************************
+Variable_name: log_error
+        Value: .\mysql_error.log
+*************************** 324. row ***************************
+Variable_name: log_output
+        Value: FILE
+*************************** 325. row ***************************
+Variable_name: log_queries_not_using_indexes
+        Value: OFF
+*************************** 326. row ***************************
+Variable_name: log_slave_updates
+        Value: OFF
+*************************** 327. row ***************************
+Variable_name: log_slow_admin_statements
+        Value: ON
+*************************** 328. row ***************************
+Variable_name: log_slow_disabled_statements
+        Value: sp
+*************************** 329. row ***************************
+Variable_name: log_slow_filter
+        Value: admin,filesort,filesort_on_disk,filesort_priority_queue,full_join,full_scan,query_cache,query_cache_miss,tmp_table,tmp_table_on_disk
+*************************** 330. row ***************************
+Variable_name: log_slow_rate_limit
+        Value: 1
+*************************** 331. row ***************************
+Variable_name: log_slow_slave_statements
+        Value: ON
+*************************** 332. row ***************************
+Variable_name: log_slow_verbosity
+        Value:
+*************************** 333. row ***************************
+Variable_name: log_tc_size
+        Value: 24576
+*************************** 334. row ***************************
+Variable_name: log_warnings
+        Value: 2
+*************************** 335. row ***************************
+Variable_name: long_query_time
+        Value: 10.000000
+*************************** 336. row ***************************
+Variable_name: low_priority_updates
+        Value: OFF
+*************************** 337. row ***************************
+Variable_name: lower_case_file_system
+        Value: ON
+*************************** 338. row ***************************
+Variable_name: lower_case_table_names
+        Value: 1
+*************************** 339. row ***************************
+Variable_name: master_verify_checksum
+        Value: OFF
+*************************** 340. row ***************************
+Variable_name: max_allowed_packet
+        Value: 1048576
+*************************** 341. row ***************************
+Variable_name: max_binlog_cache_size
+        Value: 18446744073709547520
+*************************** 342. row ***************************
+Variable_name: max_binlog_size
+        Value: 1073741824
+*************************** 343. row ***************************
+Variable_name: max_binlog_stmt_cache_size
+        Value: 18446744073709547520
+*************************** 344. row ***************************
+Variable_name: max_connect_errors
+        Value: 100
+*************************** 345. row ***************************
+Variable_name: max_connections
+        Value: 151
+*************************** 346. row ***************************
+Variable_name: max_delayed_threads
+        Value: 20
+*************************** 347. row ***************************
+Variable_name: max_digest_length
+        Value: 1024
+*************************** 348. row ***************************
+Variable_name: max_error_count
+        Value: 64
+*************************** 349. row ***************************
+Variable_name: max_heap_table_size
+        Value: 16777216
+*************************** 350. row ***************************
+Variable_name: max_insert_delayed_threads
+        Value: 20
+*************************** 351. row ***************************
+Variable_name: max_join_size
+        Value: 18446744073709551615
+*************************** 352. row ***************************
+Variable_name: max_length_for_sort_data
+        Value: 1024
+*************************** 353. row ***************************
+Variable_name: max_long_data_size
+        Value: 1048576
+*************************** 354. row ***************************
+Variable_name: max_prepared_stmt_count
+        Value: 16382
+*************************** 355. row ***************************
+Variable_name: max_recursive_iterations
+        Value: 4294967295
+*************************** 356. row ***************************
+Variable_name: max_relay_log_size
+        Value: 1073741824
+*************************** 357. row ***************************
+Variable_name: max_seeks_for_key
+        Value: 4294967295
+*************************** 358. row ***************************
+Variable_name: max_session_mem_used
+        Value: 9223372036854775807
+*************************** 359. row ***************************
+Variable_name: max_sort_length
+        Value: 1024
+*************************** 360. row ***************************
+Variable_name: max_sp_recursion_depth
+        Value: 0
+*************************** 361. row ***************************
+Variable_name: max_statement_time
+        Value: 0.000000
+*************************** 362. row ***************************
+Variable_name: max_tmp_tables
+        Value: 32
+*************************** 363. row ***************************
+Variable_name: max_user_connections
+        Value: 0
+*************************** 364. row ***************************
+Variable_name: max_write_lock_count
+        Value: 4294967295
+*************************** 365. row ***************************
+Variable_name: metadata_locks_cache_size
+        Value: 1024
+*************************** 366. row ***************************
+Variable_name: metadata_locks_hash_instances
+        Value: 8
+*************************** 367. row ***************************
+Variable_name: min_examined_row_limit
+        Value: 0
+*************************** 368. row ***************************
+Variable_name: mrr_buffer_size
+        Value: 262144
+*************************** 369. row ***************************
+Variable_name: multi_range_count
+        Value: 256
+*************************** 370. row ***************************
+Variable_name: myisam_block_size
+        Value: 1024
+*************************** 371. row ***************************
+Variable_name: myisam_data_pointer_size
+        Value: 6
+*************************** 372. row ***************************
+Variable_name: myisam_max_sort_file_size
+        Value: 2146435072
+*************************** 373. row ***************************
+Variable_name: myisam_mmap_size
+        Value: 18446744073709551615
+*************************** 374. row ***************************
+Variable_name: myisam_recover_options
+        Value: BACKUP,QUICK
+*************************** 375. row ***************************
+Variable_name: myisam_repair_threads
+        Value: 1
+*************************** 376. row ***************************
+Variable_name: myisam_sort_buffer_size
+        Value: 8388608
+*************************** 377. row ***************************
+Variable_name: myisam_stats_method
+        Value: NULLS_UNEQUAL
+*************************** 378. row ***************************
+Variable_name: myisam_use_mmap
+        Value: OFF
+*************************** 379. row ***************************
+Variable_name: mysql56_temporal_format
+        Value: ON
+*************************** 380. row ***************************
+Variable_name: named_pipe
+        Value: OFF
+*************************** 381. row ***************************
+Variable_name: net_buffer_length
+        Value: 8192
+*************************** 382. row ***************************
+Variable_name: net_read_timeout
+        Value: 30
+*************************** 383. row ***************************
+Variable_name: net_retry_count
+        Value: 10
+*************************** 384. row ***************************
+Variable_name: net_write_timeout
+        Value: 60
+*************************** 385. row ***************************
+Variable_name: old
+        Value: OFF
+*************************** 386. row ***************************
+Variable_name: old_alter_table
+        Value: DEFAULT
+*************************** 387. row ***************************
+Variable_name: old_mode
+        Value:
+*************************** 388. row ***************************
+Variable_name: old_passwords
+        Value: OFF
+*************************** 389. row ***************************
+Variable_name: open_files_limit
+        Value: 6230
+*************************** 390. row ***************************
+Variable_name: optimizer_prune_level
+        Value: 1
+*************************** 391. row ***************************
+Variable_name: optimizer_search_depth
+        Value: 62
+*************************** 392. row ***************************
+Variable_name: optimizer_selectivity_sampling_limit
+        Value: 100
+*************************** 393. row ***************************
+Variable_name: optimizer_switch
+        Value: index_merge=on,index_merge_union=on,index_merge_sort_union=on,index_merge_intersection=on,index_merge_sort_intersection=off,engine_condition_pushdown=off,index_condition_pushdown=on,derived_merge=on,derived_with_keys=on,firstmatch=on,loosescan=on,materialization=on,in_to_exists=on,semijoin=on,partial_match_rowid_merge=on,partial_match_table_scan=on,subquery_cache=on,mrr=off,mrr_cost_based=off,mrr_sort_keys=off,outer_join_with_cache=on,semijoin_with_cache=on,join_cache_incremental=on,join_cache_hashed=on,join_cache_bka=on,optimize_join_buffer_size=off,table_elimination=on,extended_keys=on,exists_to_in=on,orderby_uses_equalities=on,condition_pushdown_for_derived=on,split_materialized=on
+*************************** 394. row ***************************
+Variable_name: optimizer_use_condition_selectivity
+        Value: 1
+*************************** 395. row ***************************
+Variable_name: performance_schema
+        Value: OFF
+*************************** 396. row ***************************
+Variable_name: performance_schema_accounts_size
+        Value: -1
+*************************** 397. row ***************************
+Variable_name: performance_schema_digests_size
+        Value: -1
+*************************** 398. row ***************************
+Variable_name: performance_schema_events_stages_history_long_size
+        Value: -1
+*************************** 399. row ***************************
+Variable_name: performance_schema_events_stages_history_size
+        Value: -1
+*************************** 400. row ***************************
+Variable_name: performance_schema_events_statements_history_long_size
+        Value: -1
+*************************** 401. row ***************************
+Variable_name: performance_schema_events_statements_history_size
+        Value: -1
+*************************** 402. row ***************************
+Variable_name: performance_schema_events_waits_history_long_size
+        Value: -1
+*************************** 403. row ***************************
+Variable_name: performance_schema_events_waits_history_size
+        Value: -1
+*************************** 404. row ***************************
+Variable_name: performance_schema_hosts_size
+        Value: -1
+*************************** 405. row ***************************
+Variable_name: performance_schema_max_cond_classes
+        Value: 80
+*************************** 406. row ***************************
+Variable_name: performance_schema_max_cond_instances
+        Value: -1
+*************************** 407. row ***************************
+Variable_name: performance_schema_max_digest_length
+        Value: 1024
+*************************** 408. row ***************************
+Variable_name: performance_schema_max_file_classes
+        Value: 50
+*************************** 409. row ***************************
+Variable_name: performance_schema_max_file_handles
+        Value: 32768
+*************************** 410. row ***************************
+Variable_name: performance_schema_max_file_instances
+        Value: -1
+*************************** 411. row ***************************
+Variable_name: performance_schema_max_mutex_classes
+        Value: 200
+*************************** 412. row ***************************
+Variable_name: performance_schema_max_mutex_instances
+        Value: -1
+*************************** 413. row ***************************
+Variable_name: performance_schema_max_rwlock_classes
+        Value: 40
+*************************** 414. row ***************************
+Variable_name: performance_schema_max_rwlock_instances
+        Value: -1
+*************************** 415. row ***************************
+Variable_name: performance_schema_max_socket_classes
+        Value: 10
+*************************** 416. row ***************************
+Variable_name: performance_schema_max_socket_instances
+        Value: -1
+*************************** 417. row ***************************
+Variable_name: performance_schema_max_stage_classes
+        Value: 160
+*************************** 418. row ***************************
+Variable_name: performance_schema_max_statement_classes
+        Value: 200
+*************************** 419. row ***************************
+Variable_name: performance_schema_max_table_handles
+        Value: -1
+*************************** 420. row ***************************
+Variable_name: performance_schema_max_table_instances
+        Value: -1
+*************************** 421. row ***************************
+Variable_name: performance_schema_max_thread_classes
+        Value: 50
+*************************** 422. row ***************************
+Variable_name: performance_schema_max_thread_instances
+        Value: -1
+*************************** 423. row ***************************
+Variable_name: performance_schema_session_connect_attrs_size
+        Value: -1
+*************************** 424. row ***************************
+Variable_name: performance_schema_setup_actors_size
+        Value: 100
+*************************** 425. row ***************************
+Variable_name: performance_schema_setup_objects_size
+        Value: 100
+*************************** 426. row ***************************
+Variable_name: performance_schema_users_size
+        Value: -1
+*************************** 427. row ***************************
+Variable_name: pid_file
+        Value: C:\xampp2\mysql\data\mysql.pid
+*************************** 428. row ***************************
+Variable_name: plugin_dir
+        Value: C:\xampp2\mysql\lib\plugin\
+*************************** 429. row ***************************
+Variable_name: plugin_maturity
+        Value: gamma
+*************************** 430. row ***************************
+Variable_name: port
+        Value: 3306
+*************************** 431. row ***************************
+Variable_name: preload_buffer_size
+        Value: 32768
+*************************** 432. row ***************************
+Variable_name: profiling
+        Value: OFF
+*************************** 433. row ***************************
+Variable_name: profiling_history_size
+        Value: 15
+*************************** 434. row ***************************
+Variable_name: progress_report_time
+        Value: 5
+*************************** 435. row ***************************
+Variable_name: protocol_version
+        Value: 10
+*************************** 436. row ***************************
+Variable_name: proxy_protocol_networks
+        Value:
+*************************** 437. row ***************************
+Variable_name: proxy_user
+        Value:
+*************************** 438. row ***************************
+Variable_name: pseudo_slave_mode
+        Value: OFF
+*************************** 439. row ***************************
+Variable_name: pseudo_thread_id
+        Value: 245
+*************************** 440. row ***************************
+Variable_name: query_alloc_block_size
+        Value: 16384
+*************************** 441. row ***************************
+Variable_name: query_cache_limit
+        Value: 1048576
+*************************** 442. row ***************************
+Variable_name: query_cache_min_res_unit
+        Value: 4096
+*************************** 443. row ***************************
+Variable_name: query_cache_size
+        Value: 1048576
+*************************** 444. row ***************************
+Variable_name: query_cache_strip_comments
+        Value: OFF
+*************************** 445. row ***************************
+Variable_name: query_cache_type
+        Value: OFF
+*************************** 446. row ***************************
+Variable_name: query_cache_wlock_invalidate
+        Value: OFF
+*************************** 447. row ***************************
+Variable_name: query_prealloc_size
+        Value: 24576
+*************************** 448. row ***************************
+Variable_name: rand_seed1
+        Value: 629713412
+*************************** 449. row ***************************
+Variable_name: rand_seed2
+        Value: 961958629
+*************************** 450. row ***************************
+Variable_name: range_alloc_block_size
+        Value: 4096
+*************************** 451. row ***************************
+Variable_name: read_binlog_speed_limit
+        Value: 0
+*************************** 452. row ***************************
+Variable_name: read_buffer_size
+        Value: 262144
+*************************** 453. row ***************************
+Variable_name: read_only
+        Value: OFF
+*************************** 454. row ***************************
+Variable_name: read_rnd_buffer_size
+        Value: 524288
+*************************** 455. row ***************************
+Variable_name: relay_log
+        Value:
+*************************** 456. row ***************************
+Variable_name: relay_log_basename
+        Value:
+*************************** 457. row ***************************
+Variable_name: relay_log_index
+        Value:
+*************************** 458. row ***************************
+Variable_name: relay_log_info_file
+        Value: relay-log.info
+*************************** 459. row ***************************
+Variable_name: relay_log_purge
+        Value: ON
+*************************** 460. row ***************************
+Variable_name: relay_log_recovery
+        Value: OFF
+*************************** 461. row ***************************
+Variable_name: relay_log_space_limit
+        Value: 0
+*************************** 462. row ***************************
+Variable_name: replicate_annotate_row_events
+        Value: ON
+*************************** 463. row ***************************
+Variable_name: replicate_do_db
+        Value:
+*************************** 464. row ***************************
+Variable_name: replicate_do_table
+        Value:
+*************************** 465. row ***************************
+Variable_name: replicate_events_marked_for_skip
+        Value: REPLICATE
+*************************** 466. row ***************************
+Variable_name: replicate_ignore_db
+        Value:
+*************************** 467. row ***************************
+Variable_name: replicate_ignore_table
+        Value:
+*************************** 468. row ***************************
+Variable_name: replicate_wild_do_table
+        Value:
+*************************** 469. row ***************************
+Variable_name: replicate_wild_ignore_table
+        Value:
+*************************** 470. row ***************************
+Variable_name: report_host
+        Value:
+*************************** 471. row ***************************
+Variable_name: report_password
+        Value:
+*************************** 472. row ***************************
+Variable_name: report_port
+        Value: 3306
+*************************** 473. row ***************************
+Variable_name: report_user
+        Value:
+*************************** 474. row ***************************
+Variable_name: rowid_merge_buff_size
+        Value: 8388608
+*************************** 475. row ***************************
+Variable_name: rpl_semi_sync_master_enabled
+        Value: OFF
+*************************** 476. row ***************************
+Variable_name: rpl_semi_sync_master_timeout
+        Value: 10000
+*************************** 477. row ***************************
+Variable_name: rpl_semi_sync_master_trace_level
+        Value: 32
+*************************** 478. row ***************************
+Variable_name: rpl_semi_sync_master_wait_no_slave
+        Value: ON
+*************************** 479. row ***************************
+Variable_name: rpl_semi_sync_master_wait_point
+        Value: AFTER_COMMIT
+*************************** 480. row ***************************
+Variable_name: rpl_semi_sync_slave_delay_master
+        Value: OFF
+*************************** 481. row ***************************
+Variable_name: rpl_semi_sync_slave_enabled
+        Value: OFF
+*************************** 482. row ***************************
+Variable_name: rpl_semi_sync_slave_kill_conn_timeout
+        Value: 5
+*************************** 483. row ***************************
+Variable_name: rpl_semi_sync_slave_trace_level
+        Value: 32
+*************************** 484. row ***************************
+Variable_name: secure_auth
+        Value: ON
+*************************** 485. row ***************************
+Variable_name: secure_file_priv
+        Value:
+*************************** 486. row ***************************
+Variable_name: secure_timestamp
+        Value: NO
+*************************** 487. row ***************************
+Variable_name: server_id
+        Value: 1
+*************************** 488. row ***************************
+Variable_name: session_track_schema
+        Value: ON
+*************************** 489. row ***************************
+Variable_name: session_track_state_change
+        Value: OFF
+*************************** 490. row ***************************
+Variable_name: session_track_system_variables
+        Value: autocommit,character_set_client,character_set_connection,character_set_results,time_zone
+*************************** 491. row ***************************
+Variable_name: session_track_transaction_info
+        Value: OFF
+*************************** 492. row ***************************
+Variable_name: shared_memory
+        Value: OFF
+*************************** 493. row ***************************
+Variable_name: shared_memory_base_name
+        Value: MYSQL
+*************************** 494. row ***************************
+Variable_name: skip_external_locking
+        Value: ON
+*************************** 495. row ***************************
+Variable_name: skip_name_resolve
+        Value: OFF
+*************************** 496. row ***************************
+Variable_name: skip_networking
+        Value: OFF
+*************************** 497. row ***************************
+Variable_name: skip_parallel_replication
+        Value: OFF
+*************************** 498. row ***************************
+Variable_name: skip_replication
+        Value: OFF
+*************************** 499. row ***************************
+Variable_name: skip_show_database
+        Value: OFF
+*************************** 500. row ***************************
+Variable_name: slave_compressed_protocol
+        Value: OFF
+*************************** 501. row ***************************
+Variable_name: slave_ddl_exec_mode
+        Value: IDEMPOTENT
+*************************** 502. row ***************************
+Variable_name: slave_domain_parallel_threads
+        Value: 0
+*************************** 503. row ***************************
+Variable_name: slave_exec_mode
+        Value: STRICT
+*************************** 504. row ***************************
+Variable_name: slave_load_tmpdir
+        Value: C:\xampp2\tmp
+*************************** 505. row ***************************
+Variable_name: slave_max_allowed_packet
+        Value: 1073741824
+*************************** 506. row ***************************
+Variable_name: slave_net_timeout
+        Value: 60
+*************************** 507. row ***************************
+Variable_name: slave_parallel_max_queued
+        Value: 131072
+*************************** 508. row ***************************
+Variable_name: slave_parallel_mode
+        Value: conservative
+*************************** 509. row ***************************
+Variable_name: slave_parallel_threads
+        Value: 0
+*************************** 510. row ***************************
+Variable_name: slave_parallel_workers
+        Value: 0
+*************************** 511. row ***************************
+Variable_name: slave_run_triggers_for_rbr
+        Value: NO
+*************************** 512. row ***************************
+Variable_name: slave_skip_errors
+        Value: OFF
+*************************** 513. row ***************************
+Variable_name: slave_sql_verify_checksum
+        Value: ON
+*************************** 514. row ***************************
+Variable_name: slave_transaction_retries
+        Value: 10
+*************************** 515. row ***************************
+Variable_name: slave_transaction_retry_errors
+        Value: 1213,1205
+*************************** 516. row ***************************
+Variable_name: slave_transaction_retry_interval
+        Value: 0
+*************************** 517. row ***************************
+Variable_name: slave_type_conversions
+        Value:
+*************************** 518. row ***************************
+Variable_name: slow_launch_time
+        Value: 2
+*************************** 519. row ***************************
+Variable_name: slow_query_log
+        Value: OFF
+*************************** 520. row ***************************
+Variable_name: slow_query_log_file
+        Value: L01-slow.log
+*************************** 521. row ***************************
+Variable_name: socket
+        Value: C:/xampp2/mysql/mysql.sock
+*************************** 522. row ***************************
+Variable_name: sort_buffer_size
+        Value: 524288
+*************************** 523. row ***************************
+Variable_name: sql_auto_is_null
+        Value: OFF
+*************************** 524. row ***************************
+Variable_name: sql_big_selects
+        Value: ON
+*************************** 525. row ***************************
+Variable_name: sql_buffer_result
+        Value: OFF
+*************************** 526. row ***************************
+Variable_name: sql_log_bin
+        Value: ON
+*************************** 527. row ***************************
+Variable_name: sql_log_off
+        Value: OFF
+*************************** 528. row ***************************
+Variable_name: sql_mode
+        Value: NO_ZERO_IN_DATE,NO_ZERO_DATE,NO_ENGINE_SUBSTITUTION
+*************************** 529. row ***************************
+Variable_name: sql_notes
+        Value: ON
+*************************** 530. row ***************************
+Variable_name: sql_quote_show_create
+        Value: ON
+*************************** 531. row ***************************
+Variable_name: sql_safe_updates
+        Value: OFF
+*************************** 532. row ***************************
+Variable_name: sql_select_limit
+        Value: 18446744073709551615
+*************************** 533. row ***************************
+Variable_name: sql_slave_skip_counter
+        Value: 0
+*************************** 534. row ***************************
+Variable_name: sql_warnings
+        Value: OFF
+*************************** 535. row ***************************
+Variable_name: ssl_ca
+        Value:
+*************************** 536. row ***************************
+Variable_name: ssl_capath
+        Value:
+*************************** 537. row ***************************
+Variable_name: ssl_cert
+        Value:
+*************************** 538. row ***************************
+Variable_name: ssl_cipher
+        Value:
+*************************** 539. row ***************************
+Variable_name: ssl_crl
+        Value:
+*************************** 540. row ***************************
+Variable_name: ssl_crlpath
+        Value:
+*************************** 541. row ***************************
+Variable_name: ssl_key
+        Value:
+*************************** 542. row ***************************
+Variable_name: standard_compliant_cte
+        Value: ON
+*************************** 543. row ***************************
+Variable_name: storage_engine
+        Value: InnoDB
+*************************** 544. row ***************************
+Variable_name: stored_program_cache
+        Value: 256
+*************************** 545. row ***************************
+Variable_name: strict_password_validation
+        Value: ON
+*************************** 546. row ***************************
+Variable_name: sync_binlog
+        Value: 0
+*************************** 547. row ***************************
+Variable_name: sync_frm
+        Value: ON
+*************************** 548. row ***************************
+Variable_name: sync_master_info
+        Value: 10000
+*************************** 549. row ***************************
+Variable_name: sync_relay_log
+        Value: 10000
+*************************** 550. row ***************************
+Variable_name: sync_relay_log_info
+        Value: 10000
+*************************** 551. row ***************************
+Variable_name: system_time_zone
+        Value: unknown
+*************************** 552. row ***************************
+Variable_name: system_versioning_alter_history
+        Value: ERROR
+*************************** 553. row ***************************
+Variable_name: system_versioning_asof
+        Value: DEFAULT
+*************************** 554. row ***************************
+Variable_name: table_definition_cache
+        Value: 400
+*************************** 555. row ***************************
+Variable_name: table_open_cache
+        Value: 2000
+*************************** 556. row ***************************
+Variable_name: table_open_cache_instances
+        Value: 8
+*************************** 557. row ***************************
+Variable_name: tcp_keepalive_interval
+        Value: 0
+*************************** 558. row ***************************
+Variable_name: tcp_keepalive_probes
+        Value: 0
+*************************** 559. row ***************************
+Variable_name: tcp_keepalive_time
+        Value: 0
+*************************** 560. row ***************************
+Variable_name: thread_cache_size
+        Value: 151
+*************************** 561. row ***************************
+Variable_name: thread_concurrency
+        Value: 10
+*************************** 562. row ***************************
+Variable_name: thread_handling
+        Value: pool-of-threads
+*************************** 563. row ***************************
+Variable_name: thread_pool_idle_timeout
+        Value: 60
+*************************** 564. row ***************************
+Variable_name: thread_pool_max_threads
+        Value: 65536
+*************************** 565. row ***************************
+Variable_name: thread_pool_min_threads
+        Value: 1
+*************************** 566. row ***************************
+Variable_name: thread_pool_mode
+        Value: windows
+*************************** 567. row ***************************
+Variable_name: thread_pool_oversubscribe
+        Value: 3
+*************************** 568. row ***************************
+Variable_name: thread_pool_prio_kickup_timer
+        Value: 1000
+*************************** 569. row ***************************
+Variable_name: thread_pool_priority
+        Value: auto
+*************************** 570. row ***************************
+Variable_name: thread_pool_size
+        Value: 8
+*************************** 571. row ***************************
+Variable_name: thread_pool_stall_limit
+        Value: 500
+*************************** 572. row ***************************
+Variable_name: thread_stack
+        Value: 299008
+*************************** 573. row ***************************
+Variable_name: time_format
+        Value: %H:%i:%s
+*************************** 574. row ***************************
+Variable_name: time_zone
+        Value: SYSTEM
+*************************** 575. row ***************************
+Variable_name: timed_mutexes
+        Value: OFF
+*************************** 576. row ***************************
+Variable_name: timestamp
+        Value: 1566522166.126233
+*************************** 577. row ***************************
+Variable_name: tmp_disk_table_size
+        Value: 18446744073709551615
+*************************** 578. row ***************************
+Variable_name: tmp_memory_table_size
+        Value: 16777216
+*************************** 579. row ***************************
+Variable_name: tmp_table_size
+        Value: 16777216
+*************************** 580. row ***************************
+Variable_name: tmpdir
+        Value: C:/xampp2/tmp
+*************************** 581. row ***************************
+Variable_name: transaction_alloc_block_size
+        Value: 8192
+*************************** 582. row ***************************
+Variable_name: transaction_prealloc_size
+        Value: 4096
+*************************** 583. row ***************************
+Variable_name: tx_isolation
+        Value: REPEATABLE-READ
+*************************** 584. row ***************************
+Variable_name: tx_read_only
+        Value: OFF
+*************************** 585. row ***************************
+Variable_name: unique_checks
+        Value: ON
+*************************** 586. row ***************************
+Variable_name: updatable_views_with_limit
+        Value: YES
+*************************** 587. row ***************************
+Variable_name: use_stat_tables
+        Value: NEVER
+*************************** 588. row ***************************
+Variable_name: userstat
+        Value: OFF
+*************************** 589. row ***************************
+Variable_name: version
+        Value: 10.3.16-MariaDB
+*************************** 590. row ***************************
+Variable_name: version_comment
+        Value: mariadb.org binary distribution
+*************************** 591. row ***************************
+Variable_name: version_compile_machine
+        Value: x64
+*************************** 592. row ***************************
+Variable_name: version_compile_os
+        Value: Win64
+*************************** 593. row ***************************
+Variable_name: version_malloc_library
+        Value: system
+*************************** 594. row ***************************
+Variable_name: version_source_revision
+        Value: 0789a1a18f0e780c0412667e7b6e0a9970aa6905
+*************************** 595. row ***************************
+Variable_name: version_ssl_library
+        Value: YaSSL 2.4.4
+*************************** 596. row ***************************
+Variable_name: wait_timeout
+        Value: 28800
+*************************** 597. row ***************************
+Variable_name: warning_count
+        Value: 0
+597 rows in set (0.004 sec)
+
+MariaDB [(none)]> show variables where Variable_name = 'autocommit';
++---------------+-------+
+| Variable_name | Value |
++---------------+-------+
+| autocommit    | ON    |
++---------------+-------+
+1 row in set (0.001 sec)
+
+MariaDB [(none)]> set autocommit=0;
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [(none)]> show variables where Variable_name = 'autocommit';
++---------------+-------+
+| Variable_name | Value |
++---------------+-------+
+| autocommit    | OFF   |
++---------------+-------+
+1 row in set (0.001 sec)
+
+MariaDB [(none)]> set autocommit=1;
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [(none)]> show variables where Variable_name = 'autocommit';
++---------------+-------+
+| Variable_name | Value |
++---------------+-------+
+| autocommit    | ON    |
++---------------+-------+
+1 row in set (0.001 sec)
+
+MariaDB [(none)]> set autocommit=off;
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [(none)]> show variables where Variable_name = 'autocommit';
++---------------+-------+
+| Variable_name | Value |
++---------------+-------+
+| autocommit    | OFF   |
++---------------+-------+
+1 row in set (0.001 sec)
+
+MariaDB [(none)]> set autocommit=on;
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [(none)]> show variables where Variable_name = 'autocommit';
++---------------+-------+
+| Variable_name | Value |
++---------------+-------+
+| autocommit    | ON    |
++---------------+-------+
+1 row in set (0.001 sec)
+
+MariaDB [(none)]> set autocommit=0;
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [(none)]> show variables where Variable_name = 'autocommit';
++---------------+-------+
+| Variable_name | Value |
++---------------+-------+
+| autocommit    | OFF   |
++---------------+-------+
+1 row in set (0.001 sec)
+
+MariaDB [(none)]> start transaction;
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [(none)]> use class;
+Database changed
+MariaDB [class]> show tables;
++-----------------+
+| Tables_in_class |
++-----------------+
+| bk1             |
+| cats            |
+| db9             |
+| eventlog        |
+| myevent         |
+| mytable         |
+| product         |
+| scoreview       |
+| students        |
+| tb1             |
+| tb10            |
+| tb11            |
+| tb12            |
+| tb2             |
+| tb20            |
+| tb21            |
+| tb22            |
+| tb23            |
+| tb24            |
+| tb3             |
+| tb4             |
+| tb6             |
+| tb7             |
+| tb8             |
+| tb9             |
+| test1           |
++-----------------+
+26 rows in set (0.001 sec)
+
+MariaDB [class]> desc cats;
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| id    | int(11)      | NO   | PRI | NULL    | auto_increment |
+| cat   | varchar(100) | YES  | UNI | NULL    |                |
++-------+--------------+------+-----+---------+----------------+
+2 rows in set (0.014 sec)
+
+MariaDB [class]> select * from cats;
+Empty set (0.000 sec)
+
+MariaDB [class]> insert into cats (cat) values ('C001');
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [class]> select * from cats;
++----+------+
+| id | cat  |
++----+------+
+|  1 | C001 |
++----+------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> insert into cats (cat) values ('C001');
+ERROR 1062 (23000): Duplicate entry 'C001' for key 'cat'
+MariaDB [class]> select * from cats;
++----+------+
+| id | cat  |
++----+------+
+|  1 | C001 |
++----+------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> rollback;
+Query OK, 0 rows affected (0.001 sec)
+
+MariaDB [class]> select * from cats;
+Empty set (0.000 sec)
+
+MariaDB [class]> start transaction;
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [class]> insert into cats (cat) values ('C001');
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [class]> select * from cats;
++----+------+
+| id | cat  |
++----+------+
+|  3 | C001 |
++----+------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> commit;
+Query OK, 0 rows affected (0.001 sec)
+
+MariaDB [class]> select * from cats;
++----+------+
+| id | cat  |
++----+------+
+|  3 | C001 |
++----+------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> set autocommit=1;
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create procedure addCat(in newcat varchar(100))
+    -> begin
+    ->     insert into cats (cat) values (newcat);
+    -> end #
+Query OK, 0 rows affected (0.002 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> call addCat('C002');
+Query OK, 1 row affected (0.002 sec)
+
+MariaDB [class]> select * from cats;
++----+------+
+| id | cat  |
++----+------+
+|  3 | C001 |
+|  4 | C002 |
++----+------+
+2 rows in set (0.000 sec)
+
+MariaDB [class]> call addCat('C003');
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [class]> select * from cats;
++----+------+
+| id | cat  |
++----+------+
+|  3 | C001 |
+|  4 | C002 |
+|  5 | C003 |
++----+------+
+3 rows in set (0.000 sec)
+
+MariaDB [class]> call addCat('C003');
+ERROR 1062 (23000): Duplicate entry 'C003' for key 'cat'
+MariaDB [class]> \d #
+MariaDB [class]> create procedure addCatV2(in newcat varchar(100))
+    -> begin
+    ->     declare exit handler for sqlstat '23000'
+    ->     begin
+    ->         select 'Error.';
+    ->     end;
+    ->     insert into cats (cat) values (newcat);
+    ->     select 'Success.';
+    -> end #
+ERROR 1319 (42000): Undefined CONDITION: sqlstat
+MariaDB [class]> \d ;
+MariaDB [class]> ---------------------
+MariaDB [class]> \d #
+MariaDB [class]> create procedure addCatV2(in newcat varchar(100))
+    -> begin
+    ->     declare exit handler for sqlstate '23000'
+    ->     begin
+    ->         select 'Error.';
+    ->     end;
+    ->     insert into cats (cat) values (newcat);
+    ->     select 'Success.';
+    -> end #
+Query OK, 0 rows affected (0.002 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> select * from cats;
++----+------+
+| id | cat  |
++----+------+
+|  3 | C001 |
+|  4 | C002 |
+|  5 | C003 |
++----+------+
+3 rows in set (0.000 sec)
+
+MariaDB [class]> call addCatV2('C004');
++----------+
+| Success. |
++----------+
+| Success. |
++----------+
+1 row in set (0.002 sec)
+
+Query OK, 1 row affected (0.029 sec)
+
+MariaDB [class]> call addCatV2('C004');
++--------+
+| Error. |
++--------+
+| Error. |
++--------+
+1 row in set (0.002 sec)
+
+Query OK, 0 rows affected (0.028 sec)
+
+MariaDB [class]> ---------------------
+MariaDB [class]> \d #
+MariaDB [class]> create procedure addCatV3(in newcat varchar(100))
+    -> begin
+    ->     declare continue handler for sqlstate '23000'
+    ->     begin
+    ->         select 'Error.';
+    ->     end;
+    ->     insert into cats (cat) values (newcat);
+    ->     select 'Success.';
+    -> end #
+Query OK, 0 rows affected (0.002 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> call addCat('C005');
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [class]> call addCatV3('C006');
++----------+
+| Success. |
++----------+
+| Success. |
++----------+
+1 row in set (0.001 sec)
+
+Query OK, 1 row affected (0.020 sec)
+
+MariaDB [class]> call addCatV3('C006');
++--------+
+| Error. |
++--------+
+| Error. |
++--------+
+1 row in set (0.002 sec)
+
++----------+
+| Success. |
++----------+
+| Success. |
++----------+
+1 row in set (0.028 sec)
+
+Query OK, 0 rows affected (0.051 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create procedure addCatV4(in newcat varchar(100))
+    -> begin
+    ->     declare continue handler for sqlstate '23000';
+    ->     insert into cats (cat) values (newcat);
+    ->     select 'Success.';
+    -> end #
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ';
+    insert into cats (cat) values (newcat);
+    select 'Success.';
+end' at line 3
+MariaDB [class]> \d ;
+MariaDB [class]> \d #
+MariaDB [class]> create procedure addCatV4(in newcat varchar(100))
+    -> begin
+    ->     declare continue handler for sqlstate '23000'
+    ->     set @a = 1;
+    ->     insert into cats (cat) values (newcat);
+    ->     select 'Success.';
+    -> end #
+Query OK, 0 rows affected (0.002 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> call addCatV4('C006');
++----------+
+| Success. |
++----------+
+| Success. |
++----------+
+1 row in set (0.002 sec)
+
+Query OK, 0 rows affected (0.018 sec)
+
+MariaDB [class]> delect from cats;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'delect from cats' at line 1
+MariaDB [class]> delete from cats;
+Query OK, 6 rows affected (0.001 sec)
+
+MariaDB [class]> select * from products;
+ERROR 1146 (42S02): Table 'class.products' doesn't exist
+MariaDB [class]> select * from product;
+Empty set (0.000 sec)
+
+MariaDB [class]> \d #
+MariaDB [class]> create trigger addCatV1 after insert on product for each row
+    -> begin
+    ->     insert into cats (cat) values (new.cat);
+    -> end #
+Query OK, 0 rows affected (0.012 sec)
+
+MariaDB [class]> \d ;
+MariaDB [class]> select * from product;
+Empty set (0.004 sec)
+
+MariaDB [class]> select * from cats;
+Empty set (0.000 sec)
+
+MariaDB [class]> insert into product (pname,cat) values ('P001','C001');
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [class]> select * from product;
++----+-------+------+
+| id | pname | cat  |
++----+-------+------+
+|  1 | P001  | C001 |
++----+-------+------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> select * from cats;
++----+------+
+| id | cat  |
++----+------+
+| 13 | C001 |
++----+------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> insert into product (pname,cat) values ('P002','C001');
+ERROR 1062 (23000): Duplicate entry 'C001' for key 'cat'
+MariaDB [class]> select * from cats;
++----+------+
+| id | cat  |
++----+------+
+| 13 | C001 |
++----+------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> select * from product;
++----+-------+------+
+| id | pname | cat  |
++----+-------+------+
+|  1 | P001  | C001 |
++----+-------+------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> select count(*) into count from cats where cat = 'C001';
+ERROR 1327 (42000): Undeclared variable: count
+MariaDB [class]> select count(*) into @count from cats where cat = 'C001';
+Query OK, 1 row affected (0.000 sec)
+
+MariaDB [class]> select @count;
++--------+
+| @count |
++--------+
+|      1 |
++--------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> select count(*) into @count from cats where cat = 'C000';
+Query OK, 1 row affected (0.000 sec)
+
+MariaDB [class]> select @count;
++--------+
+| @count |
++--------+
+|      0 |
++--------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> select @count := count(*) from cats where cat = 'C000';
++--------------------+
+| @count := count(*) |
++--------------------+
+|                  0 |
++--------------------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> select @count;
++--------+
+| @count |
++--------+
+|      0 |
++--------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> select @count := count(*) from cats where cat = 'C001';
++--------------------+
+| @count := count(*) |
++--------------------+
+|                  1 |
++--------------------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> select @count;
++--------+
+| @count |
++--------+
+|      1 |
++--------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> insert into product (pname,cat) values ('P002','C001');
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [class]> select * from product;
++----+-------+------+
+| id | pname | cat  |
++----+-------+------+
+|  1 | P001  | C001 |
+|  3 | P002  | C001 |
++----+-------+------+
+2 rows in set (0.000 sec)
+
+MariaDB [class]> select * from cats;
++----+------+
+| id | cat  |
++----+------+
+| 13 | C001 |
++----+------+
+1 row in set (0.000 sec)
+
+MariaDB [class]> insert into cats (cat) select 'C002' from dual
+    -> where not exists (select cat from cats where cat = 'C002');
+Query OK, 1 row affected (0.002 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+MariaDB [class]> select * from cats;
++----+------+
+| id | cat  |
++----+------+
+| 13 | C001 |
+| 15 | C002 |
++----+------+
+2 rows in set (0.000 sec)
+
+MariaDB [class]> insert into cats (cat) select 'C002' from dual
+    -> where not exists (select cat from cats where cat = 'C002');
+Query OK, 0 rows affected (0.000 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [class]> select * from cats;
++----+------+
+| id | cat  |
++----+------+
+| 13 | C001 |
+| 15 | C002 |
++----+------+
+2 rows in set (0.000 sec)
+
+MariaDB [class]> \q
+Bye
+
+c:\xampp2\mysql\bin>a
