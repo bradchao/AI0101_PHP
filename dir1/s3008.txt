@@ -1,0 +1,695 @@
+
+<!doctype html public "-//w3c//dtd html 4.01//en" "http://www.w3.org/tr/html4/strict.dtd"> 
+<html>
+<head>
+    <meta name="oath:guce:product-eu" content="false"/>
+    <meta name="oath:guce:consent-host" content="guce.yahoo.com"/>
+    <meta name="oath:guce:locale" content="zh-Hant-TW"/>
+    <meta name="oath:guce:report-only" content="false"/>
+    <meta name="oath:guce:inline-consent" content="true"/>
+    <script src="https://s.yimg.com/oa/guce.js" async></script>
+<!-- Rapid begin. -->
+<script language="JavaScript" src="https://s.yimg.com/ss/rapid3.js"></script>
+<script language="JavaScript" src="/__rapid-worker-1.2.js"></script> <!-- rapid should require worker file itself, this should be unnessary, but require it anyway. -->
+<script language="JavaScript">
+    YAHOO.i13n.WEBWORKER_FILE = "/__rapid-worker-1.2.js";
+    var pageParams = { site: 'finance', lang: 'zh-Hant-TW', mrkt: 'tw' };
+    if (typeof articlePageParams === 'object') {
+        pageParams = articlePageParams;
+    }
+    var stockSiteRapid = new YAHOO.i13n.Rapid({ client_only: 1, spaceid: '152960937', keys: pageParams, tracked_mods: [] });
+</script>
+<!-- Rapid end. -->
+
+    <!-- Consent Manager Tag : Script -->
+    <script type="text/javascript" src="https://consent.cmp.oath.com/cmp.js" async></script>
+
+    <!-- Consent Manager Tag : Stubbed (minified) (updated 2018-04-27T17:00) -->
+<script type="text/javascript">!function(){var e=!1;function a(e){var a="string"==typeof e.data,t=e.data;if(a)try{t=JSON.parse(e.data)}catch(e){}if(t.__cmpCall){var n=t.__cmpCall;window.__cmp(n.command,n.parameter,function(t,c){var i={__cmpReturn:{returnValue:t,success:c,callId:n.callId}};e.source.postMessage(a?JSON.stringify(i):i,"*")})}}!function e(){if(!window.frames.__cmpLocator)if(document.body&&document.body.firstChild){var a=document.body,t=document.createElement("iframe");t.style.display="none",t.height=t.width=0,t.name="__cmpLocator",a.insertBefore(t,a.firstChild)}else setTimeout(e,5)}(),"function"!=typeof __cmp&&(window.__cmp=function(){var a=arguments;if(__cmp.a=__cmp.a||[],!a.length)return __cmp.a;"ping"===a[0]?a[2]({gdprAppliesGlobally:e,cmpLoaded:!1},!0):__cmp.a.push([].slice.apply(a))},__cmp.msgHandler=a,window.addEventListener?window.addEventListener("message",a,!1):window.attachEvent("onmessage",a))}();</script>
+<!-- End Consent Manager Tag : Stubbed (minified) --> 
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <script type="text/javascript">
+        window.__cmp('init');
+
+        window.__cmp('getConsentData', null, function (result, success) {
+        // consentData contains the base64-encoded consent string
+        var consentData = result.consentData;
+   
+        // gdprApplies specifies whether the user is in EU jurisdiction
+        var gdprApplies = result.gdprApplies;
+        console.log("getConsentData result:" + JSON.stringify(result, true));
+        if ( success ) {
+            console.log('call getConsentData success');
+        } else {
+            console.log('call getConsentData fail');
+        }
+        // pass these 2 values to all ad / pixel calls
+        // window.__cmp('getVendorConsents', null, function( result, success) {
+        //     if ( success ) {
+        //         console.log('call getVendorConsents success');
+        //     } else {
+        //         console.log('call getVendorConsents fail');
+        //     }
+        //     console.log("getVendorConsents result:" + JSON.stringify(result, true));
+        // });
+    });
+    </script>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=big5"> 
+<meta name="application-name" content="Yahoo!奇摩股市"/>
+<meta name="msapplication-TileColor" content="#7b0099"/> 
+<meta name="msapplication-TileImage" content="https://s.yimg.com/f/i/tw/stock/tw_stock_icon_pin.png"/>
+<meta name="description" content="大立光3008個股走勢，查詢 大立光 個股股價、新聞、成交明細、技術分析等資訊，就在Yahoo!奇摩股市。">
+<title>大立光(3008) - 個股走勢 - Yahoo!奇摩股市</title>
+<link rel="alternate" href="https://tw.mobi.yahoo.com/finance/quote/3008.TW" hreflang="zh-TW"/>
+<link rel="stylesheet" type="text/css" href="https://s.yimg.com/f/i/tw/hp/masthead/yhtw_masthead_standard.css" media="screen, print" />
+<link rel="stylesheet" type="text/css" href="https://s.yimg.com/f/i/tw/hp/masthead/yhtw_masthead_12.css" media="screen, print" />
+<link rel="stylesheet" type="text/css" href="https://s.yimg.com/f/i/tw/stock/revampe/css_1960_min.css" media="screen, print" />
+<link rel="stylesheet" type="text/css" href="https://s.yimg.com/f/i/tw/stock/img06/stock_wd.css" media="screen, print" />
+<link rel="stylesheet" type="text/css" href="https://s.yimg.com/f/i/tw/stock/stock_print_1_2.css" media="print" />
+<link href="https://s.yimg.com/f/i/tw/hp/Universal_header/uh_bt3.css" type="text/css" rel="stylesheet"/>
+<link href="https://s.yimg.com/f/i/tw/stock/revampe/ystock_uh_1_1_min.css" type="text/css" rel="stylesheet"/> <script language="javascript" src="https://s.yimg.com/f/i/tw/stock/img06/stock22.js"></script>
+<link href="https://s.yimg.com/ud/others/stock/gemini-v1.css" type="text/css" rel="stylesheet"/>
+<script language="javascript" src="https://s.yimg.com/f/i/tw/stock/img06/auth.js"></script>
+<script language="javascript" src="https://s.yimg.com/f/i/tw/mc/mc.js"></script>
+<script language="javascript" src="https://s.yimg.com/f/i/tw/stock/img06/quotelist.js"></script>
+<script language="javascript" src="https://s.yimg.com/f/i/tw/stock/img06/tsc22_r1826.js"></script>
+<script language="JavaScript" src="https://s.yimg.com/f/i/tw/hp/wd/wd_20050720.js"></script>
+<script language="JavaScript" src="https://s.yimg.com/f/i/tw/stock/yui2/yahoo_200_b2.js" ></script>
+<script language="JavaScript" src="https://s.yimg.com/f/i/tw/stock/yui2/dom_200_b2.js" ></script>
+<script language="JavaScript" src="https://s.yimg.com/f/i/tw/stock/yui2/event_200_b2.js" ></script>
+<script language="JavaScript" src="https://s.yimg.com/f/i/tw/stock/yui2/dragdrop_200_b2.js" ></script>
+<script language="JavaScript" src="https://s.yimg.com/f/i/tw/stock/img06/stk_wd.js"></script>
+<script language="javascript" src="https://s.yimg.com/f/i/tw/stock/img06/stock22.js"></script>
+<script language="javascript" src="https://s.yimg.com/f/i/tw/stock/img06/auth.js"></script>
+<script language="javascript" src="https://s.yimg.com/f/i/tw/mc/mc.js"></script>
+<script type="text/javascript" src="https://sec.yimg.com/us.js.yimg.com/lib/common/utils/2/connection_2.1.0.js" ></script>
+<script type="text/javascript" src="https://s.yimg.com/ud/others/stock/jquery.1.11.3.min.js"></script>
+<script type="text/javascript" src="https://s.yimg.com/ud/others/stock/v1/highstock.js"></script>
+<script language="javascript">
+<!--
+var uid = new String;
+function reload1() {
+ now = new Date;
+ if (now.getHours()>=9 && now.getHours()<=13)
+ thetimer = setTimeout("changeimage1()", 60000);
+}
+function changeimage1(){
+ now = new Date;
+ uid = "uid="+now.getHours().toString()+now.getMinutes().toString()+now.getSeconds().toString();
+ imagesource = imgurl + uid;
+ window.document.image.src = imagesource;
+ if(now.getHours()>=9 && now.getHours()<=13 )
+ thetimer = setTimeout("changeimage1()", 60000);
+}
+function friendlyprint()
+{
+ imgurl = imgurl + "k=p&";
+ changeimage1();
+ reload1();
+}
+//-->
+</script>
+<script type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+ var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+ var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+ var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+ if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_findObj(n, d) { //v4.01
+ var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+ d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+ if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+ for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+ if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_swapImage() { //v3.0
+ var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+ if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<script type='text/javascript'>
+ !window.YUI && document.write("<script type=\"text/javascript\" src=\"https://yui-s.yahooapis.com/combo?3.5.1/yui/yui-min.js\">"+"</scr"+"ipt>");
+</script></head>
+              <style type='text/css'>
+ .ad_slug_table TD { font-size:0px;cursor:default; }
+ .ad_slug_table TD SPAN { font-size:0px;cursor:default; }
+ .ad_slug_table TD SPAN FONT { font-size:10px;cursor:default; }
+ .ad_slug_table TD SPAN.can_ad_slug { font-size:11px;text-align:right }
+</style>
+              <script type='text/javascript' src='https://s.yimg.com/rq/darla/3-15-1/js/g-r-min.js'></script>
+              <script type="text/javascript">
+                if (!window.DARLA_CONFIG) {
+                  DARLA_CONFIG = {"useYAC":0,"usePE":0,"servicePath":"https:\/\/tw.stock.yahoo.com\/sdarla\/php\/fc.php","xservicePath":"","beaconPath":"https:\/\/tw.stock.yahoo.com\/sdarla\/php\/b.php","renderPath":"","allowFiF":false,"srenderPath":"https:\/\/s.yimg.com\/rq\/darla\/3-15-1\/html\/r-sf.html","renderFile":"https:\/\/s.yimg.com\/rq\/darla\/3-15-1\/html\/r-sf.html","sfbrenderPath":"https:\/\/s.yimg.com\/rq\/darla\/3-15-1\/html\/r-sf.html","msgPath":"https:\/\/fc.yahoo.com\/unsupported-1946.html","cscPath":"https:\/\/s.yimg.com\/rq\/darla\/3-15-1\/html\/r-csc.html","root":"sdarla","edgeRoot":"https:\/\/s.yimg.com\/rq\/darla\/3-15-1","sedgeRoot":"https:\/\/s.yimg.com\/rq\/darla\/3-15-1","version":"3-15-1","tpbURI":"","hostFile":"https:\/\/s.yimg.com\/rq\/darla\/3-15-1\/js\/g-r-min.js","beaconsDisabled":true,"rotationTimingDisabled":true,"fdb_locale":"\u60a8\u70ba\u4ec0\u9ebc\u4e0d\u559c\u6b61\u9019\u5247\u5ee3\u544a\uff1f|\u5ee3\u544a\u5167\u5bb9\u4ee4\u4eba\u53cd\u611f|\u5176\u4ed6|\u611f\u8b1d\u60a8\u5354\u52a9\u6211\u5011\u6539\u5584\u60a8\u7684 Yahoo\u5947\u6469\u9ad4\u9a57|\u5ee3\u544a\u5167\u5bb9\u8207\u6211\u6c92\u4ec0\u9ebc\u95dc\u806f|\u4f7f\u4eba\u5206\u5fc3|\u6211\u4e0d\u559c\u6b61\u9019\u652f\u5ee3\u544a|\u9001\u51fa|\u5b8c\u6210|\u70ba\u4ec0\u9ebc\u6211\u6703\u770b\u898b\u5ee3\u544a\uff1f|\u9032\u4e00\u6b65\u4e86\u89e3\u60a8\u7684\u610f\u898b\u3002|\u60f3\u8981\u4f7f\u7528\u7121\u5ee3\u544a\u6536\u4ef6\u5323\u55ce\uff1f\u5feb\u4f86\u5347\u7d1a Yahoo Mail Pro\uff01|\u7acb\u5373\u5347\u7d1a","lang":"zh-Hant-TW"};
+                }
+                            DARLA_CONFIG.events = {
+                                         'renderN':
+                            {
+                                name: 'renderN',
+                                ps: 'N',
+                                sp: 152960937,
+                                npv: 1,
+                                ssl: 1
+                            },                             'renderLREC':
+                            {
+                                name: 'renderLREC',
+                                ps: 'LREC',
+                                sp: 152960937,
+                                npv: 1,
+                                ssl: 1
+                            },
+                    'AUTO':
+                      {
+                        name: "AUTO",
+                        sp: 152960937,
+                        autoStart: 1,
+                        autoIV:1,
+                        ps: "N,LREC",
+                        ssl: 1,
+                        secure: 1,
+                        ref: document.location.href // to support testing ads.
+                      }
+                    };
+                               DARLA_CONFIG.positions = {
+                                          N: {wcpx: 1, hcpx: 1, dest: 'tgtN', clean: 'boxN' ,fdb: { "on": 1 }, metaSize: true},
+                       LREC: {wcpx: 1, hcpx: 1, dest: 'tgtLREC', clean: 'boxLREC' ,fdb: { "on": 1 }, metaSize: true}
+               };
+              </script><body vlink=#3948CC style="margin-top:0px"> 
+<center> 
+<script language="javascript" src="https://s.yimg.com/uc/sf/latest/js/safe.min.js"></script>
+<!--BEGIN:Universal Master Header-->
+<style>
+  body {
+    margin: 0;
+  }
+  .uh .eyebrow>li {
+    display: inline-block;
+    margin: 1px 32px 0 0;
+    font-size: 13px;
+    font-weight: normal;
+  }
+  .uh .eyebrow>li>a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .uh .eyebrow>li>a:hover {
+    text-decoration: underline;
+  }
+  .uh .eyebrow .more-anchor {
+    color: #fff;
+  }
+  .uh .eyebrow .more-anchor:hover {
+    color: #1d1da3;
+    background-color: #fff;
+  }
+  .uh .eyebrow .more-anchor svg {
+    fill: #fff;
+  }
+  .uh .eyebrow .more-anchor:hover svg {
+    fill: #1d1da3;
+  }
+  .uh .eyebrow .more-list {
+    display: none;
+  }
+  .uh .eyebrow .more-list li {
+    padding-bottom: 10px;
+  }
+  .uh .eyebrow .more-anchor:hover .more-list{
+    display: block;
+  }
+  .uh .header input[type=text] {
+    width: 250px;
+  }
+  .uh.broad .header input[type=text] {
+    width: 400px;
+  }
+  .uh .header .search-button {
+    border-width: 0;
+    border-bottom: 2px solid #21487f;
+    border-radius: 4px;
+    width: 80px;
+    height: 35px;
+    font: 16px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #fff;
+    background-color: #3775dd;
+    cursor: pointer;
+    outline: none;
+  }
+  .uh.broad .header .search-button {
+    padding: 0 14px;
+    width: 110px;
+  }
+  .uh .header .login-button {
+    color: #400090;
+  }
+  .uh .header .login-button:hover {
+    color: #fff;
+    background-color: #400090;
+  }
+  .uh .header .logout-link {
+    color: #26282a;
+  }
+  .uh .header .logout-link:hover {
+    color: #0078ff;
+  }
+  .uh .header .profile .profile-box {
+    display: none;
+  }
+  .uh .header .profile:hover .profile-box {
+    display: inline-block;
+  }
+</style>
+<div class="uh broad" style="position: relative; z-index: 21; margin-bottom: 10px;">
+  <ul class="eyebrow" style="margin: 0; padding: 0; height: 22px; font-size: 0; text-align: left; white-space: nowrap; background-color: #2d1152;">
+    <li style="margin-left: 10px;">
+      <a href="https://tw.yahoo.com/">
+        <div>
+          <svg width="16" height="16" style="margin-top: 1px; vertical-align: top; fill: #fff; stroke-width: 0;" viewBox="0 0 32 32" data-icon="home">
+            <path d="M16.153 3.224L0 16.962h4.314v11.814h9.87v-8.003h3.934v8.003h9.84V16.962H32" data-reactid="10"></path>
+          </svg>
+          <span>首頁</span>
+        </div>
+      </a>
+    </li>
+    <li><a href="https://tw.mail.yahoo.com/?.intl=tw&amp;.lang=zh-Hant-TW">信箱</a></li>
+    <li><a href="https://tw.news.yahoo.com/">新聞</a></li>
+    <li><a href="http://tw.stock.yahoo.com/">股市</a></li>
+    <li><a href="https://tw.news.yahoo.com/weather/">氣象</a></li>
+    <li><a href="https://tw.sports.yahoo.com/">運動</a></li>
+    <li><a href="https://tw.video.yahoo.com/">Yahoo TV</a></li>
+    <li><a href="http://yahoomode.tumblr.com/yahooapp/">App下載</a></li>
+    <li><a href="https://tw.buy.yahoo.com/">購物中心</a></li>
+    <li><a href="https://tw.mall.yahoo.com/">商城</a></li>
+    <li><a href="https://tw.bid.yahoo.com/">拍賣</a></li>
+    <li>
+      <div class="more-anchor rapidnofollow" style="position: relative; z-index: 1; margin-left: -10px; outline: none; cursor: pointer;">
+        <div style="padding: 0 10px;">
+          <span>更多</span>
+          <svg width="8" height="8" style="margin-left: 5px; vertical-align: middle;" viewBox="0 0 512 512" data-icon="CoreArrowDown">
+            <path d="M500.77 131.432L477.53 108.18c-14.45-14.55-40.11-14.55-54.51 0L255.845 275.363 88.582 108.124c-15.015-14.874-39.363-14.874-54.42.108L10.94 131.486c-14.58 14.44-14.58 40.11-.033 54.442l217.77 217.845c15.004 14.82 39.33 14.874 54.42-.108L500.88 185.82c14.818-14.982 14.87-39.298-.11-54.388z"></path>
+          </svg>
+        </div>
+        <div class="more-list" style="position: absolute; color: #1d1da3; background-color: #fff; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 7px">
+          <ul style="list-style: none; padding: 10px; text-align: left;">
+            <li><a class="D(b) Py(3px)" href="https://tw.answers.yahoo.com/">知識+</a></li>
+            <li><a class="D(b) Py(3px)" href="https://autos.yahoo.com.tw/">汽車機車</a></li>
+            <li><a class="D(b) Py(3px)" href="https://movies.yahoo.com.tw/">電影</a></li>
+            <li><a class="D(b) Py(3px)" href="https://tw.dictionary.yahoo.com/">字典</a></li>
+            <li><a class="D(b) Py(3px)" href="https://travel.yahoo.com.tw/">旅遊</a></li>
+            <li><a class="D(b) Py(3px)" href="https://tw.money.yahoo.com/">理財</a></li>
+            <li><a class="D(b) Py(3px)" href="https://house.yahoo.com.tw/">房地產</a></li>
+            <li><a class="D(b) Py(3px)" href="https://style.yahoo.com.tw/">時尚美妝</a></li>
+            <li><a class="D(b) Py(3px)" href="https://tw.discount.yahoo.net/">折扣城</a></li>
+            <li><a class="D(b) Py(3px)" href="https://tw.news.yahoo.com/entertainment">娛樂</a></li>
+            <li><a class="D(b) Py(3px)" href="https://games.yahoo.com.tw">遊戲</a></li>
+          </ul>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <div class="header" style="display: flex; height: 68px; align-items: center; width: 1080px">    <a href="/" style="display: inline-block; width: 150px; height: 38px; background-size: cover; background-image: url(https://s.yimg.com/rz/d/yahoo_finance_zh-Hant-TW_s_f_pw_351x40_stock_2x.png);"></a>
+    <div style="flex-grow: 1; text-align: left;">
+      <form action="https://tw.search.yahoo.com/search" method="get" accept-charset="utf-8" style="margin-bottom: 0;">
+        <input type="hidden" name="fr" value="ush1-finance">
+        <input type="text" placeholder="搜尋" name="p" style="box-sizing: content-box; padding: 7px 15px; height: 17px; font-size: 15px; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;"/>
+        <button class="search-button" type="submit">搜尋</button>
+      </form>
+    </div>
+    <div>
+      <a class="login-button" style="display: inline-block; border-radius: 5px; border: 2px solid #400090; width: 78px; text-align: center; vertical-align: middle; font-size: 14px; text-decoration: none;" href="https://login.yahoo.com/config/login?.src=twfinance&.intl=tw&.lang=zh-Hant-TW&.done=https%3A%2F%2Ftw.stock.yahoo.com%2F">登入</a>
+      <a href="https://mail.yahoo.com/?.intl=tw&.lang=zh-Hant-TW" style="color: #400090; text-decoration: none;">
+        <svg width="30" style="fill: #400090; vertical-align: middle;" height="35" viewBox="0 0 512 512">
+          <path d="M460.586 91.31H51.504c-10.738 0-19.46 8.72-19.46 19.477v40.088l224 104.03 224-104.03v-40.088c0-10.757-8.702-19.478-19.458-19.478M32.046 193.426V402.96c0 10.758 8.72 19.48 19.458 19.48h409.082c10.756 0 19.46-8.722 19.46-19.48V193.428l-224 102.327-224-102.327z"></path>
+        </svg>
+        <b style="font-size: 14px; font-weight: 400; vertical-align: middle;">信箱</b>
+      </a>
+    </div>
+  </div>
+</div>
+ <!--END:Universal Master Header-->
+           <div id="boxN"><div id="tgtN"></div></div><script lang="text/javascript">
+<!--
+var redirect = "https://tw.rd.yahoo.com/referurl/stock/other";
+function stkClearMe(control)
+{
+ control.value = '';
+ control.style.color = "black";
+}
+function stkRestore(control, str)
+{
+ if (control.value == '') {control.value = str; control.style.color = "#a8a8a8";};
+}
+function stockmenu_submit (form)
+{
+ if (form.stock_id.value == '輸入台股代號/名稱')
+ {
+ return false;
+ }
+ else
+ {
+ switch ( form.func.value ) {
+ case 'G': form.action = redirect + '/get_quote/quote/*' + form.action; break;
+ case 'L': form.action = redirect + '/get_quote/chart/*' + form.action; break;
+ case 'I': form.action = redirect + '/get_quote/prices/*' + form.action; break;
+ case 'N': form.action = redirect + '/get_quote/news/*' + form.action; break;
+ case 'H': form.action = redirect + '/get_quote/health/*' + form.action; break;
+ case 'F': form.action = redirect + '/get_quote/fundamental/*' + form.action; break;
+ case 'C': form.action = redirect + '/get_quote/credit/*' + form.action; break;
+ case 'T': form.action = redirect + '/get_quote/daily/*' + form.action; break;
+ case 'W': form.action = redirect + '/get_quote/weekly/*' + form.action; break;
+ case 'M': form.action = redirect + '/get_quote/monthly/*' + form.action; break;
+ }
+ form.submit();
+ }
+}
+//-->
+</script>
+<link rel="stylesheet" href="https://s.yimg.com/cv/apiv2/twstock/stockNavSearchBar-style_1547006034898.css">
+<div id="stockNavSearchBar" style="width: 1080px">    <nav id="ystkglonav">
+        <ul class="desktopNav">
+            <li class="parent"><a class="navLink" href=https://tw.stock.yahoo.com/>首頁</a></li><li class="parent"><a class="navLink" href=https://tw.stock.yahoo.com/pf/mypf>投資組合</a></li><li class="parent"><a class="navLink current" href=https://tw.stock.yahoo.com/h/getclass.php>當日行情</a><ul class="child"><li><a class="dropLink" href=https://tw.stock.yahoo.com/d/i/major.html>法人進出</a></li><li><a class="dropLink" href=https://tw.stock.yahoo.com/d/i/cap.html>成交比重</a></li><li><a class="dropLink" href=https://tw.stock.yahoo.com/d/i/credit.html>資券餘額</a></li><li><a class="dropLink" href=https://tw.stock.yahoo.com/d/i/hot.html>熱門排行</a></li></ul></li><li class="parent"><a class="navLink" href=https://tw.stock.yahoo.com/s/tse.php>大盤</a></li><li class="parent"><a class="navLink" href=https://tw.stock.yahoo.com/s/nine.php>類股</a></li><li class="parent"><a class="navLink" href=https://tw.futures.finance.yahoo.com/future/>期權</a></li><li class="parent"><a class="navLink" href=https://tw.stock.yahoo.com/hkcn/>港滬深股</a></li><li class="parent"><a class="navLink" href=https://tw.stock.yahoo.com/us/>美股</a></li><li class="parent"><a class="navLink" href=https://tw.stock.yahoo.com/news_index.html>新聞</a><ul class="child"><li><a class="dropLink" href=https://tw.tv.yahoo.com/stock-watch/>五分鐘看台股</a></li><li><a class="dropLink" href=https://tw.stock.yahoo.com/news_list/url/d/e/N1.html>重大要聞</a></li><li><a class="dropLink" href=https://tw.stock.yahoo.com/news_list/url/d/e/N2.html>台股盤勢</a></li><li><a class="dropLink" href=https://tw.stock.yahoo.com/news_list/url/d/e/N3.html>個股動態</a></li><li><a class="dropLink" href=https://tw.stock.yahoo.com/news_list/url/d/e/N12.html>國際財經</a></li><li><a class="dropLink" href=https://tw.stock.yahoo.com/report_index.html>研究報告</a></li></ul></li><li class="parent"><a class="navLink" href=https://tw.screener.finance.yahoo.net/screener/basic.html>選股</a></li><li class="parent"><a class="navLink" href=http://bit.ly/2MVn1Em>理財</a></li><li class="parent"><a class="navLink" href=http://bit.ly/2YWQgJw>基金</a></li>        </ul>
+    </nav>
+    <div id="stockSearchBar">
+        <div class="barContainer" style="display: inline-table">
+            <form style="display: inline; margin: 0; margin-block-end: 0" name="menu" action="https://tw.stock.yahoo.com/h/stockmenu.php">
+                <div class="searchInput" style="background: #fff;">
+                    <img id="searchIcon" width="16px" src="https://s.yimg.com/cv/apiv2/twstock/icon-search.png" srcset="https://s.yimg.com/cv/apiv2/twstock/icon-search@2x.png 2x, https://s.yimg.com/cv/apiv2/twstock/icon-search@3x.png 3x"/>
+                    <input id="stock_id" type="text" name="stock_id" placeholder="搜尋台股美股代號/名稱"/>
+                    <img id="closeBtn" src="https://s.yimg.com/cv/apiv2/twstock/cancel.png" srcset="https://s.yimg.com/cv/apiv2/twstock/cancel@2x.png 2x, https://s.yimg.com/cv/apiv2/twstock/cancel@3x.png 3x" style="cursor: pointer; display: none"/>
+                </div>
+            </form>
+            <div class="stockSearch">
+                <a href="javascript:open_win('/h/kimosel.php','menu','stock_id','stock_name')">
+                    <img src="https://s.yimg.com/cv/apiv2/twstock/stock-list_1543909743394.png" srcset="https://s.yimg.com/cv/apiv2/twstock/stock-list@2x_1543909743407.png 2x, https://s.yimg.com/cv/apiv2/twstock/stock-list@3x_1543909743401.png 3x"/>
+                    <span>台股代號查詢</span>
+                </a>
+            </div>
+            <div class="stockInfos"><span id=marketTimeCountDown>距離台股收盤還有1小時29分鐘</span><a href="javascript:window.location.reload();">更新</a></div>        </div>
+    </div>
+</div>
+<script type="text/javascript" charset="UTF-8">
+    function submitStockMenuForm(symbol) {
+        var stockForm = document.querySelector('#stockSearchBar .barContainer').children[0];
+        stockForm.stock_id.value = symbol;
+        stockForm.submit();
+    }
+    var stockInput = document.querySelector('#stockSearchBar #stock_id');
+    var closeBtn = document.querySelector('#stockSearchBar #closeBtn');
+    stockInput.addEventListener('input', function(e) {
+        if (stockInput.value.length) {
+            closeBtn.style.display= "block"
+        } else {
+            closeBtn.style.display= "none"
+        }
+    });
+    closeBtn.addEventListener('click', function() {
+        stockInput.value = '';
+        closeBtn.style.display= "none"
+    });
+
+    var marketTimeCountDownElem = document.getElementById('marketTimeCountDown');
+    var countDownText = marketTimeCountDownElem.innerText;
+    var time = countDownText.match(/\d+/g);
+
+    if (time.length === 2) {
+        var expires = new Date();
+        expires.setHours(expires.getHours() + parseInt(time[0]));
+        expires.setMinutes(expires.getMinutes() + parseInt(time[1]));
+        var expiresTime = expires.getTime();
+
+        var countdownTimer = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = parseInt((expiresTime - now) / 1000);
+            if (distance > 0) {
+                var hours = parseInt(distance / 3600);
+                distance = (distance % 3600);
+                var minutes = parseInt(distance / 60);
+                var template = countDownText.replace(/\d+/g, "{{timeSlot}}");
+                template = hours === 0 ? template.replace('{{timeSlot}}小時', '') : template.replace('{{timeSlot}}', hours);
+                template = minutes === 0 ? template.replace('{{timeSlot}}分鐘', '') : template.replace('{{timeSlot}}', minutes);
+                marketTimeCountDownElem.innerHTML = template;
+            } else {
+                clearInterval(countdownTimer);
+                marketTimeCountDownElem.innerHTML = '';
+            }
+        }, 30000);
+    }
+</script>
+<script src="https://s.yimg.com/cv/apiv2/twstock/autocomplete-bar.bundle_1547107706574.js" type="text/javascript" charset="UTF-8" defer></script>
+<table width="1040">
+<tbody>
+<tr>
+<td align="left" width='700' style="vertical-align:top">
+        <script language="javascript">
+            <!--
+            document.menu.stock_id.value="3008";
+            //-->
+        </script>    <table style="width: 700px; margin-bottom: 24px">
+    <tbody>
+    <tr>
+      <td>
+        <div style="width: 700px; margin: 14px 0 24px 0; text-align: left;">
+          <div style="font-size: 24px; font-weight: 450; color: #26282a; margin-bottom: 24px; line-height: 1">
+            <div style="display: inline-block">大立光</div
+            ><div style="margin-left: 8px; color: #979ba7; display: inline-block">
+              3008
+            </div
+            ><a href="/pf/pfsel?stocklist=3008" style="margin-left: 16px; display: inline-block; cursor: pointer">
+              <svg width="22" height="22" viewBox="0 0 24 24" data-icon="star" style="fill: rgb(151, 155, 167); stroke: rgb(151, 155, 167); stroke-width: 0; vertical-align: bottom; transform: translateY(-2px)"><path d="M8.485 7.83l-6.515.21c-.887.028-1.3 1.117-.66 1.732l4.99 4.78-1.414 6.124c-.2 1.14.767 1.49 1.262 1.254l5.87-3.22 5.788 3.22c.48.228 1.464-.097 1.26-1.254l-1.33-6.124 4.962-4.78c.642-.615.228-1.704-.658-1.732l-6.486-.21-2.618-6.22c-.347-.815-1.496-.813-1.84.003L8.486 7.83zm7.06 6.05l1.11 5.11-4.63-2.576L7.33 18.99l1.177-5.103-4.088-3.91 5.41-.18 2.19-5.216 2.19 5.216 5.395.18-4.06 3.903z"></path></svg>
+            </a>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr style="display:block; border-bottom: 1px solid #e0e4e9; box-sizing: border-box;">          <td style='padding-bottom: 9px; margin-right: 24px; display:inline-block; border-bottom: 4px solid #26282a'>走勢圖</td>
+          <td style='padding-bottom: 9px; margin-right: 24px; display:inline-block;'><a style="text-decoration: none;" href='/q/ta?s=3008'>技術分析</a></td>
+          <td style='padding-bottom: 9px; margin-right: 24px; display:inline-block;'><a style="text-decoration: none;" href='/q/ts?s=3008'>成交明細</a></td>
+<td style="padding-bottom: 9px; margin-right: 24px; display:inline-block; color: #979ba7"><a style='text-decoration: none;' href='/d/s/company_3008.html'>基本</a></td>
+<td style="padding-bottom: 9px; margin-right: 24px; display:inline-block; color: #979ba7"><a style='text-decoration: none;' href='/d/s/major_3008.html'>籌碼</a></td>
+<td style="padding-bottom: 9px; margin-right: 24px; display:inline-block; color: #979ba7"><a style='text-decoration: none;' href='/d/s/dividend_3008.html'>股利政策</a></td>
+<td style="padding-bottom: 9px; margin-right: 24px; display:inline-block; color: #979ba7;"><a style='text-decoration: none;' href='/q/h?s=3008'>新聞</a></td>
+<td style="padding-bottom: 9px; margin-right: 24px; display:inline-block; color: #979ba7"><a style='text-decoration: none;' target='_blank' href='https://tw.rd.yahoo.com/referurl/stock/other/SIG=125v47s73/**https://tw.screener.finance.yahoo.net/screener/check.html?symid=3008'>健診</a></td>
+</tr></tbody></table><table align="center" cellpadding="1" cellspacing="0" width="100%" style="max-width: 700px; border: 1px solid #fec003; margin-left: 0">
+<tr><td>
+ <table bgcolor="#ffffff" border="0" cellpadding="" cellspacing="0" width="100%" style="padding: 15px 0">
+ <tbody><tr><td align="left" width='80%'>
+ <script type="text/javascript" src="https://s.yimg.com/ji/stock/qbcs/v1/StxChart-min.js" symbol="3008"></script>
+</td>
+ <style>
+ .yui_stock_warrant tr.caption td{padding:10px 0 2px 0;}
+ .yui_stock_warrant tr td{font-size:15px;text-align:left;}
+ .yui_stock_warrant tr td .d{color:#338b48;}
+ .yui_stock_warrant tr td .u{color:#df3f3f;}
+ .yui_stock_warrant tr td .e{color:#000;}
+ </style>
+ <td align="left" valign="top" width='20%' id="yuiStockWarrantBox" nowrap>
+ 
+ </td>
+<script type='text/javascript'>
+ <!--
+ var yuiStockWarrant;
+ (function(yuiStockWarrant){
+ yuiStockWarrant.id='';
+ yuiStockWarrant.nreg=new RegExp('<!--[^>]*-->','g');
+ yuiStockWarrant.ajax=function(args){
+ var xmlhttp,
+ $_this=this;
+ if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+ xmlhttp=new XMLHttpRequest();
+ }
+ else{// code for IE6, IE5
+ xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+ }
+ if(xmlhttp!=null){
+ xmlhttp.onreadystatechange=function(){
+ if(xmlhttp.readyState==4){
+ if (xmlhttp.status == 200 || xmlhttp.status == 0){
+ var result = xmlhttp.responseText;
+ args.success(result);
+ }
+ }
+ }
+ xmlhttp.open(args.method,args.url,true);
+ xmlhttp.send(null);
+ }
+ };
+ yuiStockWarrant.loadWarrantJson=function(json_data){
+ var table_array=[];
+ switch(json_data.type){
+ case 'stock':
+ var table_info='相關權證';
+ break;
+ case 'warrant':
+ var table_info='個股';
+ break;
+ }
+ table_array.push("<table border='0' cellpadding='0' cellspacing='3' width='100%' class='yui_stock_warrant'><tbody>");
+ table_array.push("<tr class='caption'><td>("+table_info+")</td></tr>");
+ if(json_data.relation!=undefined){
+ for(var i=0;i<json_data.relation.length;i++){
+ if(table_array.length<16){
+ switch(json_data.relation[i].ud.toLowerCase()){
+ case 'd':
+ table_array.push("<tr><td><a href='/q/bc?s="+json_data.relation[i].id+"' class='d'>"+json_data.relation[i].nm+"</a></td></tr>");
+ break;
+ case 'e':
+ table_array.push("<tr><td><a href='/q/bc?s="+json_data.relation[i].id+"' class='e'>"+json_data.relation[i].nm+"</a></td></tr>");
+ break;
+ case 'u':
+ table_array.push("<tr><td><a href='/q/bc?s="+json_data.relation[i].id+"' class='u'>"+json_data.relation[i].nm+"</a></td></tr>");
+ break;
+}
+ }
+ }
+ }
+ table_array.push("</tbody></table>");
+ if(document.getElementById('yuiStockWarrantBox')){
+ document.getElementById('yuiStockWarrantBox').innerHTML=table_array.join('');
+ }
+ };
+ yuiStockWarrant.parseJSON=function(data){
+ if ( typeof data !== "string" || !data ) {
+ return null;
+ }
+ data = data.replace(/^\s+|\s+$/, '');
+ if ( window.JSON && window.JSON.parse ) {
+ return window.JSON.parse( data );
+ }
+ var rvalidchars = /^[\],:{}\s]*$/,
+ rvalidescape = /\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g,
+ rvalidtokens = /"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g,
+ rvalidbraces = /(?:^|:|,)(?:\s*\[)+/g;
+ if ( rvalidchars.test( data.replace( rvalidescape, "@" )
+ .replace( rvalidtokens, "]" )
+ .replace( rvalidbraces, "")) ) {
+ return ( new Function( "return " + data ) )();
+ }
+ return null;
+ };
+ }(yuiStockWarrant||(yuiStockWarrant={})));
+ yuiStockWarrant.ajax({
+ method:'get',
+ url:'/q/getjson.php?s=3008',
+ success:function(data){
+ if(data){
+ var json_data=yuiStockWarrant.parseJSON(data.replace(yuiStockWarrant.nreg,''));
+ yuiStockWarrant.loadWarrantJson(json_data);
+ }
+ }
+ });
+ //-->
+</script>
+</tr></tbody></table>
+</td></tr>
+</table>
+<p>
+<!--START:YSM CM MODULE-->
+<script>
+document.write
+('<script src="https://s.yimg.com/f/i/tw/ysm/hybrid/linkspot_stock_trend_big5.js?rnd=' + Number(new Date()) + '"></sc' + 'ript>');</script> 
+<!--END:YSM CM MODULE--> <p>
+</td>
+<td align="right" width='300' style="vertical-align:top">
+<div style="width: 300px; margin-top: 14px">
+  <div class="bd">
+             <div id="boxLREC"><div id="tgtLREC"></div></div></div>
+<div class="addendum" style="width: 300px; margin-top: 20px">
+ <div class="news" style="width: 100%;">
+ <div class="hd">
+ <span class="stock">個股新聞與研究報告</span>
+ <span class="more"><a href="https://tw.stock.yahoo.com/q/h?s=3008">&raquo; 更多</a></span>
+ </div>
+ <div class="bd quote"> 
+ <ul id="researchNews">
+ <li>
+ <a data-ylk="itc:0;sec:個股新聞與研究報告;elm:hdln;g:d9d9d41a-1df8-359b-9cac-733c479238e8" href="https://tw.stock.yahoo.com/news/%E7%9B%A4%E4%B8%AD%E8%A7%A3%E6%9E%90-%E7%BE%8E%E4%B8%AD%E8%B2%BF%E6%98%93%E7%81%AB%E4%B8%8A%E5%8A%A0%E6%B2%B9-%E5%8F%B0%E8%82%A1-%E7%A9%BA-%E8%A5%B2%E6%91%94%E5%B9%B4%E7%B7%9A-022909013.html">《盤中解析》美中貿易火上加油，台股「空」襲摔年線</a>
+ <span class="meta">(時報資訊 2019/08/26 10:29)</span>
+ </li> <li>
+ <a data-ylk="itc:0;sec:個股新聞與研究報告;elm:hdln;g:3e99e4fb-59d8-36de-96a6-48125fcab330" href="https://tw.stock.yahoo.com/news/%E5%8C%AF%E5%B8%82-%E8%B2%BF%E6%98%93%E6%88%B0%E5%BB%B6%E7%87%92-%E4%BA%BA%E6%B0%91%E5%B9%A3%E8%B2%B6%E5%80%BC-%E5%8F%B0%E5%B9%A3%E6%B8%AC31-5%E5%85%83-021159613.html">《匯市》貿易戰延燒+人民幣貶值，台幣測31.5元</a>
+ <span class="meta">(時報資訊 2019/08/26 10:11)</span>
+ </li> <li>
+ <a data-ylk="itc:0;sec:個股新聞與研究報告;elm:hdln;g:36010534-8e0d-384a-998a-fc539afe3c91" href="https://tw.stock.yahoo.com/news/%E5%8F%B0%E5%8C%97%E8%82%A1%E5%B8%82-%E5%8F%B0%E8%82%A1%E9%96%8B%E8%B7%8C84-71%E9%BB%9E-%E5%A0%B110453-4%E9%BB%9E-011558491.html">《台北股市》台股開跌84.71點，報10453.4點</a>
+ <span class="meta">(時報資訊 2019/08/26 09:15)</span>
+ </li> <li>
+ <a data-ylk="itc:0;sec:個股新聞與研究報告;elm:hdln;g:c41cd285-3dbf-39ba-937a-9869f2f121c1" href="https://tw.stock.yahoo.com/news/%E5%A4%96%E8%B3%87-%E7%91%9E%E9%8A%80%E8%AD%893%E8%B3%AA%E7%96%91%E4%B8%8B%E4%BF%AE%E5%8F%B0%E8%82%A1%E7%9B%AE%E6%A8%99%E5%83%B9%E8%87%B3%E8%90%AC%E9%BB%9E-%E9%BB%9E%E5%90%8D6%E5%A5%BD6%E5%A3%9E-035815883.html">《外資》瑞銀證3質疑下修台股目標價至萬點，點名6好6壞</a>
+ <span class="meta">(時報資訊 2019/08/23 11:58)</span>
+ </li> </ul>
+ </div>
+ <div class="ft">
+ </div>
+ </div>
+ </div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="1080" border="0" align="center" cellpadding="0" cellspacing="0"> 
+ <tr>
+ <td height="90" valign="bottom">
+<DIV id=yhtw_mastfoot>
+<div class="ln">Yahoo Finance 
+<a href="https://policies.yahoo.com/tw/zh-hant/yahoo/terms/utos/">服務條款</a> 
+<a href="https://policies.yahoo.com/tw/zh-hant/yahoo/privacy/">隱私權</a>
+</div>
+<div class="other">精誠資訊　<a href="http://www.money-link.com.tw/"><img src="https://s.yimg.com/f/i/tw/stock/revamp/ml_logo_color.gif" style="border-style:none;vertical-align:text-bottom;"></a> 版權所有 &copy; 2019 Systex All Rights Reserved.
+</div><div class="other">
+<p>台股資料來源<a href="http://www.tse.com.tw/zh/" target="_blank">臺灣證券交易所</a>、<a href="http://www.taifex.com.tw" target="_blank">臺灣期貨交易所</a>及<a href="http://www.tpex.org.tw/web/" target="_blank">財團法人中華民國證券櫃檯買賣中心</a>。國際股市資料來源請參考<a href="https://help.yahoo.com/kb/finance-for-desktop/SLN2310.html" target="_blank">Yahoo Finance</a>。使用Yahoo奇摩股市服務前，請您詳閱相關<a href="https://tw.help.yahoo.com/kb/stock-tw-web/SLN28774.html?impressions=true" target="_blank">使用規範與聲明</a>。</p>
+</div>
+</DIV>
+  </td>
+ </tr>
+</table>
+<script type="application/javascript">(function(w,d,t,r,u){w[u]=w[u]||[];w[u].push({'projectId':'10000','properties':{'pixelId':'428726','qstrings':{'country':'tw', 'property':'stock', 'tag':''}}});var s=d.createElement(t);s.src=r;s.async=true;s.onload=s.onreadystatechange=function(){var y,rs=this.readyState,c=w[u];if(rs&&rs!="complete"&&rs!="loaded"){return}try{y=YAHOO.ywa.I13N.fireBeacon;w[u]=[];w[u].push=function(p){y([p])};y(c)}catch(e){}};var scr=d.getElementsByTagName(t)[0],par=scr.parentNode;par.insertBefore(s,scr)})(window,document,"script","https://s.yimg.com/wi/ytc.js","dotq");</script>
+<noscript>
+    <img src="https://geo.yahoo.com/b?s=152960937" height="1" width="1" />
+</noscript>
+</center>
+ </body><script src="https://s.yimg.com/f/i/tw/mb/universal_header/uh_tw_v11.js" type="text/javascript"></script> 
+   <script type="text/javascript">
+       if (window.DARLA && window.DARLA_CONFIG) {
+          DARLA.config(DARLA_CONFIG);
+          DARLA.event( "AUTO" );
+       }
+
+     </script><!-- Begin comScore Tag --> 
+<script>
+ var _comscore = _comscore || [];
+ _comscore.push({
+ c1: "2",
+ c2: "7241469",
+ c5: "152960937",
+ c7: "https%3A%2F%2Ftw.stock.yahoo.com%252fq%252fbc%253fs%253d3008"
+ });
+ (function() {
+ var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+ s.src = "https://s.yimg.com/lq" + "/lib/3pm/cs_0.2.js";
+ el.parentNode.insertBefore(s, el);
+ })();
+ YUI().use('node',function(Y){
+ if(Y.one('#yuhead-sform-searchfield')){
+ Y.one('#yuhead-sform-searchfield').set('value',document.getElementById('yuhead-sform-searchfield').getAttribute("data-sh"));
+ }
+ })
+</script>
+<noscript><img src="https://sb.scorecardresearch.com/p?c1=2&c2=7241469&c7=https%3A%2F%2Ftw.stock.yahoo.com%252fq%252fbc%253fs%253d3008&c5=152960937&cv=2.0&cj=1" width="1" height="1" alt=""/></noscript>
+<!-- End comScore Tag -->
+<!-- Gemini Ads Beacon -->
+<script type="text/javascript">
+var tracked_mods = ['researchNews'];
+stockSiteRapid.addModules(tracked_mods);
+</script>
+</html> 
+<script type="text/javascript">
+document.querySelector("#ysmlinkspot").style.width = "694px";
+</script>
+<!-- w230.finance.tw1.yahoo.com Mon Aug 26 04:00:28 UTC 2019 -->
