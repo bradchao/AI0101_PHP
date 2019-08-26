@@ -1,0 +1,21 @@
+[08:47:06:255][CAVerDevice][IsInDeviceList] GetDeviceInfo fail
+[08:47:06:283][CUVCDeviceControl][GetDeviceCount] ENTRY
+[08:47:06:288][CAVerDevice][IsInDeviceList] GetDeviceInfo fail
+[08:47:06:290][CUVCDeviceControl][GetDeviceCount] LEAVE
+[08:47:06:291][CUVCDeviceControl][GetDeviceDisplayName] ENTRY
+[08:47:06:295][CAVerDevice][IsInDeviceList] GetDeviceInfo fail
+[08:47:06:297][CUVCDeviceControl][GetDeviceDisplayName] LEAVE
+[08:47:06:302][CUVCDeviceControl][GetExtensionUnit] ENTRY
+[08:47:06:302][CExtensionUnitControl][GetExtensionUnit] +
+[08:47:06:309][CExtensionUnitControl][GetExtensionUnit] -
+[08:47:06:309][CUVCDeviceControl][GetExtensionUnit] LEAVE
+[08:47:31:343][CUVCDeviceControl][GetDeviceCount] ENTRY
+[08:47:31:348][CAVerDevice][IsInDeviceList] GetDeviceInfo fail
+[08:47:31:350][CUVCDeviceControl][GetDeviceCount] LEAVE
+[08:47:31:350][CUVCDeviceControl][GetDeviceDisplayName] ENTRY
+[08:47:31:354][CAVerDevice][IsInDeviceList] GetDeviceInfo fail
+[08:47:31:356][CUVCDeviceControl][GetDeviceDisplayName] LEAVE
+[08:47:31:356][CUVCDeviceControl][GetExtensionUnit] ENTRY
+[08:47:31:356][CExtensionUnitControl][GetExtensionUnit] +
+[08:47:31:364][CExtensionUnitControl][GetExtensionUnit] -
+[08:47:31:364][CUVCDeviceControl][GetExtensionUnit] LEAVE

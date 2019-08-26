@@ -1,0 +1,428 @@
+MariaDB [northwind]> select companyname, city, country from customers;
+
+91 rows in set (0.068 sec)
+
+MariaDB [northwind]> select city, country from customers;
+
+91 rows in set (0.001 sec)
+
+MariaDB [northwind]> select employeeid, lastname, city country from employees where row(city, country) in (select city, country from customers);
++------------+-----------+----------+
+| employeeid | lastname  | country  |
++------------+-----------+----------+
+|          1 | Davolio   | Seattle  |
+|          3 | Leverling | Kirkland |
+|          5 | Buchanan  | London   |
+|          6 | Suyama    | London   |
+|          7 | King      | London   |
+|          8 | Callahan  | Seattle  |
+|          9 | Dodsworth | London   |
++------------+-----------+----------+
+7 rows in set (0.087 sec)
+
+MariaDB [northwind]> select productid, max(unitprice) from `order details` where productid=47;
++-----------+----------------+
+| productid | max(unitprice) |
++-----------+----------------+
+|        47 |         9.5000 |
++-----------+----------------+
+1 row in set (0.002 sec)
+
+MariaDB [northwind]> select distinct od.productid, od.unitprice maxprice from `order details` od
+    -> where od.unitprice = (select max(unitprice) from `order details` od2 where od.productid = od2.productid)
+    -> order by od.unitprice;
++-----------+----------+
+| productid | maxprice |
++-----------+----------+
+|        33 |   2.5000 |
+|        24 |   4.5000 |
+|        13 |   6.0000 |
+|        52 |   7.0000 |
+|        54 |   7.4500 |
+|        75 |   7.7500 |
+|        23 |   9.0000 |
+|        19 |   9.2000 |
+|        45 |   9.5000 |
+|        47 |   9.5000 |
+|        41 |   9.6500 |
+|         3 |  10.0000 |
+|        21 |  10.0000 |
+|        74 |  10.0000 |
+|        46 |  12.0000 |
+|        31 |  12.5000 |
+|        68 |  12.5000 |
+|        48 |  12.7500 |
+|        77 |  13.0000 |
+|        58 |  13.2500 |
+|        25 |  14.0000 |
+|        34 |  14.0000 |
+|        42 |  14.0000 |
+|        67 |  14.0000 |
+|        70 |  15.0000 |
+|        73 |  15.0000 |
+|        15 |  15.5000 |
+|        50 |  16.2500 |
+|        66 |  17.0000 |
+|        16 |  17.4500 |
+|         1 |  18.0000 |
+|        35 |  18.0000 |
+|        39 |  18.0000 |
+|        76 |  18.0000 |
+|        40 |  18.4000 |
+|         2 |  19.0000 |
+|        36 |  19.0000 |
+|        44 |  19.4500 |
+|        57 |  19.5000 |
+|        49 |  20.0000 |
+|        11 |  21.0000 |
+|        22 |  21.0000 |
+|        65 |  21.0500 |
+|         5 |  21.3500 |
+|        71 |  21.5000 |
+|         4 |  22.0000 |
+|        14 |  23.2500 |
+|        55 |  24.0000 |
+|         6 |  25.0000 |
+|        30 |  25.8900 |
+|        37 |  26.0000 |
+|        61 |  28.5000 |
+|         7 |  30.0000 |
+|        10 |  31.0000 |
+|        26 |  31.2300 |
+|        32 |  32.0000 |
+|        53 |  32.8000 |
+|        64 |  33.2500 |
+|        60 |  34.0000 |
+|        72 |  34.8000 |
+|        69 |  36.0000 |
+|        12 |  38.0000 |
+|        56 |  38.0000 |
+|        17 |  39.0000 |
+|         8 |  40.0000 |
+|        27 |  43.9000 |
+|        63 |  43.9000 |
+|        28 |  45.6000 |
+|        43 |  46.0000 |
+|        62 |  49.3000 |
+|        51 |  53.0000 |
+|        59 |  55.0000 |
+|        18 |  62.5000 |
+|        20 |  81.0000 |
+|         9 |  97.0000 |
+|        29 | 123.7900 |
+|        38 | 263.5000 |
++-----------+----------+
+77 rows in set (0.156 sec)
+
+MariaDB [northwind]> select count(distinct e.employeeid) unmEmployee, count(distinct c.customerid) numCustomer, e.city, c.city
+    -> from employees e join customers c on (e.city = c.city) group by e.city, c.city;
++-------------+-------------+----------+----------+
+| unmEmployee | numCustomer | city     | city     |
++-------------+-------------+----------+----------+
+|           1 |           1 | Kirkland | Kirkland |
+|           4 |           6 | London   | London   |
+|           2 |           1 | Seattle  | Seattle  |
++-------------+-------------+----------+----------+
+3 rows in set (0.050 sec)
+
+MariaDB [northwind]> select e.employeeid, sum(od.unitprice*od.quantity) total from orders o
+    -> join `order details` od on (o.orderid = od.orderid) join employees e on (o.employeeid = e.employeeid)
+    -> group by o.employeeid order by total desc;
++------------+-------------+
+| employeeid | total       |
++------------+-------------+
+|          4 | 250187.4500 |
+|          3 | 213051.3000 |
+|          1 | 202143.7100 |
+|          2 | 177749.2600 |
+|          7 | 141295.9900 |
+|          8 | 133301.0300 |
+|          9 |  82964.0000 |
+|          6 |  78198.1000 |
+|          5 |  75567.7500 |
++------------+-------------+
+9 rows in set (0.268 sec)
+
+MariaDB [northwind]> select sum(unitprice*quantity) from `order details` where orderid in (select orderid from orders where employeeid = 7);
++-------------------------+
+| sum(unitprice*quantity) |
++-------------------------+
+|             141295.9900 |
++-------------------------+
+1 row in set (0.021 sec)
+
+MariaDB [northwind]> select p.productname, s.companyname from products p join suppliers s on (p.supplierid = s.supplierid) limit 10;
++---------------------------------+----------------------------+
+| productname                     | companyname                |
++---------------------------------+----------------------------+
+| Chai                            | Exotic Liquids             |
+| Chang                           | Exotic Liquids             |
+| Aniseed Syrup                   | Exotic Liquids             |
+| Chef Anton's Cajun Seasoning    | New Orleans Cajun Delights |
+| Chef Anton's Gumbo Mix          | New Orleans Cajun Delights |
+| Grandma's Boysenberry Spread    | Grandma Kelly's Homestead  |
+| Uncle Bob's Organic Dried Pears | Grandma Kelly's Homestead  |
+| Northwoods Cranberry Sauce      | Grandma Kelly's Homestead  |
+| Mishi Kobe Niku                 | Tokyo Traders              |
+| Ikura                           | Tokyo Traders              |
++---------------------------------+----------------------------+
+10 rows in set (0.001 sec)
+
+MariaDB [northwind]> select p.productname, s.companyname from products p, suppliers s where p.supplierid = s.supplierid limit 10;
++---------------------------------+----------------------------+
+| productname                     | companyname                |
++---------------------------------+----------------------------+
+| Chai                            | Exotic Liquids             |
+| Chang                           | Exotic Liquids             |
+| Aniseed Syrup                   | Exotic Liquids             |
+| Chef Anton's Cajun Seasoning    | New Orleans Cajun Delights |
+| Chef Anton's Gumbo Mix          | New Orleans Cajun Delights |
+| Grandma's Boysenberry Spread    | Grandma Kelly's Homestead  |
+| Uncle Bob's Organic Dried Pears | Grandma Kelly's Homestead  |
+| Northwoods Cranberry Sauce      | Grandma Kelly's Homestead  |
+| Mishi Kobe Niku                 | Tokyo Traders              |
+| Ikura                           | Tokyo Traders              |
++---------------------------------+----------------------------+
+10 rows in set (0.001 sec)
+
+MariaDB [northwind]> select p.productname, s.companyname from products p join suppliers s using (supplierid) limit 10;
++---------------------------------+----------------------------+
+| productname                     | companyname                |
++---------------------------------+----------------------------+
+| Chai                            | Exotic Liquids             |
+| Chang                           | Exotic Liquids             |
+| Aniseed Syrup                   | Exotic Liquids             |
+| Chef Anton's Cajun Seasoning    | New Orleans Cajun Delights |
+| Chef Anton's Gumbo Mix          | New Orleans Cajun Delights |
+| Grandma's Boysenberry Spread    | Grandma Kelly's Homestead  |
+| Uncle Bob's Organic Dried Pears | Grandma Kelly's Homestead  |
+| Northwoods Cranberry Sauce      | Grandma Kelly's Homestead  |
+| Mishi Kobe Niku                 | Tokyo Traders              |
+| Ikura                           | Tokyo Traders              |
++---------------------------------+----------------------------+
+10 rows in set (0.001 sec)
+
+MariaDB [db1]> select * from tb1;
++------+------+
+| id   | f1   |
++------+------+
+|    1 | A    |
+|    2 | B    |
+|    3 | C    |
+|    4 | D    |
++------+------+
+4 rows in set (0.001 sec)
+
+MariaDB [db1]> select * from tb2;
++------+------+-------+
+| id   | f2   | tb1f1 |
++------+------+-------+
+|    1 | AA   | A     |
+|    2 | BB   | B     |
+|    3 | CC   | Z     |
++------+------+-------+
+3 rows in set (0.000 sec)
+
+MariaDB [db1]> select tb1.id, tb1.f1, tb2.f2 from tb1 join tb2 on (tb1.f1 = tb2.tb1f1);
++------+------+------+
+| id   | f1   | f2   |
++------+------+------+
+|    1 | A    | AA   |
+|    2 | B    | BB   |
++------+------+------+
+2 rows in set (0.001 sec)
+
+MariaDB [db1]> select tb1.id, tb1.f1, tb2.f2 from tb1 left join tb2 on (tb1.f1 = tb2.tb1f1);
++------+------+------+
+| id   | f1   | f2   |
++------+------+------+
+|    1 | A    | AA   |
+|    2 | B    | BB   |
+|    3 | C    | NULL |
+|    4 | D    | NULL |
++------+------+------+
+4 rows in set (0.001 sec)
+
+MariaDB [db1]> select tb1.id, tb1.f1, tb2.f2 from tb1 right join tb2 on (tb1.f1 = tb2.tb1f1);
++------+------+------+
+| id   | f1   | f2   |
++------+------+------+
+|    1 | A    | AA   |
+|    2 | B    | BB   |
+| NULL | NULL | CC   |
++------+------+------+
+3 rows in set (0.001 sec)
+
+MariaDB [db1]> create view myview as select tb1.id, tb1.f1, tb2.f2 from tb1 join tb2 on (tb1.f1 = tb2.tb1f1);
+Query OK, 0 rows affected (0.012 sec)
+
+MariaDB [db1]> desc myview;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int(11)     | YES  |     | NULL    |       |
+| f1    | varchar(10) | YES  |     | NULL    |       |
+| f2    | varchar(10) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.073 sec)
+
+MariaDB [db1]> select * from myview;
++------+------+------+
+| id   | f1   | f2   |
++------+------+------+
+|    1 | A    | AA   |
+|    2 | B    | BB   |
++------+------+------+
+2 rows in set (0.001 sec)
+
+MariaDB [db1]> update tb2 set tb1f1='C' where id=3;
+Query OK, 1 row affected (0.052 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [db1]> select * from myview;
++------+------+------+
+| id   | f1   | f2   |
++------+------+------+
+|    1 | A    | AA   |
+|    2 | B    | BB   |
+|    3 | C    | CC   |
++------+------+------+
+3 rows in set (0.001 sec)
+
+MariaDB [class]> select cid, cname, cchinese, cenglish, cmath, cchinese+cenglish+cmath score from bk1;
++-----+--------+----------+----------+-------+-------+
+| cid | cname  | cchinese | cenglish | cmath | score |
++-----+--------+----------+----------+-------+-------+
+|  01 | Â²©^§g |        2 |       90 |    35 |   127 |
+|  02 | ¶À¹t½ü |       53 |       53 |    44 |   150 |
+|  03 | ¼ï¥|·q |       57 |       95 |    30 |   182 |
+|  04 | ¿à³Ó®¦ |       25 |       28 |    83 |   136 |
+|  05 | ¾¤·¡¹ç |       57 |       89 |    95 |   241 |
+|  06 | ½²¤¤¿o |        9 |       33 |    60 |   102 |
+|  07 | ®}¨Î¿Ã |       76 |       38 |    88 |   202 |
+|  08 | ªL«BØÅ |       48 |       13 |    25 |    86 |
+|  09 | ªL¤ß»ö |       16 |       17 |    92 |   125 |
+|  10 | ¤ý¿P³Õ |       35 |        7 |    12 |    54 |
+|  11 | Qiu    |       28 |       90 |     2 |   120 |
++-----+--------+----------+----------+-------+-------+
+11 rows in set (0.000 sec)
+
+MariaDB [class]> create view scoreview as select cid, cname, cchinese, cenglish, cmath, cchinese+cenglish+cmath score from bk1;
+Query OK, 0 rows affected (0.026 sec)
+
+MariaDB [class]> select * from scoreview;
++-----+--------+----------+----------+-------+-------+
+| cid | cname  | cchinese | cenglish | cmath | score |
++-----+--------+----------+----------+-------+-------+
+|  01 | Â²©^§g |        2 |       90 |    35 |   127 |
+|  02 | ¶À¹t½ü |       53 |       53 |    44 |   150 |
+|  03 | ¼ï¥|·q |       57 |       95 |    30 |   182 |
+|  04 | ¿à³Ó®¦ |       25 |       28 |    83 |   136 |
+|  05 | ¾¤·¡¹ç |       57 |       89 |    95 |   241 |
+|  06 | ½²¤¤¿o |        9 |       33 |    60 |   102 |
+|  07 | ®}¨Î¿Ã |       76 |       38 |    88 |   202 |
+|  08 | ªL«BØÅ |       48 |       13 |    25 |    86 |
+|  09 | ªL¤ß»ö |       16 |       17 |    92 |   125 |
+|  10 | ¤ý¿P³Õ |       35 |        7 |    12 |    54 |
+|  11 | Qiu    |       28 |       90 |     2 |   120 |
++-----+--------+----------+----------+-------+-------+
+11 rows in set (0.001 sec)
+
+MariaDB [northwind]> create view rankboard as
+    -> select e.lastname, sum(od.unitprice*od.quantity) total from orders o
+    -> join `order details` od using (orderid)
+    -> join employees e using (employeeid)
+    -> group by o.employeeid order by total desc;
+Query OK, 0 rows affected (0.060 sec)
+
+MariaDB [northwind]> select * from rankboard;
++-----------+-------------+
+| lastname  | total       |
++-----------+-------------+
+| Peacock   | 250187.4500 |
+| Leverling | 213051.3000 |
+| Davolio   | 202143.7100 |
+| Fuller    | 177749.2600 |
+| King      | 141295.9900 |
+| Callahan  | 133301.0300 |
+| Dodsworth |  82964.0000 |
+| Suyama    |  78198.1000 |
+| Buchanan  |  75567.7500 |
++-----------+-------------+
+9 rows in set (0.262 sec)
+
+MariaDB [northwind]> update employees set lastname='Queen' where lastname='king';
+Query OK, 1 row affected (0.051 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [northwind]> select * from rankboard;
++-----------+-------------+
+| lastname  | total       |
++-----------+-------------+
+| Peacock   | 250187.4500 |
+| Leverling | 213051.3000 |
+| Davolio   | 202143.7100 |
+| Fuller    | 177749.2600 |
+| Queen     | 141295.9900 |
+| Callahan  | 133301.0300 |
+| Dodsworth |  82964.0000 |
+| Suyama    |  78198.1000 |
+| Buchanan  |  75567.7500 |
++-----------+-------------+
+9 rows in set (0.266 sec)
+
+MariaDB [northwind]> update `order details` set quantity=40000 where orderid=10347 and productid=40;
+Query OK, 1 row affected, 1 warning (0.053 sec)
+Rows matched: 1  Changed: 1  Warnings: 1
+
+MariaDB [northwind]> select * from rankboard;
++-----------+-------------+
+| lastname  | total       |
++-----------+-------------+
+| Peacock   | 731803.5500 |
+| Leverling | 213051.3000 |
+| Davolio   | 202143.7100 |
+| Fuller    | 177749.2600 |
+| Queen     | 141295.9900 |
+| Callahan  | 133301.0300 |
+| Dodsworth |  82964.0000 |
+| Suyama    |  78198.1000 |
+| Buchanan  |  75567.7500 |
++-----------+-------------+
+9 rows in set (0.269 sec)
+
+MariaDB [northwind]> select lastname, total, case when total >= 200000 then 'A' when total >= 100000 then 'B' else 'C' end rank from rankboard;
++-----------+-------------+------+
+| lastname  | total       | rank |
++-----------+-------------+------+
+| Peacock   | 731803.5500 | A    |
+| Leverling | 213051.3000 | A    |
+| Davolio   | 202143.7100 | A    |
+| Fuller    | 177749.2600 | B    |
+| Queen     | 141295.9900 | B    |
+| Callahan  | 133301.0300 | B    |
+| Dodsworth |  82964.0000 | C    |
+| Suyama    |  78198.1000 | C    |
+| Buchanan  |  75567.7500 | C    |
++-----------+-------------+------+
+9 rows in set (0.271 sec)
+
+MariaDB [northwind]>  create view rankv2 as select lastname, total, case when total >= 200000 then 'A' when total >= 100000 then 'B' else 'C' end rank from rankboard;
+Query OK, 0 rows affected (0.061 sec)
+
+MariaDB [northwind]> select * from rankv2;
++-----------+-------------+------+
+| lastname  | total       | rank |
++-----------+-------------+------+
+| Peacock   | 731803.5500 | A    |
+| Leverling | 213051.3000 | A    |
+| Davolio   | 202143.7100 | A    |
+| Fuller    | 177749.2600 | B    |
+| Queen     | 141295.9900 | B    |
+| Callahan  | 133301.0300 | B    |
+| Dodsworth |  82964.0000 | C    |
+| Suyama    |  78198.1000 | C    |
+| Buchanan  |  75567.7500 | C    |
++-----------+-------------+------+
+9 rows in set (0.261 sec)
+

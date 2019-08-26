@@ -1,0 +1,1268 @@
+<!doctype html public "-//w3c//dtd html 4.01//en" "http://www.w3.org/tr/html4/strict.dtd">
+<html>
+<head>
+    <meta name="oath:guce:product-eu" content="false"/>
+    <meta name="oath:guce:consent-host" content="guce.yahoo.com"/>
+    <meta name="oath:guce:locale" content="zh-Hant-TW"/>
+    <meta name="oath:guce:report-only" content="false"/>
+    <meta name="oath:guce:inline-consent" content="true"/>
+    <script src="https://s.yimg.com/oa/guce.js" async></script>
+<!-- Rapid begin. -->
+<script language="JavaScript" src="https://s.yimg.com/ss/rapid3.js"></script>
+<script language="JavaScript" src="/__rapid-worker-1.2.js"></script> <!-- rapid should require worker file itself, this should be unnessary, but require it anyway. -->
+<script language="JavaScript">
+    YAHOO.i13n.WEBWORKER_FILE = "/__rapid-worker-1.2.js";
+    var pageParams = { site: 'finance', lang: 'zh-Hant-TW', mrkt: 'tw' };
+    if (typeof articlePageParams === 'object') {
+        pageParams = articlePageParams;
+    }
+    var stockSiteRapid = new YAHOO.i13n.Rapid({ client_only: 1, spaceid: '152952223', keys: pageParams, tracked_mods: [] });
+</script>
+<!-- Rapid end. -->
+
+    <!-- Consent Manager Tag : Script -->
+    <script type="text/javascript" src="https://consent.cmp.oath.com/cmp.js" async></script>
+
+    <!-- Consent Manager Tag : Stubbed (minified) (updated 2018-04-27T17:00) -->
+<script type="text/javascript">!function(){var e=!1;function a(e){var a="string"==typeof e.data,t=e.data;if(a)try{t=JSON.parse(e.data)}catch(e){}if(t.__cmpCall){var n=t.__cmpCall;window.__cmp(n.command,n.parameter,function(t,c){var i={__cmpReturn:{returnValue:t,success:c,callId:n.callId}};e.source.postMessage(a?JSON.stringify(i):i,"*")})}}!function e(){if(!window.frames.__cmpLocator)if(document.body&&document.body.firstChild){var a=document.body,t=document.createElement("iframe");t.style.display="none",t.height=t.width=0,t.name="__cmpLocator",a.insertBefore(t,a.firstChild)}else setTimeout(e,5)}(),"function"!=typeof __cmp&&(window.__cmp=function(){var a=arguments;if(__cmp.a=__cmp.a||[],!a.length)return __cmp.a;"ping"===a[0]?a[2]({gdprAppliesGlobally:e,cmpLoaded:!1},!0):__cmp.a.push([].slice.apply(a))},__cmp.msgHandler=a,window.addEventListener?window.addEventListener("message",a,!1):window.attachEvent("onmessage",a))}();</script>
+<!-- End Consent Manager Tag : Stubbed (minified) --> 
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <script type="text/javascript">
+        window.__cmp('init');
+
+        window.__cmp('getConsentData', null, function (result, success) {
+        // consentData contains the base64-encoded consent string
+        var consentData = result.consentData;
+   
+        // gdprApplies specifies whether the user is in EU jurisdiction
+        var gdprApplies = result.gdprApplies;
+        console.log("getConsentData result:" + JSON.stringify(result, true));
+        if ( success ) {
+            console.log('call getConsentData success');
+        } else {
+            console.log('call getConsentData fail');
+        }
+        // pass these 2 values to all ad / pixel calls
+        // window.__cmp('getVendorConsents', null, function( result, success) {
+        //     if ( success ) {
+        //         console.log('call getVendorConsents success');
+        //     } else {
+        //         console.log('call getVendorConsents fail');
+        //     }
+        //     console.log("getVendorConsents result:" + JSON.stringify(result, true));
+        // });
+    });
+    </script>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=big5"> 
+<meta name="application-name" content="Yahoo!奇摩股市"/>
+<meta name="msapplication-TileColor" content="#7b0099"/> 
+<meta name="msapplication-TileImage" content="https://s.yimg.com/f/i/tw/stock/tw_stock_icon_pin.png"/>
+<meta name="description" content="提供集中市場當日行情表、櫃檯買賣市場行情、電子產業行情、概念股行情、集團股行情等資訊。">
+<title>當日行情 - Yahoo!奇摩股市</title>
+<link rel="stylesheet" type="text/css" href="https://s.yimg.com/f/i/tw/hp/masthead/yhtw_masthead_standard.css" media="screen, print" />
+<link rel="stylesheet" type="text/css" href="https://s.yimg.com/f/i/tw/hp/masthead/yhtw_masthead_12.css" media="screen, print" />
+<link rel="stylesheet" type="text/css" href="https://s.yimg.com/f/i/tw/stock/revampe/css_1960_min.css" media="screen, print" />
+<link rel="stylesheet" type="text/css" href="https://s.yimg.com/f/i/tw/stock/img06/stock_wd.css" media="screen, print" />
+<link rel="stylesheet" type="text/css" href="https://s.yimg.com/f/i/tw/stock/stock_print_1_2.css" media="print" />
+<link href="https://s.yimg.com/f/i/tw/hp/Universal_header/uh_bt3.css" type="text/css" rel="stylesheet"/>
+<link href="https://s.yimg.com/f/i/tw/stock/revampe/ystock_uh_1_1_min.css" type="text/css" rel="stylesheet"/> 
+<link href="https://s.yimg.com/ud/others/stock/gemini-v1.css" type="text/css" rel="stylesheet"/>
+<script type="text/JavaScript"> 
+<!--
+function MM_swapImgRestore() { //v3.0
+ var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+ var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+ var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+ if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_findObj(n, d) { //v4.01
+ var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+ d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+ if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+ for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+ if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_swapImage() { //v3.0
+ var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+ if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+.style1 {
+ color: #000000;
+ font-family: "新細明體";
+}
+.style2 {color: #4f5d70}
+.style4 {color: #009900}
+.style5 {color: #FF0000}
+.style8 {font-size: 10pt;}
+.style9 {color: #000000; }
+.style12 {line-height: 25pt; font-family: "新細明體", mingliu, taipei;}
+.style13 {color: #4f5d70}
+-->
+</style>
+<script language="JavaScript" src="https://s.yimg.com/f/i/tw/hp/wd/wd_20050720.js"></script>
+<script language="JavaScript" src="https://s.yimg.com/f/i/tw/stock/yui2/yahoo_200_b2.js" ></script>
+<script language="JavaScript" src="https://s.yimg.com/f/i/tw/stock/yui2/dom_200_b2.js" ></script>
+<script language="JavaScript" src="https://s.yimg.com/f/i/tw/stock/yui2/event_200_b2.js" ></script>
+<script language="JavaScript" src="https://s.yimg.com/f/i/tw/stock/yui2/dragdrop_200_b2.js" ></script>
+<script language="JavaScript" src="https://s.yimg.com/f/i/tw/stock/img06/stk_wd_1_2.js"></script>
+<script language="javascript" src="https://s.yimg.com/f/i/tw/stock/img06/stock22.js"></script>
+<script src="https://yui-s.yahooapis.com/combo?3.5.0/yui/yui-min.js"></script>
+<script type="text/javascript" src="https://sec.yimg.com/us.js.yimg.com/lib/common/utils/2/connection_2.1.0.js" ></script>
+</head> 
+
+              <style type='text/css'>
+ .ad_slug_table TD { font-size:0px;cursor:default; }
+ .ad_slug_table TD SPAN { font-size:0px;cursor:default; }
+ .ad_slug_table TD SPAN FONT { font-size:10px;cursor:default; }
+ .ad_slug_table TD SPAN.can_ad_slug { font-size:11px;text-align:right }
+</style>
+              <script type='text/javascript' src='https://s.yimg.com/rq/darla/3-15-1/js/g-r-min.js'></script>
+              <script type="text/javascript">
+                if (!window.DARLA_CONFIG) {
+                  DARLA_CONFIG = {"useYAC":0,"usePE":0,"servicePath":"https:\/\/tw.stock.yahoo.com\/sdarla\/php\/fc.php","xservicePath":"","beaconPath":"https:\/\/tw.stock.yahoo.com\/sdarla\/php\/b.php","renderPath":"","allowFiF":false,"srenderPath":"https:\/\/s.yimg.com\/rq\/darla\/3-15-1\/html\/r-sf.html","renderFile":"https:\/\/s.yimg.com\/rq\/darla\/3-15-1\/html\/r-sf.html","sfbrenderPath":"https:\/\/s.yimg.com\/rq\/darla\/3-15-1\/html\/r-sf.html","msgPath":"https:\/\/fc.yahoo.com\/unsupported-1946.html","cscPath":"https:\/\/s.yimg.com\/rq\/darla\/3-15-1\/html\/r-csc.html","root":"sdarla","edgeRoot":"https:\/\/s.yimg.com\/rq\/darla\/3-15-1","sedgeRoot":"https:\/\/s.yimg.com\/rq\/darla\/3-15-1","version":"3-15-1","tpbURI":"","hostFile":"https:\/\/s.yimg.com\/rq\/darla\/3-15-1\/js\/g-r-min.js","beaconsDisabled":true,"rotationTimingDisabled":true,"fdb_locale":"\u60a8\u70ba\u4ec0\u9ebc\u4e0d\u559c\u6b61\u9019\u5247\u5ee3\u544a\uff1f|\u5ee3\u544a\u5167\u5bb9\u4ee4\u4eba\u53cd\u611f|\u5176\u4ed6|\u611f\u8b1d\u60a8\u5354\u52a9\u6211\u5011\u6539\u5584\u60a8\u7684 Yahoo\u5947\u6469\u9ad4\u9a57|\u5ee3\u544a\u5167\u5bb9\u8207\u6211\u6c92\u4ec0\u9ebc\u95dc\u806f|\u4f7f\u4eba\u5206\u5fc3|\u6211\u4e0d\u559c\u6b61\u9019\u652f\u5ee3\u544a|\u9001\u51fa|\u5b8c\u6210|\u70ba\u4ec0\u9ebc\u6211\u6703\u770b\u898b\u5ee3\u544a\uff1f|\u9032\u4e00\u6b65\u4e86\u89e3\u60a8\u7684\u610f\u898b\u3002|\u60f3\u8981\u4f7f\u7528\u7121\u5ee3\u544a\u6536\u4ef6\u5323\u55ce\uff1f\u5feb\u4f86\u5347\u7d1a Yahoo Mail Pro\uff01|\u7acb\u5373\u5347\u7d1a","lang":"zh-Hant-TW"};
+                }
+                            DARLA_CONFIG.events = {
+                                         'renderN':
+                            {
+                                name: 'renderN',
+                                ps: 'N',
+                                sp: 152952223,
+                                npv: 1,
+                                ssl: 1
+                            },                             'renderLREC':
+                            {
+                                name: 'renderLREC',
+                                ps: 'LREC',
+                                sp: 152952223,
+                                npv: 1,
+                                ssl: 1
+                            },
+                    'AUTO':
+                      {
+                        name: "AUTO",
+                        sp: 152952223,
+                        autoStart: 1,
+                        autoIV:1,
+                        ps: "N,LREC",
+                        ssl: 1,
+                        secure: 1,
+                        ref: document.location.href // to support testing ads.
+                      }
+                    };
+                               DARLA_CONFIG.positions = {
+                                          N: {wcpx: 1, hcpx: 1, dest: 'tgtN', clean: 'boxN' ,fdb: { "on": 1 }, metaSize: true},
+                       LREC: {wcpx: 1, hcpx: 1, dest: 'tgtLREC', clean: 'boxLREC' ,fdb: { "on": 1 }, metaSize: true}
+               };
+              </script>
+<body bgcolor=white vlink=#3948CC alink=red text=#4C4C4C style="margin-top:0px">
+<center>
+<script language="javascript" src="https://s.yimg.com/uc/sf/latest/js/safe.min.js"></script>
+<!--BEGIN:Universal Master Header-->
+<style>
+  body {
+    margin: 0;
+  }
+  .uh .eyebrow>li {
+    display: inline-block;
+    margin: 1px 32px 0 0;
+    font-size: 13px;
+    font-weight: normal;
+  }
+  .uh .eyebrow>li>a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .uh .eyebrow>li>a:hover {
+    text-decoration: underline;
+  }
+  .uh .eyebrow .more-anchor {
+    color: #fff;
+  }
+  .uh .eyebrow .more-anchor:hover {
+    color: #1d1da3;
+    background-color: #fff;
+  }
+  .uh .eyebrow .more-anchor svg {
+    fill: #fff;
+  }
+  .uh .eyebrow .more-anchor:hover svg {
+    fill: #1d1da3;
+  }
+  .uh .eyebrow .more-list {
+    display: none;
+  }
+  .uh .eyebrow .more-list li {
+    padding-bottom: 10px;
+  }
+  .uh .eyebrow .more-anchor:hover .more-list{
+    display: block;
+  }
+  .uh .header input[type=text] {
+    width: 250px;
+  }
+  .uh.broad .header input[type=text] {
+    width: 400px;
+  }
+  .uh .header .search-button {
+    border-width: 0;
+    border-bottom: 2px solid #21487f;
+    border-radius: 4px;
+    width: 80px;
+    height: 35px;
+    font: 16px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #fff;
+    background-color: #3775dd;
+    cursor: pointer;
+    outline: none;
+  }
+  .uh.broad .header .search-button {
+    padding: 0 14px;
+    width: 110px;
+  }
+  .uh .header .login-button {
+    color: #400090;
+  }
+  .uh .header .login-button:hover {
+    color: #fff;
+    background-color: #400090;
+  }
+  .uh .header .logout-link {
+    color: #26282a;
+  }
+  .uh .header .logout-link:hover {
+    color: #0078ff;
+  }
+  .uh .header .profile .profile-box {
+    display: none;
+  }
+  .uh .header .profile:hover .profile-box {
+    display: inline-block;
+  }
+</style>
+<div class="uh " style="position: relative; z-index: 21; margin-bottom: 10px;">
+  <ul class="eyebrow" style="margin: 0; padding: 0; height: 22px; font-size: 0; text-align: left; white-space: nowrap; background-color: #2d1152;">
+    <li style="margin-left: 10px;">
+      <a href="https://tw.yahoo.com/">
+        <div>
+          <svg width="16" height="16" style="margin-top: 1px; vertical-align: top; fill: #fff; stroke-width: 0;" viewBox="0 0 32 32" data-icon="home">
+            <path d="M16.153 3.224L0 16.962h4.314v11.814h9.87v-8.003h3.934v8.003h9.84V16.962H32" data-reactid="10"></path>
+          </svg>
+          <span>首頁</span>
+        </div>
+      </a>
+    </li>
+    <li><a href="https://tw.mail.yahoo.com/?.intl=tw&amp;.lang=zh-Hant-TW">信箱</a></li>
+    <li><a href="https://tw.news.yahoo.com/">新聞</a></li>
+    <li><a href="http://tw.stock.yahoo.com/">股市</a></li>
+    <li><a href="https://tw.news.yahoo.com/weather/">氣象</a></li>
+    <li><a href="https://tw.sports.yahoo.com/">運動</a></li>
+    <li><a href="https://tw.video.yahoo.com/">Yahoo TV</a></li>
+    <li><a href="http://yahoomode.tumblr.com/yahooapp/">App下載</a></li>
+    <li><a href="https://tw.buy.yahoo.com/">購物中心</a></li>
+    <li><a href="https://tw.mall.yahoo.com/">商城</a></li>
+    <li><a href="https://tw.bid.yahoo.com/">拍賣</a></li>
+    <li>
+      <div class="more-anchor rapidnofollow" style="position: relative; z-index: 1; margin-left: -10px; outline: none; cursor: pointer;">
+        <div style="padding: 0 10px;">
+          <span>更多</span>
+          <svg width="8" height="8" style="margin-left: 5px; vertical-align: middle;" viewBox="0 0 512 512" data-icon="CoreArrowDown">
+            <path d="M500.77 131.432L477.53 108.18c-14.45-14.55-40.11-14.55-54.51 0L255.845 275.363 88.582 108.124c-15.015-14.874-39.363-14.874-54.42.108L10.94 131.486c-14.58 14.44-14.58 40.11-.033 54.442l217.77 217.845c15.004 14.82 39.33 14.874 54.42-.108L500.88 185.82c14.818-14.982 14.87-39.298-.11-54.388z"></path>
+          </svg>
+        </div>
+        <div class="more-list" style="position: absolute; color: #1d1da3; background-color: #fff; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 7px">
+          <ul style="list-style: none; padding: 10px; text-align: left;">
+            <li><a class="D(b) Py(3px)" href="https://tw.answers.yahoo.com/">知識+</a></li>
+            <li><a class="D(b) Py(3px)" href="https://autos.yahoo.com.tw/">汽車機車</a></li>
+            <li><a class="D(b) Py(3px)" href="https://movies.yahoo.com.tw/">電影</a></li>
+            <li><a class="D(b) Py(3px)" href="https://tw.dictionary.yahoo.com/">字典</a></li>
+            <li><a class="D(b) Py(3px)" href="https://travel.yahoo.com.tw/">旅遊</a></li>
+            <li><a class="D(b) Py(3px)" href="https://tw.money.yahoo.com/">理財</a></li>
+            <li><a class="D(b) Py(3px)" href="https://house.yahoo.com.tw/">房地產</a></li>
+            <li><a class="D(b) Py(3px)" href="https://style.yahoo.com.tw/">時尚美妝</a></li>
+            <li><a class="D(b) Py(3px)" href="https://tw.discount.yahoo.net/">折扣城</a></li>
+            <li><a class="D(b) Py(3px)" href="https://tw.news.yahoo.com/entertainment">娛樂</a></li>
+            <li><a class="D(b) Py(3px)" href="https://games.yahoo.com.tw">遊戲</a></li>
+          </ul>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <div class="header" style="display: flex; height: 68px; align-items: center; width: 750px">    <a href="/" style="display: inline-block; width: 150px; height: 38px; background-size: cover; background-image: url(https://s.yimg.com/rz/d/yahoo_finance_zh-Hant-TW_s_f_pw_351x40_stock_2x.png);"></a>
+    <div style="flex-grow: 1; text-align: left;">
+      <form action="https://tw.search.yahoo.com/search" method="get" accept-charset="utf-8" style="margin-bottom: 0;">
+        <input type="hidden" name="fr" value="ush1-finance">
+        <input type="text" placeholder="搜尋" name="p" style="box-sizing: content-box; padding: 7px 15px; height: 17px; font-size: 15px; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;"/>
+        <button class="search-button" type="submit">搜尋</button>
+      </form>
+    </div>
+    <div>
+      <a class="login-button" style="display: inline-block; border-radius: 5px; border: 2px solid #400090; width: 78px; text-align: center; vertical-align: middle; font-size: 14px; text-decoration: none;" href="https://login.yahoo.com/config/login?.src=twfinance&.intl=tw&.lang=zh-Hant-TW&.done=https%3A%2F%2Ftw.stock.yahoo.com%2F">登入</a>
+      <a href="https://mail.yahoo.com/?.intl=tw&.lang=zh-Hant-TW" style="color: #400090; text-decoration: none;">
+        <svg width="30" style="fill: #400090; vertical-align: middle;" height="35" viewBox="0 0 512 512">
+          <path d="M460.586 91.31H51.504c-10.738 0-19.46 8.72-19.46 19.477v40.088l224 104.03 224-104.03v-40.088c0-10.757-8.702-19.478-19.458-19.478M32.046 193.426V402.96c0 10.758 8.72 19.48 19.458 19.48h409.082c10.756 0 19.46-8.722 19.46-19.48V193.428l-224 102.327-224-102.327z"></path>
+        </svg>
+        <b style="font-size: 14px; font-weight: 400; vertical-align: middle;">信箱</b>
+      </a>
+    </div>
+  </div>
+</div>
+ <!--END:Universal Master Header-->
+           <div id="boxN"><div id="tgtN"></div></div><script lang="text/javascript">
+<!--
+function stkClearMe(control)
+{
+ control.value = '';
+ control.style.color = "black";
+}
+function stkRestore(control, str)
+{
+ if (control.value == '') {control.value = str; control.style.color = "#a8a8a8";};
+}
+function stockmenu_submit (form)
+{
+ if (form.stock_id.value == '輸入台股代號/名稱')
+ {
+ return false;
+ }
+ form.submit();
+}
+//-->
+</script>
+<link rel="stylesheet" href="https://s.yimg.com/cv/apiv2/twstock/stockNavSearchBar-style_1547006034898.css">
+<div id="stockNavSearchBar" style="width: 750px">    <nav id="ystkglonav">
+        <ul class="desktopNav">
+            <li class="parent"><a class="navLink" href=https://tw.stock.yahoo.com/>首頁</a></li><li class="parent"><a class="navLink" href=https://tw.stock.yahoo.com/pf/mypf>投資組合</a></li><li class="parent"><a class="navLink current" href=https://tw.stock.yahoo.com/h/getclass.php>當日行情</a><ul class="child"><li><a class="dropLink" href=https://tw.stock.yahoo.com/d/i/major.html>法人進出</a></li><li><a class="dropLink" href=https://tw.stock.yahoo.com/d/i/cap.html>成交比重</a></li><li><a class="dropLink" href=https://tw.stock.yahoo.com/d/i/credit.html>資券餘額</a></li><li><a class="dropLink" href=https://tw.stock.yahoo.com/d/i/hot.html>熱門排行</a></li></ul></li><li class="parent"><a class="navLink" href=https://tw.stock.yahoo.com/s/tse.php>大盤</a></li><li class="parent"><a class="navLink" href=https://tw.stock.yahoo.com/s/nine.php>類股</a></li><li class="parent"><a class="navLink" href=https://tw.futures.finance.yahoo.com/future/>期權</a></li><li class="parent"><a class="navLink" href=https://tw.stock.yahoo.com/hkcn/>港滬深股</a></li><li class="parent"><a class="navLink" href=https://tw.stock.yahoo.com/us/>美股</a></li><li class="parent"><a class="navLink" href=https://tw.stock.yahoo.com/news_index.html>新聞</a><ul class="child"><li><a class="dropLink" href=https://tw.tv.yahoo.com/stock-watch/>五分鐘看台股</a></li><li><a class="dropLink" href=https://tw.stock.yahoo.com/news_list/url/d/e/N1.html>重大要聞</a></li><li><a class="dropLink" href=https://tw.stock.yahoo.com/news_list/url/d/e/N2.html>台股盤勢</a></li><li><a class="dropLink" href=https://tw.stock.yahoo.com/news_list/url/d/e/N3.html>個股動態</a></li><li><a class="dropLink" href=https://tw.stock.yahoo.com/news_list/url/d/e/N12.html>國際財經</a></li><li><a class="dropLink" href=https://tw.stock.yahoo.com/report_index.html>研究報告</a></li></ul></li><li class="parent"><a class="navLink" href=https://tw.screener.finance.yahoo.net/screener/basic.html>選股</a></li><li class="parent"><a class="navLink" href=http://bit.ly/2MVn1Em>理財</a></li><li class="parent"><a class="navLink" href=http://bit.ly/2YWQgJw>基金</a></li>        </ul>
+    </nav>
+    <div id="stockSearchBar">
+        <div class="barContainer" style="display: inline-table">
+            <form style="display: inline; margin: 0; margin-block-end: 0" name="menu" action="https://tw.stock.yahoo.com/h/stockmenu.php">
+                <div class="searchInput" style="background: #fff;">
+                    <img id="searchIcon" width="16px" src="https://s.yimg.com/cv/apiv2/twstock/icon-search.png" srcset="https://s.yimg.com/cv/apiv2/twstock/icon-search@2x.png 2x, https://s.yimg.com/cv/apiv2/twstock/icon-search@3x.png 3x"/>
+                    <input id="stock_id" type="text" name="stock_id" placeholder="搜尋台股美股代號/名稱"/>
+                    <img id="closeBtn" src="https://s.yimg.com/cv/apiv2/twstock/cancel.png" srcset="https://s.yimg.com/cv/apiv2/twstock/cancel@2x.png 2x, https://s.yimg.com/cv/apiv2/twstock/cancel@3x.png 3x" style="cursor: pointer; display: none"/>
+                </div>
+            </form>
+            <div class="stockSearch">
+                <a href="javascript:open_win('/h/kimosel.php','menu','stock_id','stock_name')">
+                    <img src="https://s.yimg.com/cv/apiv2/twstock/stock-list_1543909743394.png" srcset="https://s.yimg.com/cv/apiv2/twstock/stock-list@2x_1543909743407.png 2x, https://s.yimg.com/cv/apiv2/twstock/stock-list@3x_1543909743401.png 3x"/>
+                    <span>台股代號查詢</span>
+                </a>
+            </div>
+            <div class="stockInfos"><span id=marketTimeCountDown>距離台股收盤還有1小時24分鐘</span><a href="javascript:window.location.reload();">更新</a></div>        </div>
+    </div>
+</div>
+<script type="text/javascript" charset="UTF-8">
+    function submitStockMenuForm(symbol) {
+        var stockForm = document.querySelector('#stockSearchBar .barContainer').children[0];
+        stockForm.stock_id.value = symbol;
+        stockForm.submit();
+    }
+    var stockInput = document.querySelector('#stockSearchBar #stock_id');
+    var closeBtn = document.querySelector('#stockSearchBar #closeBtn');
+    stockInput.addEventListener('input', function(e) {
+        if (stockInput.value.length) {
+            closeBtn.style.display= "block"
+        } else {
+            closeBtn.style.display= "none"
+        }
+    });
+    closeBtn.addEventListener('click', function() {
+        stockInput.value = '';
+        closeBtn.style.display= "none"
+    });
+
+    var marketTimeCountDownElem = document.getElementById('marketTimeCountDown');
+    var countDownText = marketTimeCountDownElem.innerText;
+    var time = countDownText.match(/\d+/g);
+
+    if (time.length === 2) {
+        var expires = new Date();
+        expires.setHours(expires.getHours() + parseInt(time[0]));
+        expires.setMinutes(expires.getMinutes() + parseInt(time[1]));
+        var expiresTime = expires.getTime();
+
+        var countdownTimer = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = parseInt((expiresTime - now) / 1000);
+            if (distance > 0) {
+                var hours = parseInt(distance / 3600);
+                distance = (distance % 3600);
+                var minutes = parseInt(distance / 60);
+                var template = countDownText.replace(/\d+/g, "{{timeSlot}}");
+                template = hours === 0 ? template.replace('{{timeSlot}}小時', '') : template.replace('{{timeSlot}}', hours);
+                template = minutes === 0 ? template.replace('{{timeSlot}}分鐘', '') : template.replace('{{timeSlot}}', minutes);
+                marketTimeCountDownElem.innerHTML = template;
+            } else {
+                clearInterval(countdownTimer);
+                marketTimeCountDownElem.innerHTML = '';
+            }
+        }, 30000);
+    }
+</script>
+<script src="https://s.yimg.com/cv/apiv2/twstock/autocomplete-bar.bundle_1547107706574.js" type="text/javascript" charset="UTF-8" defer></script>
+<center><br></center>
+<table align="center" width="750" cellpadding="0" border="0" cellspacing="3"> 
+<tr>
+<td width="60%">
+<!----yk_left.jake starts----> 
+<table width="100%" class="shortcuts">
+ <tr align="center">
+ <td><a href="#table1">集中市場</a></td>
+ <td><a href="#table3">櫃檯買賣</a></td>
+ <td><a href="#table5">電子產業</a></td>
+ <td><a href="#table7">概念股</a></td> <td><a href="#table9">集團股</a></td> </tr>
+</table>
+<table width="100%" id="market"><tr><td class="font-be-adjust">
+<!----table 1 ------------------------------>
+<table id="table1" width="100%" border="0" cellspacing="0" cellpadding="0" height="43">
+<tr>
+<td width="47" rowspan="2" height="43" valign="bottom"><img src="https://s.yimg.com/f/i/tw/stock/price_1.gif" width="47" height="43" class="yui-tw-stock-block"></td>
+<td height="8">&nbsp;</td>
+</tr>
+<tr>
+<td height="35" bgcolor="#FFEDA9" width="100%">
+<table width="100%" border="0" cellspacing="0" cellpadding="4">
+<tr>
+<td class="yui-text-left" width="155">
+<b><font color="#CC3366">集中市場當日行情表</font></b>
+</td>
+<td align="right"><a href="/s/tse.php">大盤走勢</a>　<a href="/s/nine.php">類股走勢</a>&nbsp;　</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!----table 2 ------------------------------>
+<table border="0" cols=2 width=100% cellspacing="0" cellpadding="7">
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%A4%F4%AAd&rr=0.59317600 1566792324">水泥</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%AD%B9%AB%7E&rr=0.59318100 1566792324">食品</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B6%EC%BD%A6&rr=0.59318300 1566792324">塑膠</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%AF%BC%C2%B4&rr=0.59318500 1566792324">紡織</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B9q%BE%F7&rr=0.59318800 1566792324">電機</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B9q%BE%B9%B9q%C6l&rr=0.59318900 1566792324">電器電纜</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%A4%C6%BE%C7&rr=0.59319100 1566792324">化學</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%A5%CD%A7%DE%C2%E5%C0%F8&rr=0.59319400 1566792324">生技醫療</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%AC%C1%BC%FE&rr=0.59319600 1566792324">玻璃</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B3y%AF%C8&rr=0.59319700 1566792324">造紙</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%BF%FB%C5K&rr=0.59319900 1566792324">鋼鐵</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%BE%F3%BD%A6&rr=0.59320000 1566792324">橡膠</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%A8T%A8%AE&rr=0.59320200 1566792324">汽車</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%A5b%BE%C9%C5%E9&rr=0.59320400 1566792324">半導體</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B9q%B8%A3%B6g%C3%E4&rr=0.59323100 1566792324">電腦週邊</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%A5%FA%B9q&rr=0.59323400 1566792324">光電</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B3q%ABH%BA%F4%B8%F4&rr=0.59323600 1566792324">通信網路</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B9q%A4l%B9s%B2%D5%A5%F3&rr=0.59323800 1566792324">電子零組件</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B9q%A4l%B3q%B8%F4&rr=0.59324000 1566792324">電子通路</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B8%EA%B0T%AAA%B0%C8&rr=0.59324100 1566792324">資訊服務</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%A8%E4%A5%A6%B9q%A4l&rr=0.59324300 1566792324">其它電子</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C0%E7%AB%D8&rr=0.59324400 1566792324">營建</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%AF%E8%B9B&rr=0.59324600 1566792324">航運</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C6%5B%A5%FA&rr=0.59324800 1566792324">觀光</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%AA%F7%BF%C4&rr=0.59324900 1566792324">金融</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B6T%A9%F6%A6%CA%B3f&rr=0.59325100 1566792324">貿易百貨</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%AAo%B9q%BFU%AE%F0&rr=0.59325300 1566792324">油電燃氣</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%A8%E4%A5L&rr=0.59325500 1566792324">其他</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%A6s%B0U%BE%CC%C3%D2&rr=0.59325700 1566792324">存託憑證</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%A5%AB%BB%7B%C1%CA&rr=0.59325900 1566792324">市認購</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%A5%AB%BB%7B%B0%E2&rr=0.59326100 1566792324">市認售</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%AB%FC%BC%C6%C3%FE&rr=0.59326300 1566792324">指數類</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=ETF&rr=0.59326500 1566792324">ETF</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%A8%FC%AFq%C3%D2%A8%E9&rr=0.59326700 1566792324">受益證券</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=ETN&rr=0.59326800 1566792324">ETN</a></td>
+</tr>
+</table>
+<!----table 3 ------------------------------>
+<table id="table3" width="100%" border="0" cellspacing="0" cellpadding="0" height="43">
+<tr>
+<td width="47" rowspan="2" height="43" valign="bottom"><img src="https://s.yimg.com/f/i/tw/stock/price_2.gif" width="47" height="43" class="yui-tw-stock-block"></td>
+<td height="8">&nbsp;</td>
+</tr>
+<tr>
+<td height="35" bgcolor="#FFEDA9" width="100%">
+<table width="100%" border="0" cellspacing="0" cellpadding="4">
+<tr>
+<td class="yui-text-left">
+<b><font color="#CC3366">櫃檯買賣市場行情</font></b>
+</td>
+<td align="right"><a href="/s/otc.php">櫃檯走勢</a>&nbsp;&nbsp;　<a href="#ystkglonav">Top</a>&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!----table 4 ------------------------------>
+<table border="0" cols=2 width=100% cellspacing="0" cellpadding="7">
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%AD%B9%AB%7E&rr=0.59327100 1566792324">食品</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%B6%EC%BD%A6&rr=0.59327200 1566792324">塑膠</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%AF%BC%C2%B4&rr=0.59327400 1566792324">紡織</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%B9q%BE%F7&rr=0.59327600 1566792324">電機</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%B9q%BE%B9&rr=0.59327800 1566792324">電器</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%A4%C6%A4u&rr=0.59327900 1566792324">化工</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%A5%CD%A7%DE&rr=0.59328100 1566792324">生技</a></td>
+<!-- td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%AC%C1%BC%FE&rr=0.59328200 1566792324">玻璃</a></td -->
+<td width="25%" height="25" nowrap><a href="/s/list.php?c=%C2d%AAo%B9q&rr=0.59328400 1566792324">油電</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%BF%FB%C5K&rr=0.59328500 1566792324">鋼鐵</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%BE%F3%BD%A6&rr=0.59328700 1566792324">橡膠</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%A5b%BE%C9&rr=0.59328800 1566792324">半導</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%B9q%B8%A3&rr=0.59329000 1566792324">電腦</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%A5%FA%B9q&rr=0.59329100 1566792324">光電</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%B3q%ABH&rr=0.59329300 1566792324">通信</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%B9q%B9s&rr=0.59329500 1566792324">電零</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%B3q%B8%F4&rr=0.59329700 1566792324">通路</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%B8%EA%AAA&rr=0.59330500 1566792324">資服</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%A5L%B9q&rr=0.59330700 1566792324">他電</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%C0%E7%AB%D8&rr=0.59330900 1566792324">營建</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%AF%E8%B9B&rr=0.59331000 1566792324">航運</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%C6%5B%A5%FA&rr=0.59331200 1566792324">觀光</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%AA%F7%BF%C4&rr=0.59331300 1566792324">金融</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%B6T%A9%F6&rr=0.59331500 1566792324">貿易</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%AB%FC%BC%C6%C3%FE&rr=0.59331600 1566792324">指數類</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%A8%E4%A5L&rr=0.59331800 1566792324">其他</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%BA%DE%B2z&rr=0.59331900 1566792324">管理</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%A4%BD%A5q&rr=0.59332100 1566792324">公司</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%BE%CC%C3%D2&rr=0.59332200 1566792324">憑證</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%BB%7B%C1%CA&rr=0.59332400 1566792324">認購</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2d%BB%7B%B0%E2&rr=0.59332500 1566792324">認售</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2dETF&rr=0.59332700 1566792324">ETF</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C2dETN&rr=0.59332800 1566792324">ETN</a></td>
+<td width="25%" height="20" nowrap>&nbsp;</td>
+</tr>
+</table>
+<!----table 5 ------------------------------>
+<table id="table5" width="100%" border="0" cellspacing="0" cellpadding="0" height="43">
+<tr>
+<td width="47" rowspan="2" height="43" valign="bottom"><img src="https://s.yimg.com/f/i/tw/stock/price_3.gif" width="47" height="43" class="yui-tw-stock-block"></td>
+<td height="8">&nbsp;</td>
+</tr>
+<tr>
+<td height="35" bgcolor="#FFEDA9" width="100%">
+<table width="100%" border="0" cellspacing="0" cellpadding="4">
+<tr>
+<td class="yui-text-left"><a name="EE"><font ="ttt"><b><font color="#CC3366">電子產業行情</font></b></font></td>
+<td align="right"><a href="#ystkglonav">Top</a>&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!----table 6 ------------------------------>
+<table border="0" cols=2 width=100% cellspacing="0" cellpadding="7">
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=DRAM&rr=0.59333000 1566792324">DRAM</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=DRAM%BC%D2%B2%D5&rr=0.59333200 1566792324">DRAM模組</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=IC%B3%5D%ADp&rr=0.59333300 1566792324">IC設計</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=IC%A5%CD%B2%A3&rr=0.59333500 1566792324">IC生產</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=IC%AB%CA%B8%CB%B4%FA%B8%D5&rr=0.59333600 1566792324">IC封測</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=TFT-LCD&rr=0.59333800 1566792324">TFT-LCD</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=Flash%BC%D2%B2%D5&rr=0.59334000 1566792324">Flash模組</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%A5D%BE%F7%AAO&rr=0.59334100 1566792324">主機板</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%A5%FA%BA%D0%A4%F9&rr=0.59334300 1566792324">光碟片</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%A5%FA%BA%D0%BE%F7&rr=0.59334400 1566792324">光碟機</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%A5%FA%C5%D6%B2%A3%AB%7E&rr=0.59334600 1566792324">光通訊</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%A6%F8%AAA%BE%B9&rr=0.59334700 1566792324">伺服器</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B3n%C5%E9%B7%7E&rr=0.59334900 1566792324">軟體業</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B1%BD%BA%CB%BE%B9&rr=0.59335000 1566792324">掃描器</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%BE%C9%BDu%AC%5B&rr=0.59335200 1566792324">導線架</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%A8%C6%B0%C8%BE%F7%BE%B9&rr=0.59336300 1566792324">OA產品</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%A6L%AA%ED%BE%F7&rr=0.59336500 1566792324">印表機</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B3s%B1%B5%BE%B9&rr=0.59336600 1566792324">連接器</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%BE%F7%B4%DF&rr=0.59336800 1566792324">機殼業</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%AE%F8%B6O%A9%CA%B9q%A4l%B2%A3%AB%7E&rr=0.59337000 1566792324">消費性電子</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%BC%D2%A8%E3%A8R%C0%A3&rr=0.59337200 1566792324">模具沖壓</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B9q%ABH%B3%5D%B3%C6&rr=0.59337400 1566792324">電信設備</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%AE%E0%A4W%AB%AC%B9q%B8%A3&rr=0.59337500 1566792324">電腦系統</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B6g%C3%E4%B2%A3%AB%7E&rr=0.59337700 1566792324">電腦週邊</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B5%A7%B0O%AB%AC%B9q%B8%A3&rr=0.59337900 1566792324">筆記型電腦</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%C5%E3%A5%DC%BE%B9&rr=0.59338200 1566792324">顯示(監視)器</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B3q%B0T%BA%F4%B8%F4&rr=0.59338400 1566792324">網路設備</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B9q%B8%A3%B3q%B8%F4%B0%D3&rr=0.59338600 1566792324">資訊通路</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%A8t%B2%CE%BE%E3%A6X&rr=0.59338800 1566792324">資訊服務</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%A6L%A8%EA%B9q%B8%F4%AAO&rr=0.59339000 1566792324">印刷電路板</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=Internet%AC%DB%C3%F6&rr=0.59339200 1566792324">網際網路相關</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%A4%E2%BE%F7&rr=0.59339400 1566792324">行動電話</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%BC%C6%A6%EC%AC%DB%BE%F7&rr=0.59339500 1566792324">數位相機</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B3Q%B0%CA%A4%B8%A5%F3&rr=0.59339700 1566792324">被動元件</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B9q%B7%BD%A8%D1%C0%B3%BE%B9&rr=0.59339900 1566792324">電源供應器(SPS)</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=PDA&rr=0.59340000 1566792324">掌上電子產品</a></td>
+</tr>
+<tr align=center>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B1M%B7%7E%B4%B9%B6%EA%A5N%A4u&rr=0.59340200 1566792324">晶圓代工</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B9q%ABH%2F%BC%C6%BE%DA%AAA%B0%C8&rr=0.59340300 1566792324">電信/數據服務</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=%B5L%BDu%BA%F4%B8%F4&rr=0.59340500 1566792324">無線網路</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list.php?c=LED&rr=0.59340700 1566792324">發光二極體(LED)</a></td>
+</tr>
+</table>
+<!----table 7 ------------------------------>
+<table id="table7" width="100%" border="0" cellspacing="0" cellpadding="0" height="43">
+<tr>
+<td width="47" rowspan="2" height="43" valign="bottom"><img src="https://s.yimg.com/f/i/tw/stock/price_2.gif" width="47" height="43" class="yui-tw-stock-block"></td>
+<td height="8">&nbsp;</td>
+</tr>
+<tr>
+<td height="35" bgcolor="#FFEDA9" width="100%">
+<table width="100%" border="0" cellspacing="0" cellpadding="4">
+<tr>
+<td class="yui-text-left"><a name="EE"><font ="ttt"><b><font color="#CC3366">概念股行情</font></b></font></td>
+<td align="right"><a href="#ystkglonav">Top</a>&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!----table 8 ------------------------------>
+<table border="0" cols=2 width=100% cellspacing="0" cellpadding="7">
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=AI%B2z%B0%5D%BE%F7%BE%B9%A4H&rr=0.59341700 1566792324">AI理財機器人</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AAF%A8%CA%B6%F8%B9B&rr=0.59342000 1566792324">東京奧運</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5x%B0%D3%A6%AC%A6%A8&rr=0.59342200 1566792324">台商收成</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0%AA%B6%AF%C1%FA%ACy&rr=0.59342300 1566792324">高雄韓流</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AD%E1%C4%D6%C2%E5%AC%FC&rr=0.59342900 1566792324">凍齡醫美</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=iTV&rr=0.59343100 1566792324">iTV</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0%AA%B4%DE%A7Q%B2v&rr=0.59343300 1566792324">高殖利率</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B4%BC%BCz%C2%E5%C0%F8&rr=0.59343500 1566792324">智慧醫療</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B6%B3%BA%DD%AC%DB%C3%F6&rr=0.59343900 1566792324">雲端相關</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B6%C5%C2%E0%AA%D1&rr=0.59344100 1566792324">債轉股</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5%FE%B2y%BC%D0%B7%C7%AB%FC%BC%C6%AD%E7%B0%A3&rr=0.59344300 1566792324">全球標準指數剔除</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%BC%DA%A4%B8%B6S%AD%C8&rr=0.59344500 1566792324">歐元貶值</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AE%FC%B6q%B8%EA%AE%C6&rr=0.59344900 1566792324">海量資料</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A6%CC%A8%E4%AAL&rr=0.59345100 1566792324">米其林</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0l%C2%DC%BC%DA%ACw&rr=0.59345300 1566792324">追蹤歐洲</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B9B%B0%CA%AAA%B9%A2&rr=0.59345400 1566792324">運動服飾</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=SH%AD%7D%A4h%A5%A7&rr=0.59345800 1566792324">SH迪士尼</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=RFID&rr=0.59346000 1566792324">RFID</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A6A%A5%CD%B4%60%C0%F4&rr=0.59346100 1566792324">再生循環</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C6%5B%A5%FA%B6%BA%A9%B1%C1%CA%AA%AB%A4%A4%A4%DF&rr=0.59346300 1566792324">觀光飯店購物中心</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AE%F5%BB%CB%A4%C9%AD%C8&rr=0.59346700 1566792324">泰銖升值</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0%D3%A5%CE%A4%A3%B0%CA%B2%A3%B7%A7%A9%C0&rr=0.59346900 1566792324">商用不動產概念</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=5G&rr=0.59347100 1566792324">5G</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B9q%C4v%B2%A3%B7%7E&rr=0.59347300 1566792324">電競產業</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%BA%D2%C5%D6%BA%FB&rr=0.59347700 1566792324">碳纖維</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5%FE%B2y%BC%D0%B7%C7%AB%FC%BC%C6%B7s%BCW&rr=0.59347900 1566792324">全球標準指數新增</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B5L%A4H%BEr%BEp&rr=0.59348100 1566792324">無人駕駛</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AC%FC%B0%EA%B9q%A4l%AC%DB%C3%F6&rr=0.59348300 1566792324">美國電子相關</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B6%C7%B2%A3%A6%CA%A4%B8%AD%D1%BC%D6%B3%A1&rr=0.59348700 1566792324">傳產百元俱樂部</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%DA%BE%A4%A8%F3%C4%B3&rr=0.59348900 1566792324">巴黎協議</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0l%C2%DC%A4j%B3%B0&rr=0.59349000 1566792324">追蹤大陸</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A8%AE%A5%CE%C3%E8%C0Y&rr=0.59349200 1566792324">車用鏡頭</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=MSCI&rr=0.59349600 1566792324">MSCI</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=OPPO&rr=0.59349800 1566792324">OPPO</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=Mini+LED&rr=0.59349900 1566792324">Mini LED</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0l%C2%DC%AD%BB%B4%E4&rr=0.59350100 1566792324">追蹤香港</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AAo%B9q%A8%AE&rr=0.59350500 1566792324">油電車</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%E9%B6%EA%B6S%AD%C8&rr=0.59350600 1566792324">日圓貶值</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AC%EF%C0%B9%B8%CB%B8m&rr=0.59350800 1566792324">穿戴裝置</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%BF%FB%C5K%A6%A9%A5%F3&rr=0.59351000 1566792324">鋼鐵扣件</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A8%AE%A5%CE%B4%B2%BC%F6&rr=0.59351300 1566792324">車用散熱</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AE%D6%AF%E0%B5o%B9q&rr=0.59351500 1566792324">核能發電</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=100%AB%FC&rr=0.59351700 1566792324">100指</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AA%F7%BF%C4MOU&rr=0.59351900 1566792324">金融MOU</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B4N%B7%7E88&rr=0.59352300 1566792324">就業88</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%BB%A8%A6v%B7%A7%A9%C0&rr=0.59352400 1566792324">豪宅概念</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%BA%AD%B4%E4%B3qSH&rr=0.59352600 1566792324">滬港通SH</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B9B%B0%CA%AET%BC%D6&rr=0.59352700 1566792324">運動娛樂</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%BA%EB%AB%7E&rr=0.59353100 1566792324">精品</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A8%C8%ACw%AAx%A5%CE%BE%F0%AF%D7%BA%A6%BB%F9&rr=0.59353300 1566792324">亞洲泛用樹脂漲價</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4j%BC%C6%BE%DA2.0&rr=0.59353500 1566792324">大數據2.0</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A8%AE%A5%CE%A5b%BE%C9&rr=0.59353600 1566792324">車用半導</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4T%A4%AD%B1%DA&rr=0.59354000 1566792324">三五族</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=VR%2F%B5%EA%C0%C0%B9%EA%B9%D2&rr=0.59354200 1566792324">VR/虛擬實境</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C1%7E%B9S%AB%FC%BC%C6&rr=0.59354400 1566792324">薪酬指數</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=LED%A5%FA%B7%BD&rr=0.59354600 1566792324">LED光源</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B3%5D%B3%C6%B3q%B8%F4&rr=0.59354900 1566792324">設備通路</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AC%FC%B0%EA%BEc%A7%F7%A5N%A4u&rr=0.59355100 1566792324">美國鞋材代工</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B9B%B0%CA%BEc&rr=0.59357100 1566792324">運動鞋</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%BA%F4%AC%F5%B8g%C0%D9&rr=0.59357300 1566792324">網紅經濟</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A8T%A8%AE%B9q%A6%C0&rr=0.59357800 1566792324">汽車電池</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C0%F9%B2%D3%ADM%AAv%C0%F8&rr=0.59357900 1566792324">癌細胞治療</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C3%C4%AB%7E%B3q%B8%F4&rr=0.59358100 1566792324">藥品通路</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B4%BC%BCz%AD%B5%BDc&rr=0.59358300 1566792324">智慧音箱</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B4N%B7%7E99&rr=0.59358600 1566792324">就業99</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B7s%A5%FC%A5%CD%A7%DE&rr=0.59358800 1566792324">新兆生技</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AC%FC%A4%A4%B6T%A9%F6%BE%D4%A8%FC%B4f&rr=0.59359000 1566792324">美中貿易戰受惠</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=AI%A4H%A4u%B4%BC%BCz&rr=0.59359200 1566792324">AI人工智慧</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=4K2K+TV&rr=0.59359500 1566792324">4K2K TV</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B9q%B0%CA%A8T%BE%F7&rr=0.59359700 1566792324">電動汽機</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=Kinect&rr=0.59359900 1566792324">Kinect</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4u%A8%E3%BE%F7%BCt&rr=0.59360100 1566792324">工具機廠</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=RF+IC&rr=0.59360400 1566792324">RF IC</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=3D%B7P%B4%FA&rr=0.59360600 1566792324">3D感測</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B9q%A4l%B0%D3%B0%C8&rr=0.59360800 1566792324">電子商務</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%BE%F7%BE%B9%A4H&rr=0.59361000 1566792324">機器人</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%ADu%AC%FC%B1%BE%B5P&rr=0.59361300 1566792324">赴美掛牌</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AE%E7%B6%E9%AF%E8%AA%C5%AB%B0&rr=0.59361500 1566792324">桃園航空城</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5%F4%A4%D1%B0%F3Switch&rr=0.59361700 1566792324">任天堂Switch</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=HomePod&rr=0.59361800 1566792324">HomePod</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A8%AE%A5%CE%BCv%AD%B5&rr=0.59362200 1566792324">車用影音</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%BE%F7%BE%B9%B5%F8%C4%B1&rr=0.59362400 1566792324">機器視覺</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0%AA%C1%7E100&rr=0.59362500 1566792324">高薪100</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B9q%ABH%B9s%B0%E2%B3q%B8%F4&rr=0.59362700 1566792324">電信零售通路</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=AppleWatch&rr=0.59363000 1566792324">AppleWatch</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4H%C1y%BF%EB%C3%D1&rr=0.59363200 1566792324">人臉辨識</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%A6%B3%C1%A8U%A6%B0&rr=0.59363400 1566792324">丹麥沃旭</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%A4%B7%A7%B3q%B8%F4&rr=0.59363500 1566792324">中概通路</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=FinTech&rr=0.59363800 1566792324">FinTech</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%ADL%C0%A3%B0%BB%B4%FA&rr=0.59364000 1566792324">胎壓偵測</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%40%B1a%A4%40%B8%F4&rr=0.59364200 1566792324">一帶一路</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A7C%BB%F9%B4%BC%BCz%A4%E2%BE%F7&rr=0.59364400 1566792324">低價智慧手機</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=LED%A8%AE%BFO&rr=0.59364700 1566792324">LED車燈</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=Win+10&rr=0.59364900 1566792324">Win 10</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=50%AB%FC&rr=0.59365000 1566792324">50指</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AE%FC%A6%E8%B7%A7%A9%C0&rr=0.59365200 1566792324">海西概念</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0%B7%B1d%AD%B9%AB%7E&rr=0.59365500 1566792324">健康食品</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B7s%A5%FC%AF%E0%B7%BD&rr=0.59365700 1566792324">新兆能源</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AC%FC%B0%EA%A6%A8%A6%E7%A5N%A4u&rr=0.59365900 1566792324">美國成衣代工</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%A4%B8%EA%A6a%B2%A3&rr=0.59366000 1566792324">中資地產</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%BA%F4%C1%CA%AC%DB%C3%F6&rr=0.59366300 1566792324">網購相關</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B5%D8%AC%B0%A8%C6%A5%F3&rr=0.59366500 1566792324">華為事件</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B2%60%B4%E4%B3qAH&rr=0.59366700 1566792324">深港通AH</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=ApplePay&rr=0.59366800 1566792324">ApplePay</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0%D3%A5%CE%A4%A3%B0%CA%B2%A3&rr=0.59367200 1566792324">商用不動產</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B2%60%B4%E4%B3qSZ&rr=0.59367400 1566792324">深港通SZ</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%BA%BB%DD%A6%AC%A6%A8&rr=0.59367500 1566792324">內需收成</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5%5C%B2v%A5b%BE%C9%C5%E9&rr=0.59367700 1566792324">功率半導體</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5%DB%BE%A5%B2m&rr=0.59368000 1566792324">石墨烯</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=AirPods&rr=0.59368200 1566792324">AirPods</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%A4%B0%EA%A4Q%A4T%A4%AD&rr=0.59368300 1566792324">中國十三五</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AC%FC%B0%EA%A8T%A8%AE%B0t%A5%F3&rr=0.59368500 1566792324">美國汽車配件</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B4%BC%BCz%AB%B0%A5%AB&rr=0.59368800 1566792324">智慧城市</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0%AA%B4%DE%A7Q%C0%F2%A7Q&rr=0.59369000 1566792324">高殖利獲利</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C2d%AAv%B2z&rr=0.59369200 1566792324">櫃治理</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%A4%B0%EA%B0%AA%C5K&rr=0.59369300 1566792324">中國高鐵</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0l%C2%DC%A4%E9%A5%BB&rr=0.59369600 1566792324">追蹤日本</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B5L%BDu%A5R%B9q&rr=0.59369800 1566792324">無線充電</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AD%CB%A8%AE%BCv%B9%B3&rr=0.59370000 1566792324">倒車影像</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A6%E6%B0%CA%C2%E5%C0%F8&rr=0.59370100 1566792324">行動醫療</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=TPP&rr=0.59370500 1566792324">TPP</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%BA%AD%B4%E4%B3qHK&rr=0.59370600 1566792324">滬港通HK</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=PS4&rr=0.59370800 1566792324">PS4</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4p%A6%CC%A4%E2%BE%F7&rr=0.59371000 1566792324">小米手機</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B4%D3%AA%AB%A4u%BCt&rr=0.59371300 1566792324">植物工廠</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%ADu%AC%FC%A7%EB%B8%EA&rr=0.59371400 1566792324">赴美投資</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A8%AE%B8%FC%B0O%BE%D0&rr=0.59371600 1566792324">車載記憶</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=ADAS&rr=0.59371800 1566792324">ADAS</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0%F2%A6%5D%C0%CB%B4%FA&rr=0.59372100 1566792324">基因檢測</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%A4%B7%A7%C2%E5%C0%F8&rr=0.59372200 1566792324">中概醫療</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=NIKE&rr=0.59372400 1566792324">NIKE</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=iPad+mini&rr=0.59372600 1566792324">iPad mini</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A8%E2%A9%A4%A4T%A6a500%AB%FC&rr=0.59372900 1566792324">兩岸三地500指</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C3%E8%C0Y&rr=0.59373100 1566792324">鏡頭</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%A4%B0%EA%A4G%ADL%A4%C6%B6%7D%A9%F1&rr=0.59373200 1566792324">中國二胎化開放</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5x%B9%F4%A4%C9%AD%C8&rr=0.59373400 1566792324">台幣升值</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%A4%B0%EA%B1%BE%B5P&rr=0.59373700 1566792324">中國掛牌</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=iPhone+X%B7s%BE%F7%A8t%A6C&rr=0.59373900 1566792324">iPhone X新機系列</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0l%C2%DC%A6L%AB%D7&rr=0.59374100 1566792324">追蹤印度</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B6%B3%A6%F8%AAA%BE%B9&rr=0.59374200 1566792324">雲伺服器</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4u%B7%7E4.0&rr=0.59374500 1566792324">工業4.0</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C4%B2%B1%B1&rr=0.59374700 1566792324">觸控</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C4%AB%AAG%A8%D1%C0%B3&rr=0.59374900 1566792324">蘋果供應</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C0%A6%A5%AE%A8%E0&rr=0.59375000 1566792324">嬰幼兒</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C3%F6%C1%E4%B9s%B2%D5&rr=0.59375300 1566792324">關鍵零組</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0l%C2%DC%AC%FC%B0%EA&rr=0.59375500 1566792324">追蹤美國</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=QDII&rr=0.59375600 1566792324">QDII</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5%7E%BEP%A6%AC%A6%A8&rr=0.59375800 1566792324">外銷收成</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=Google+TV&rr=0.59376100 1566792324">Google TV</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B9q%B0%CA%A8%AETesla&rr=0.59376300 1566792324">電動車Tesla</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%A4%B8%EA%ABO%C0I&rr=0.59376400 1566792324">中資保險</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A8%AE%B9q%B9s%B2%D5&rr=0.59376600 1566792324">車電零組</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C4%AB%AAG%B0%AA%B3q%A9M%B8%D1&rr=0.59376900 1566792324">蘋果高通和解</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4t%B4%B6%B5%7C%A7%EF&rr=0.59377100 1566792324">川普稅改</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C2%C5%C4_%A5%DB%A7%F7&rr=0.59377200 1566792324">藍寶石材</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B9p%B9F%AD%CB%A8%AE&rr=0.59377400 1566792324">雷達倒車</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C4%B2%B1%B1%AD%B1%AAO&rr=0.59377700 1566792324">觸控面板</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C1n%B1%B1&rr=0.59377800 1566792324">聲控</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%A4%A4p%AB%AC%AD%E7%B0%A3&rr=0.59378000 1566792324">中小型剔除</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A8%AE%A4G%B7%A5%C5%E9&rr=0.59378200 1566792324">車二極體</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A8%E4%A5%A6%AF%E8%A4%D3&rr=0.59378500 1566792324">其它航太</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AC%FC%B0%EAADR&rr=0.59378600 1566792324">美國ADR</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A7%D6%A5R&rr=0.59381400 1566792324">快充</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0%EA%A5%F8%A7%EF%AD%B2&rr=0.59381600 1566792324">國企改革</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=4G+LTE&rr=0.59382000 1566792324">4G LTE</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A7%E9%C5%7C%A4%E2%BE%F7&rr=0.59382100 1566792324">折疊手機</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4T%ACP&rr=0.59382300 1566792324">三星</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B7s%AA%D1%B1%BE%B5P&rr=0.59382500 1566792324">新股掛牌</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=3C%B3q%B8%F4%AA%AB%ACy&rr=0.59382800 1566792324">3C通路物流</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5%CD%BD%E8%AF%E0%B7%BD&rr=0.59382900 1566792324">生質能源</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A8%BE%AC%CC%C3%C4%AB%7E&rr=0.59383100 1566792324">防疫藥品</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B8%C9%B2%DF%B1%D0%A8%7C&rr=0.59383300 1566792324">補習教育</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%BA%EB%B7%C7%C2%E5%C0%F8&rr=0.59383600 1566792324">精準醫療</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=3D+TV&rr=0.59383800 1566792324">3D TV</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%AC%C1p%BA%F4%2B&rr=0.59384000 1566792324">互聯網+</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0l%C2%DC%A5x%C6W&rr=0.59384100 1566792324">追蹤台灣</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=Smart+TV&rr=0.59384400 1566792324">Smart TV</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%BA%AD%B4%E4%B3qAH&rr=0.59384600 1566792324">滬港通AH</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=iPad+Air&rr=0.59384800 1566792324">iPad Air</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B3%A3%A7%F3&rr=0.59384900 1566792324">都更</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AAv%B2z%A6%CA&rr=0.59385200 1566792324">治理百</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B9w%A8%BE%C2%E5%BE%C7&rr=0.59385400 1566792324">預防醫學</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A8%AE%A5%CEPCB&rr=0.59385500 1566792324">車用PCB</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AA%F8%B7%D3&rr=0.59385700 1566792324">長照</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B5%D8%AC%B0&rr=0.59386000 1566792324">華為</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%D3%B6%A7%B8%60%AF%E0&rr=0.59386200 1566792324">太陽節能</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%F1%AFS%B9%F4&rr=0.59386300 1566792324">比特幣</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B6%C0%AA%F7%B7%A7%A9%C0&rr=0.59386500 1566792324">黃金概念</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4H%A5%C1%B9%F4%A4%C9&rr=0.59386800 1566792324">人民幣升</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AFS%B4%B5%A9%D4&rr=0.59386900 1566792324">特斯拉</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B2%C4%A4T%A4%E8%A4%E4%A5I&rr=0.59387100 1566792324">第三方支付</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B4%BC%BCz%AEa%AEx&rr=0.59387300 1566792324">智慧家庭</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=Apple+TV&rr=0.59387500 1566792324">Apple TV</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AAF%A8%F3%B3%5D%BCt&rr=0.59387700 1566792324">東協設廠</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0%AA%C4%D6%A4%C6%C2%E5%C0%F8&rr=0.59387900 1566792324">高齡化醫療</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B5L%A4H%BE%F7&rr=0.59388000 1566792324">無人機</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B9B%B0%CA%BE%B9%A7%F7&rr=0.59388300 1566792324">運動器材</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5%CD%A7%DE%B9A%B7%7E&rr=0.59388500 1566792324">生技農業</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0%AA%A6%A8%AA%F8&rr=0.59388600 1566792324">高成長</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C4%AB%AAG&rr=0.59388800 1566792324">蘋果</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%A4%B0%EA%B8%EA%B2%A3&rr=0.59389100 1566792324">中國資產</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B4I%C2d50&rr=0.59389200 1566792324">富櫃50</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=Google%B2%B4%C3%E8&rr=0.59389400 1566792324">Google眼鏡</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5%CD%A7%DE%AAA%B0%C8&rr=0.59389600 1566792324">生技服務</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AE%E7%B6%E9%BE%F7%B3%F5%B1%B6%B9B&rr=0.59389900 1566792324">桃園機場捷運</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=SDN&rr=0.59390100 1566792324">SDN</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C3%C4%AB%7E%A5%CD%B2%A3&rr=0.59390300 1566792324">藥品生產</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AD%BB%B4%E4%B1%BE%B5P&rr=0.59390500 1566792324">香港掛牌</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B9q%B0%CA%A8T%A8%AE&rr=0.59390700 1566792324">電動汽車</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B8%7D%BD%F1%A8%AE&rr=0.59390900 1566792324">腳踏車</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AF%E8%B9B%AA%D1&rr=0.59391100 1566792324">航運股</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B2%60%B4%E4%B3qHK&rr=0.59391200 1566792324">深港通HK</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0%AA%AA%D1%AE%A7&rr=0.59391500 1566792324">高股息</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0%EA%A8%BE%A6%DB%A5D&rr=0.59391600 1566792324">國防自主</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B3%A3%A7%F3%B7%A7%A9%C0&rr=0.59391800 1566792324">都更概念</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C2%E5%C0%F8%C0%CB%B4%FA%B3%5D%B3%C6&rr=0.59392000 1566792324">醫療檢測設備</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=iPhone+8&rr=0.59392200 1566792324">iPhone 8</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C2%F9%A4Q%A4%40&rr=0.59392400 1566792324">雙十一</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B5L%A4H%B0%D3%A9%B1&rr=0.59392600 1566792324">無人商店</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A8%AE%A5%CE%AD%B1%AAO&rr=0.59392700 1566792324">車用面板</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B8%EA%B2%A3%AA%D1&rr=0.59393000 1566792324">資產股</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AAx%A6%DB%B0%CA%A4%C6&rr=0.59393100 1566792324">泛自動化</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=USB3.1&rr=0.59393300 1566792324">USB3.1</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B4f%A5x%ACF%B5%A6&rr=0.59393500 1566792324">惠台政策</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B8%F3%B0%EA%C0%5C%B6%BC&rr=0.59393700 1566792324">跨國餐飲</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A7%BB%B9F%B9q&rr=0.59393900 1566792324">宏達電</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B6V%ABn%B3%5D%BCt&rr=0.59394000 1566792324">越南設廠</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A8%AE%C1p%BA%F4&rr=0.59394200 1566792324">車聯網</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B3%5D%B3%C6%B2%D5%A5%F3&rr=0.59394500 1566792324">設備組件</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%A4%A4p%AB%AC%B7s%BCW&rr=0.59394600 1566792324">中小型新增</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=3D%A6C%A6L&rr=0.59394800 1566792324">3D列印</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=3D%A7%DE%B3N&rr=0.59394900 1566792324">3D技術</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=MOSFET&rr=0.59395200 1566792324">MOSFET</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B8%EA%B2%A3%C3D%A7%F7%AA%D1&rr=0.59395400 1566792324">資產題材股</a></td>
+<td width="25%" height="20" nowrap>&nbsp;</td>
+<td width="25%" height="20" nowrap>&nbsp;</td>
+</tr>
+</table>
+<!----table 9 ------------------------------>
+<table id="table9" width="100%" border="0" cellspacing="0" cellpadding="0" height="43">
+<tr>
+<td width="47" rowspan="2" height="43" valign="bottom"><img src="https://s.yimg.com/f/i/tw/stock/price_3.gif" width="47" height="43" class="yui-tw-stock-block"></td>
+<td height="8">&nbsp;</td>
+</tr>
+<tr>
+<td height="35" bgcolor="#FFEDA9" width="100%">
+<table width="100%" border="0" cellspacing="0" cellpadding="4">
+<tr>
+<td class="yui-text-left"><a name="EE"><font ="ttt"><b><font color="#CC3366">集團股行情</font></b></font></td>
+<td align="right"><a href="#ystkglonav">Top</a>&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!----table 10 ------------------------------>
+<table border="0" cols=2 width=100% cellspacing="0" cellpadding="7">
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B5%D8%A5%DF&rr=0.59396000 1566792324">華立</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B3%BB%B7s%B0%EA%BB%DA&rr=0.59396100 1566792324">頂新國際</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B5%D8%BA%D3&rr=0.59396300 1566792324">華碩</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AA%BF%AB%7E&rr=0.59396500 1566792324">矽品</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4T%B0%D3%A6%E6&rr=0.59396800 1566792324">三商行</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B5%D8%B7s&rr=0.59396900 1566792324">華新</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%BC%ED%AE%F5&rr=0.59397100 1566792324">潤泰</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B7s%A5%FA&rr=0.59397200 1566792324">新光</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B8%CE%B6%A9&rr=0.59397500 1566792324">裕隆</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5%C3%C2%D7%BEl&rr=0.59397700 1566792324">永豐餘</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%BDn%B3%D0%B8%EA%B3q&rr=0.59397800 1566792324">緯創資通</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A7%D3%B6W&rr=0.59398000 1566792324">志超</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AB%C2%B2%B1&rr=0.59398300 1566792324">威盛</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B8s%A5%FA%C2%C5%A4%D1&rr=0.59398400 1566792324">群光藍天</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%A4%B1j%A5%FA%B9q&rr=0.59398600 1566792324">中強光電</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5%F5%BCw&rr=0.59398800 1566792324">仰德</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5%BF%B4Q&rr=0.59399000 1566792324">正崴</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5%DD%A6%F9%B0%F3&rr=0.59399200 1566792324">禾伸堂</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A9M%BA%D3&rr=0.59399400 1566792324">和碩</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AA%F8%BAa&rr=0.59399500 1566792324">長榮</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AA%F7%A4%AF%C4_&rr=0.59399800 1566792324">金仁寶</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5%BF%B6%A9&rr=0.59400000 1566792324">正隆</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%A4%B5%D8%B9q%ABH&rr=0.59400100 1566792324">中華電信</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A9%F4%A9%F4&rr=0.59400300 1566792324">旺旺</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%E9%A4%EB%A5%FA&rr=0.59400500 1566792324">日月光</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5%DF%AFq%AF%BC%C2%B4&rr=0.59400700 1566792324">立益紡織</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%A4%B9%A9%A4u%B5%7B&rr=0.59400900 1566792324">中鼎工程</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B2%CE%A4%40&rr=0.59401100 1566792324">統一</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%A4%C0%F4&rr=0.59401400 1566792324">中環</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%BB%B7%B6%AF&rr=0.59401600 1566792324">遠雄</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4O%C4R&rr=0.59401800 1566792324">力麗</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%BB%F5%A5%FA&rr=0.59401900 1566792324">億光</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%EAM%C1p%BF%FB%C5K&rr=0.59402200 1566792324">燁聯鋼鐵</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4j%BB%F5&rr=0.59402400 1566792324">大億</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AF%E0%B2v&rr=0.59402500 1566792324">能率</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AAF%A4%B8%B9q%BE%F7&rr=0.59402700 1566792324">東元電機</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AD%E2%B6%A7&rr=0.59402900 1566792324">凌陽</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%ABn%B0T&rr=0.59403100 1566792324">南訊</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0%EA%A5%A8&rr=0.59403300 1566792324">國巨</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AAF%ACv&rr=0.59403400 1566792324">東洋</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4j%A6P&rr=0.59403700 1566792324">大同</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AD%5E%B7%7E%B9F&rr=0.59403800 1566792324">英業達</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%A4%A4%D1%A5%CD%A7%DE&rr=0.59404000 1566792324">中天生技</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C1n%C4_&rr=0.59404200 1566792324">聲寶</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C1p%B9q&rr=0.59404400 1566792324">聯電</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C4_%A6%A8&rr=0.59404600 1566792324">寶成</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AB%C2%A8%CA&rr=0.59404700 1566792324">威京</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%A4%C5%D6&rr=0.59404900 1566792324">中纖</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5x%ABn%C0%B0&rr=0.59405200 1566792324">台南幫</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%CD%B9F&rr=0.59405300 1566792324">友達</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5x%B6%EC&rr=0.59405500 1566792324">台塑</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AA%A2%ACw&rr=0.59405600 1566792324">炎洲</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C2E%AE%FC&rr=0.59405900 1566792324">鴻海</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%AC%E3%B5%D8&rr=0.59406100 1566792324">研華</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4h%AAL%AF%C8%B7%7E&rr=0.59406200 1566792324">士林紙業</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5x%BBE&rr=0.59406400 1566792324">台聚</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%EB%E4%BCw&rr=0.59406600 1566792324">錸德</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5%FA%C4_&rr=0.59406800 1566792324">光寶</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B7C%AFq&rr=0.59406900 1566792324">嵩益</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%BCs%B9F&rr=0.59407100 1566792324">廣達</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%B8%A4j&rr=0.59407400 1566792324">元大</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0%EA%BA%D3&rr=0.59407600 1566792324">國碩</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%A4%BF%FB&rr=0.59407800 1566792324">中鋼</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%CD%B0T&rr=0.59407900 1566792324">友訊</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A7%BB%F9%D6&rr=0.59408200 1566792324">宏碁</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B0%EA%B2%A3&rr=0.59408400 1566792324">國產</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C1p%B5%D8%AF%AB%B3q&rr=0.59408500 1566792324">聯華神通</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C1p%B5o%AC%EC&rr=0.59408700 1566792324">聯發科</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%BB%B7%AAF&rr=0.59409000 1566792324">遠東</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5x%BFn%B9q&rr=0.59409100 1566792324">台積電</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%B4I%A8%B9&rr=0.59409300 1566792324">富邦</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A4%A4%ABH&rr=0.59409400 1566792324">中信</a></td>
+</tr>
+<tr align="center">
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%A5x%AAd&rr=0.59409700 1566792324">台泥</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C0M%B6%E9&rr=0.59409800 1566792324">霖園</a></td>
+<td width="25%" height="20" nowrap><a href="/s/list2.php?c=%C0%E9%A9%5B%A5%F8%B7%7E&rr=0.59410000 1566792324">燦坤企業</a></td>
+<td width="25%" height="20" nowrap>&nbsp;</td>
+</tr>
+</table>
+</td></tr></table>
+<!----yk_left.jake ends----> </td>
+<td width="40%" valign="top" align="center">
+<table bgcolor="#fefae5" cellspacing="0" cellpadding="0" border="0">
+<tr height="17" ><td bgcolor="#FFFFFF" colspan="2">
+</td></tr>
+<tr><td height="15" colspan="2">
+</td></tr>
+<tr>
+<td cellspacing="0" colspan="2" align="center" >
+<table><tr><td colspan="2">
+           <div id="boxLREC"><div id="tgtLREC"></div></div></td></tr></table>
+</td>
+</tr>
+<tr><td height="15" colspan="2">
+</td></tr>
+<tr><td bgcolor="#ffe077" height="28" align="center" colspan="2"><font color="#330066">即時新聞區</font></td></tr>
+<tr><td colspan="2" height="5"></td></tr>
+<tr><td width="10%" valign="top" >&#8226;</td><td width="90%" class="yui-text-left"><font class=c2 size=-1><a href="https://tw.stock.yahoo.com/news/科技-idc-資料變現金-聚焦3產業-掌握5原則-034811717.html">《科技》IDC：資料變現金，聚焦3產業、掌握5原則</a></font></td></tr><tr><td colspan="2" height="5" ></td></tr><tr><td width="10%" valign="top" >&#8226;</td><td width="90%" class="yui-text-left"><font class=c2 size=-1><a href="https://tw.stock.yahoo.com/news/傳產-信義全球搶攻桃園工業地產商機-成立據點代尋標的-034618611.html">《傳產》信義全球搶攻桃園工業地產商機，成立據點代尋標的</a></font></td></tr><tr><td colspan="2" height="5" ></td></tr><tr> 
+<td colspan="2" class="yui-get-class-ad">
+<!--include linkspot-->
+<link href='https://s.yimg.com/f/i/tw/hp/linkspot/hybrid_generator_02_big5.css' rel='stylesheet' type='text/css'>
+<link href='https://s.yimg.com/ud/others/stock/ysm_gemini_getclass_v2.css' rel='stylesheet' type='text/css'>
+<div id="ysmrubycm" class="vplain" style="display: block;">
+    <table class="border" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+            <tr>
+                <td class="ysmlabel">
+                    <a href="https://tw.emarketing.yahoo.com/ysmacq/project.html" target="_blank">贊助網站</a>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    <ul id="ysmrubykw">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td width="50%"><div class="ysmkwlist"><a href="https://tw.linkspot.search.yahoo.com/sales/ysmlist.php?Partner=yahoo_tw_stock_xml_park&p=%E6%8A%95%E8%B3%87">投資</a></div></td><td><img src="https://s.yimg.com/f/i/tw/ysm/img/space.gif" width="5px" /></td><td width="50%"><div class="ysmkwlist"><a href="https://tw.linkspot.search.yahoo.com/sales/ysmlist.php?Partner=yahoo_tw_stock_xml_park&p=%E6%9C%AA%E4%B8%8A%E5%B8%82">未上市</a></div></td></tr><tr><td><img src="https://s.yimg.com/f/i/tw/ysm/img/space.gif" height="6px" /></td></tr><tr><td width="50%"><div class="ysmkwlist"><a href="https://tw.linkspot.search.yahoo.com/sales/ysmlist.php?Partner=yahoo_tw_stock_xml_park&p=%E6%88%BF%E5%9C%B0%E7%94%A2%E6%8A%95%E8%B3%87">房地產投資</a></div></td><td><img src="https://s.yimg.com/f/i/tw/ysm/img/space.gif" width="5px" /></td><td width="50%"><div class="ysmkwlist"><a href="https://tw.linkspot.search.yahoo.com/sales/ysmlist.php?Partner=yahoo_tw_stock_xml_park&p=%E6%8A%95%E8%B3%87%E7%90%86%E8%B2%A1">投資理財</a></div></td></tr><tr><td><img src="https://s.yimg.com/f/i/tw/ysm/img/space.gif" height="6px" /></td></tr><tr><td width="50%"><div class="ysmkwlist"><a href="https://tw.linkspot.search.yahoo.com/sales/ysmlist.php?Partner=yahoo_tw_stock_xml_park&p=%E6%8A%95%E8%B3%87%E9%A1%A7%E5%95%8F">投資顧問</a></div></td><td><img src="https://s.yimg.com/f/i/tw/ysm/img/space.gif" width="5px" /></td><td width="50%"><div class="ysmkwlist"><a href="https://tw.linkspot.search.yahoo.com/sales/ysmlist.php?Partner=yahoo_tw_stock_xml_park&p=%E7%90%86%E8%B2%A1">理財</a></div></td></tr><tr><td><img src="https://s.yimg.com/f/i/tw/ysm/img/space.gif" height="6px" /></td></tr><tr><td width="50%"><div class="ysmkwlist"><a href="https://tw.linkspot.search.yahoo.com/sales/ysmlist.php?Partner=yahoo_tw_stock_xml_park&p=%E8%82%A1%E7%A5%A8">股票</a></div></td><td><img src="https://s.yimg.com/f/i/tw/ysm/img/space.gif" width="5px" /></td>                        </table>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- linkspot ends-->
+</td>
+</tr>
+<tr><td colspan="2" height="10"></td></tr>
+</table> 
+</td>
+</tr>
+</table>
+<table width="750" border="0" align="center" cellpadding="0" cellspacing="0"> 
+ <tr>
+ <td height="90" valign="bottom">
+<DIV id=yhtw_mastfoot>
+<div class="ln">Yahoo Finance 
+<a href="https://policies.yahoo.com/tw/zh-hant/yahoo/terms/utos/">服務條款</a> 
+<a href="https://policies.yahoo.com/tw/zh-hant/yahoo/privacy/">隱私權</a>
+</div>
+<div class="other">
+<p>台股資料來源<a href="http://www.tse.com.tw/zh/" target="_blank">臺灣證券交易所</a>、<a href="http://www.taifex.com.tw" target="_blank">臺灣期貨交易所</a>及<a href="http://www.tpex.org.tw/web/" target="_blank">財團法人中華民國證券櫃檯買賣中心</a>。國際股市資料來源請參考<a href="https://help.yahoo.com/kb/finance-for-desktop/SLN2310.html" target="_blank">Yahoo Finance</a>。使用Yahoo奇摩股市服務前，請您詳閱相關<a href="https://tw.help.yahoo.com/kb/stock-tw-web/SLN28774.html?impressions=true" target="_blank">使用規範與聲明</a>。</p>
+</div>
+</DIV>
+  </td>
+ </tr>
+</table>
+<script type="application/javascript">(function(w,d,t,r,u){w[u]=w[u]||[];w[u].push({'projectId':'10000','properties':{'pixelId':'428726','qstrings':{'country':'tw', 'property':'stock', 'tag':''}}});var s=d.createElement(t);s.src=r;s.async=true;s.onload=s.onreadystatechange=function(){var y,rs=this.readyState,c=w[u];if(rs&&rs!="complete"&&rs!="loaded"){return}try{y=YAHOO.ywa.I13N.fireBeacon;w[u]=[];w[u].push=function(p){y([p])};y(c)}catch(e){}};var scr=d.getElementsByTagName(t)[0],par=scr.parentNode;par.insertBefore(s,scr)})(window,document,"script","https://s.yimg.com/wi/ytc.js","dotq");</script>
+<noscript>
+    <img src="https://geo.yahoo.com/b?s=152952223" height="1" width="1" />
+</noscript>
+</center>
+ </body> <script src="https://s.yimg.com/f/i/tw/mb/universal_header/uh_tw_v11.js" type="text/javascript"></script> 
+
+   <script type="text/javascript">
+       if (window.DARLA && window.DARLA_CONFIG) {
+          DARLA.config(DARLA_CONFIG);
+          DARLA.event( "AUTO" );
+       }
+
+     </script>
+<!-- Begin comScore Tag --> 
+<script>
+ var _comscore = _comscore || [];
+ _comscore.push({
+ c1: "2",
+ c2: "7241469",
+ c5: "152952223",
+ c7: "https%3A%2F%2Ftw.stock.yahoo.com%252fh%252fgetclass.php"
+ });
+ (function() {
+ var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+ s.src = "https://s.yimg.com/lq" + "/lib/3pm/cs_0.2.js";
+ el.parentNode.insertBefore(s, el);
+ })();
+ YUI().use('node',function(Y){
+ if(Y.one('#yuhead-sform-searchfield')){
+ Y.one('#yuhead-sform-searchfield').set('value',document.getElementById('yuhead-sform-searchfield').getAttribute("data-sh"));
+ }
+ })
+</script>
+<noscript><img src="https://sb.scorecardresearch.com/p?c1=2&c2=7241469&c7=https%3A%2F%2Ftw.stock.yahoo.com%252fh%252fgetclass.php&c5=152952223&cv=2.0&cj=1" width="1" height="1" alt=""/></noscript>
+<!-- End comScore Tag -->
+<!-- Gemini Ads Beacon -->
+<script type="text/javascript">
+</script>
+</html>
+
+<!-- w228.finance.tw1.yahoo.com Mon Aug 26 04:05:24 UTC 2019 -->
