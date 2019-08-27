@@ -58,5 +58,19 @@
         return $data;
     }
 
+    class Student {
+        public $ch, $eng, $math;
+        public function __construct($ch=0, $eng=0, $math=0){
+            $this->ch = $ch;
+            $this->eng = $eng;
+            $this->math = $math;
+        }
+        public function sum(){
+            return $this->ch + $this->eng + $this->math;
+        }
+        public function avg(){
+            return $this->sum()/3;
+        }
+    }
 
 ?>
