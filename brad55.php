@@ -1,8 +1,8 @@
 <?php
+    include 'bradapis.php';
     session_start();
-    $rand = $_SESSION['rand'];
-    foreach($rand as $k => $v){
-        echo "{$k} : {$v}<br>";
-    }
+
+    $s1 = $_SESSION['s1'];
+    echo $s1->sum() . ":" . $s1->avg() . '<br>'; 
 
 ?>

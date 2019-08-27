@@ -1,14 +1,17 @@
 <?php
+    include 'bradapis.php';
     session_start();
 
-    $rand = [1,2,3,4,5];
-    foreach($rand as $k => $v){
-        echo "{$k} : {$v}<br>";
-    }
-    $_SESSION['rand'] = $rand;
+    $s1 = new Student(80,40,10);
+    $_SESSION['s1'] = $s1;
 
-    $rand[3] = 87;
+    echo $s1->sum() . ":" . $s1->avg() . '<br>'; 
+    
+    $s1->math = 100;
+    echo $s1->sum() . ":" . $s1->avg() . '<br>'; 
 
+
+    
 ?>
 <hr>
 <a href='brad55.php'>Next Page</a>
