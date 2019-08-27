@@ -52,4 +52,11 @@
         return $tempId;
     }
 
+    function processData(){
+        $data['title'] = 'CY Big Company';
+        $data['user'] = 'Tony';
+        return $data;
+    }
+
+
 ?>

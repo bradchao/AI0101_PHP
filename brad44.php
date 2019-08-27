@@ -6,6 +6,7 @@
     }
 
     if ($upload['error'] == 0){
+        
         if (move_uploaded_file($upload['tmp_name'], 
                 "upload/{$upload['name']}")){
             echo 'Success';

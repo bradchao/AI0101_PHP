@@ -1,4 +1,7 @@
 <?php
+    if (!isset($_FILES['upload'])) 
+        header('Location: brad45.php');
+        
     $upload = $_FILES['upload'];
     foreach($upload as $k => $v){
         echo "{$k} => <br>";

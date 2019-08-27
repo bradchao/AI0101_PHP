@@ -8,8 +8,10 @@
     'C:\xampp2\htdocs\brad\AI0101_PHP\myfont.ttf', "好");
 
     // 3. Output => 1. file; 2. Browser
-    header('Content-Type: image/jpeg');
-    imagejpeg($img);
+    // header('Content-Type: image/jpeg');
+    // imagejpeg($img);
+
+    imagejpeg($img, "newcoffee.jpg");
 
     // 4. release
     imagedestroy($img);
