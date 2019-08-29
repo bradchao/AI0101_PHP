@@ -1,0 +1,33 @@
+<script>
+    var xhttp = new XMLHttpRequest();
+    function test1(){
+        let n = document.getElementById('n').value;
+        xhttp.onreadystatechange = callback;
+        xhttp.open("GET", "brad63.php?n=" + n, true);
+        xhttp.send();
+    }
+    function callback(){
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            document.getElementById('lottery').innerHTML =
+                xhttp.responseText;
+        }
+        // if (xhttp.readyState == 1){
+        //     document.getElementById('state1').innerHTML = '1';
+        // }else if (xhttp.readyState == 2){
+        //     document.getElementById('state2').innerHTML = '2';
+        // }else if (xhttp.readyState == 3){
+        //     document.getElementById('state3').innerHTML = '3';
+        // }else if (xhttp.readyState == 4){
+        //     document.getElementById('state4').innerHTML = '4';
+        // }
+    }
+</script>
+<input type="number" id='n' />
+<input type="button" onclick="test1()" value="Click Me" /><br>
+<!--
+State1:<span id="state1"></span><br>
+State2:<span id="state2"></span><br>
+State3:<span id="state3"></span><br>
+State4:<span id="state4"></span><br>
+-->
+<div id='lottery'></div>
